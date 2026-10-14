@@ -18,6 +18,15 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 .sec h2 .cnt{font-size:12px;font-weight:400;background:#dcefe0;color:#2e7d32;border-radius:10px;padding:2px 10px}
 .sec .sub{font-size:13px;color:#777;margin:4px 0 10px}
 .card{background:#fff;border-radius:14px;padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 4px rgba(20,40,80,.07)}
+.trend-btn{margin-top:10px;background:#1976d2;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:14px;cursor:pointer}
+.trend-btn:active{opacity:.8}
+.modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:99;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;max-width:640px;width:100%;max-height:85vh;overflow:auto;padding:18px}
+.modal-box h3{margin:0 0 4px;font-size:18px}
+.modal-box .sub{color:#888;font-size:13px;margin-bottom:10px}
+.modal-close{float:right;background:#eee;border:none;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px}
+#trendChart{width:100%;height:260px}
 .chead .nm{font-size:17px;font-weight:700}
 .chead .code{font-size:12.5px;color:#888;font-family:ui-monospace,Menlo,monospace;margin-top:2px}
 .prow{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
@@ -126,5 +135,71 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 <div class="warn">量化筛选结果仅供研究参考，不构成投资建议。盘中价为轮询抓取可能延迟，下单以券商 App 实时行情为准。</div>
 <div class="foot">stock.shmily.work · 小墨自动更新<br><a href="./history.html">查看历史选股归档</a></div>
 </div>
+<div class="modal" id="trendModal" onclick="if(event.target===this)closeTrend()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeTrend()">关闭</button>
+    <h3 id="trendTitle"></h3>
+    <div class="sub" id="trendSub">近30个交易日收盘价走势</div>
+    <svg id="trendChart" viewBox="0 0 600 260" preserveAspectRatio="none"></svg>
+  </div>
+</div>
+<script>
+function showTrend(code, name, trend) {
+  document.getElementById('trendTitle').textContent = name + ' (' + code + '.HK)';
+  var svg = document.getElementById('trendChart');
+  svg.innerHTML = '';
+  if (!trend || !trend.length) {
+    svg.innerHTML = '<text x="300" y="130" text-anchor="middle" fill="#999">暂无趋势数据</text>';
+  } else {
+    var prices = trend.map(function(t){return t.c;});
+    var min = Math.min.apply(null, prices), max = Math.max.apply(null, prices);
+    var pad = (max - min) * 0.1 || 1;
+    min -= pad; max += pad;
+    var W = 600, H = 260, PL = 46, PR = 10, PT = 14, PB = 28;
+    var iw = W - PL - PR, ih = H - PT - PB;
+    function X(i){ return PL + iw * i / (prices.length - 1); }
+    function Y(v){ return PT + ih * (1 - (v - min) / (max - min)); }
+    var ns = 'http://www.w3.org/2000/svg';
+    // 网格线和价格标签
+    for (var g = 0; g <= 4; g++) {
+      var gv = min + (max - min) * g / 4;
+      var gy = Y(gv);
+      var ln = document.createElementNS(ns, 'line');
+      ln.setAttribute('x1', PL); ln.setAttribute('x2', W - PR);
+      ln.setAttribute('y1', gy); ln.setAttribute('y2', gy);
+      ln.setAttribute('stroke', '#eee'); svg.appendChild(ln);
+      var tx = document.createElementNS(ns, 'text');
+      tx.setAttribute('x', 4); tx.setAttribute('y', gy + 4);
+      tx.setAttribute('font-size', '11'); tx.setAttribute('fill', '#999');
+      tx.textContent = gv.toFixed(3); svg.appendChild(tx);
+    }
+    // 折线
+    var pts = prices.map(function(v, i){ return X(i).toFixed(1) + ',' + Y(v).toFixed(1); }).join(' ');
+    var pl = document.createElementNS(ns, 'polyline');
+    pl.setAttribute('points', pts); pl.setAttribute('fill', 'none');
+    var up = prices[prices.length-1] >= prices[0];
+    pl.setAttribute('stroke', up ? '#d32f2f' : '#2e7d32'); pl.setAttribute('stroke-width', '2');
+    svg.appendChild(pl);
+    // 首尾圆点
+    [[0, prices[0]], [prices.length-1, prices[prices.length-1]]].forEach(function(p){
+      var c = document.createElementNS(ns, 'circle');
+      c.setAttribute('cx', X(p[0])); c.setAttribute('cy', Y(p[1])); c.setAttribute('r', 4);
+      c.setAttribute('fill', up ? '#d32f2f' : '#2e7d32'); svg.appendChild(c);
+    });
+    // 日期标签（首/中/尾）
+    var dates = [trend[0].d, trend[Math.floor(trend.length/2)].d, trend[trend.length-1].d];
+    var xpos = [PL, PL + iw/2, W - PR];
+    dates.forEach(function(d, i){
+      var t = document.createElementNS(ns, 'text');
+      t.setAttribute('x', xpos[i]); t.setAttribute('y', H - 8);
+      t.setAttribute('font-size', '11'); t.setAttribute('fill', '#999');
+      t.setAttribute('text-anchor', i===0?'start':(i===2?'end':'middle'));
+      t.textContent = d; svg.appendChild(t);
+    });
+  }
+  document.getElementById('trendModal').classList.add('open');
+}
+function closeTrend(){ document.getElementById('trendModal').classList.remove('open'); }
+</script>
 </body>
 </html>
