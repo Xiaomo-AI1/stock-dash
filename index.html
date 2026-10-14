@@ -3,569 +3,801 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>港股短线选股 · shmily.work</title>
+<title>港股短线选股 · stock.shmily.work</title>
 <style>
 *{box-sizing:border-box}
-body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;margin:0;background:#eef1f5;color:#222;-webkit-text-size-adjust:100%}
-.wrap{max-width:860px;margin:0 auto;padding:14px 12px 40px}
-.hero{background:linear-gradient(135deg,#1a2a6c,#2a4d9b);color:#fff;border-radius:14px;padding:18px 16px;margin-bottom:14px}
-.hero h1{margin:0 0 6px;font-size:21px}
-.hero .sub{font-size:12.5px;opacity:.85;line-height:1.7}
-.sec{margin:16px 0 8px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
-.sec .cnt{font-size:12px;font-weight:400;background:#dde5f0;color:#3a5a8c;border-radius:10px;padding:2px 9px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:560px){.grid{grid-template-columns:1fr}}
-.card{background:#fff;border-radius:12px;padding:13px 14px;box-shadow:0 1px 4px rgba(20,40,80,.08)}
-.chead{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.code{font-size:13px;color:#888;font-weight:600}
-.nm{font-size:15px;font-weight:700}
-.score{font-size:12px;color:#888}.score b{color:#1a2a6c;font-size:15px}
-.badge{font-size:11px;border-radius:8px;padding:2px 8px;background:#eef1f5;color:#666;margin-left:4px}
-.badge.vg{background:#e6f4ea;color:#1e8e3e}.badge.vb{background:#fdecea;color:#c0392b}.badge.vn{background:#e8f0fe;color:#1a73e8}
-.cprice{margin:2px 0 8px}.cprice .p{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
-.cprice span:last-child{font-size:14px;font-weight:600;margin-left:6px}
+body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;margin:0;background:#f2f4f7;color:#222;-webkit-text-size-adjust:100%}
+.wrap{max-width:860px;margin:0 auto;padding:12px 12px 40px}
+.topbar{text-align:center;font-size:18px;font-weight:700;margin:6px 0 10px}
+.topbar small{color:#888;font-weight:400}
+.info{background:#fff;border-radius:12px;padding:14px 16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+.info .lbl{font-size:12px;color:#999}
+.info .dt{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px}
+.sec{margin:18px 0 4px}
+.sec h2{font-size:20px;margin:0;display:flex;align-items:center;gap:8px}
+.sec h2 .cnt{font-size:12px;font-weight:400;background:#dcefe0;color:#2e7d32;border-radius:10px;padding:2px 10px}
+.sec .sub{font-size:13px;color:#777;margin:4px 0 10px}
+.card{background:#fff;border-radius:14px;padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 4px rgba(20,40,80,.07)}
+.chead .nm{font-size:17px;font-weight:700}
+.chead .code{font-size:12.5px;color:#888;font-family:ui-monospace,Menlo,monospace;margin-top:2px}
+.prow{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.pcol{flex:1}
+.lbl{font-size:12px;color:#999;margin-bottom:3px}
+.pval{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.pval .live{font-size:11px;background:#fdecea;color:#c0392b;border-radius:8px;padding:2px 7px;vertical-align:2px;margin-left:4px}
+.pct .big{font-size:17px;font-weight:700}
+.pct .nopct{font-size:15px;color:#999;font-weight:600}
 .up{color:#c0392b}.dn{color:#1e8e3e}
-.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px 6px;margin-bottom:8px}
-.cgrid label{display:block;font-size:11px;color:#999;margin-bottom:1px}
-.cgrid span{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
-.cfac{display:flex;flex-wrap:wrap;gap:6px}
-.ftag{font-size:11px;background:#f0f4fa;color:#3a5a8c;border-radius:8px;padding:2px 8px}
-.empty{background:#fff;border-radius:12px;padding:18px;text-align:center;color:#999;font-size:13px}
-.dim{font-size:12px;color:#888;font-weight:400}
+.score{font-size:17px;font-weight:700;display:flex;align-items:center;gap:8px}
+.bar{display:inline-block;width:120px;max-width:40vw;height:8px;background:#e8edf3;border-radius:6px;overflow:hidden;vertical-align:middle}
+.bar i{display:block;height:100%;background:#2e7d32;border-radius:6px}
+.vbadge{font-size:13px;background:#f1f3f6;color:#888;border-radius:8px;padding:4px 12px}
+.vbadge.vg{background:#e6f4ea;color:#1e8e3e}.vbadge.vb{background:#fdecea;color:#c0392b}.vbadge.vn{background:#e8f0fe;color:#1a73e8}
+.detail{margin-top:10px;border:1px solid #e5e9ef;border-radius:12px;padding:10px 12px;background:#fbfcfd}
+.detail summary{cursor:pointer;font-size:14px;color:#2e7d32;font-weight:600;list-style:none;text-align:right}
+.detail summary::-webkit-details-marker{display:none}
+.detail summary::after{content:" ⌃"}
+.detail[open] summary::after{content:" ⌄"}
+.dgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px}
+.dv{font-size:14px;font-weight:600}
+.reason{font-size:13.5px;line-height:1.7;color:#333;margin-top:4px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{font-size:12.5px;background:#f1f3f6;color:#555;border-radius:9px;padding:5px 11px}
+.tag b{font-weight:700;color:#333}
 .warn{background:#fff8e1;border:1px solid #ffe082;border-radius:10px;padding:11px 13px;font-size:12.5px;color:#7a5c00;margin-top:16px;line-height:1.7}
-.foot{font-size:11.5px;color:#aaa;margin-top:10px;text-align:center}
+.foot{font-size:11.5px;color:#aaa;margin-top:14px;text-align:center;line-height:1.8}
+.foot a{color:#3a5a8c}
+.nav{display:flex;gap:10px;margin:10px 0}
+.nav a{flex:1;text-align:center;background:#fff;border-radius:10px;padding:10px;font-size:14px;color:#1a2a6c;text-decoration:none;font-weight:600;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+.hist-date{font-size:15px;font-weight:700;margin:18px 0 8px}
+.hist-table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border-radius:10px;overflow:hidden}
+.hist-table th,.hist-table td{padding:7px 8px;border-bottom:1px solid #eef0f3;text-align:left;white-space:nowrap}
+.hist-table th{background:#f6f8fa;color:#666;font-weight:600}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="hero">
-    <h1>港股短线选股</h1>
-    <div class="sub">页面生成 2026-10-14 17:27 · 数据日期 —<br>
-    盘中价更新 2026-10-14 15:38（27 只候选）· 全盘约 — 只</div>
-  </div>
+<div class="nav"><a href="./index.html">当日选股</a><a href="./history.html">历史归档</a></div>
 
-  <div class="sec">底部反转候选 <span class="cnt">15 只</span></div>
-  <div class="grid">
+<div class="topbar">15 / 12 只 <small>（反转 / 动量）</small></div>
+<div class="info"><div class="lbl">量化基础数据更新</div><div class="dt">2026-10-14 07:56</div>
+<div class="lbl" style="margin-top:8px">页面生成 2026-10-14 17:32 · 盘中价更新 2026-10-14 15:38（27 只）· 全盘约 — 只</div></div>
+
+<div class="sec"><h2>低位反转候选 <span class="cnt">15 只</span></h2><div class="sub">关注低位、超卖与放量止跌信号</div></div>
+
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02652</span> <span class="nm">长风药业</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>107</b></div>
+  <div class="chead"><div class="nm">长风药业</div><div class="code">02652.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 6.155 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-3.07%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">6.155</span> <span class="dn">-3.07%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>26.9</span></div>
-    <div><label>60日位置</label><span>0.04</span></div>
-    <div><label>5日涨跌</label><span class="dn">-7.80%</span></div>
-    <div><label>换手率</label><span>2.50%</span></div>
-    <div><label>量比</label><span>2.50</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">107 <span class="bar"><i style="width:100%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>26.9</b></span><span class="tag">60日位置 <b>4%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-7.80%</b></span>
+      <span class="tag">换手率 <b>2.5%</b></span><span class="tag">量比 <b>2.5</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">08360</span> <span class="nm">简朴新生活</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>100</b></div>
+  <div class="chead"><div class="nm">简朴新生活</div><div class="code">08360.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.240 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">+0.00%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.240</span> <span class="">+0.00%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>33.2</span></div>
-    <div><label>60日位置</label><span>0.06</span></div>
-    <div><label>5日涨跌</label><span class="dn">-9.40%</span></div>
-    <div><label>换手率</label><span>1.40%</span></div>
-    <div><label>量比</label><span>3.50</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">100 <span class="bar"><i style="width:100%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>33.2</b></span><span class="tag">60日位置 <b>6%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-9.40%</b></span>
+      <span class="tag">换手率 <b>1.4%</b></span><span class="tag">量比 <b>3.5</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">00751</span> <span class="nm">创维集团</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>97</b></div>
+  <div class="chead"><div class="nm">创维集团</div><div class="code">00751.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 3.240 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+6.93%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">3.240</span> <span class="up">+6.93%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>27.8</span></div>
-    <div><label>60日位置</label><span>0.09</span></div>
-    <div><label>5日涨跌</label><span class="up">+1.70%</span></div>
-    <div><label>换手率</label><span>0.20%</span></div>
-    <div><label>量比</label><span>3.00</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">97 <span class="bar"><i style="width:97.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>27.8</b></span><span class="tag">60日位置 <b>9%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+1.70%</b></span>
+      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>3.0</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02665</span> <span class="nm">图达通</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>97</b></div>
+  <div class="chead"><div class="nm">图达通</div><div class="code">02665.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.380 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-5.80%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">1.380</span> <span class="dn">-5.80%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>29.9</span></div>
-    <div><label>60日位置</label><span>0.00</span></div>
-    <div><label>5日涨跌</label><span class="dn">-7.60%</span></div>
-    <div><label>换手率</label><span>3.20%</span></div>
-    <div><label>量比</label><span>3.10</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">97 <span class="bar"><i style="width:97.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>29.9</b></span><span class="tag">60日位置 <b>0%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-7.60%</b></span>
+      <span class="tag">换手率 <b>3.2%</b></span><span class="tag">量比 <b>3.1</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">01928</span> <span class="nm">金沙中国有限公司</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>90</b></div>
+  <div class="chead"><div class="nm">金沙中国有限公司</div><div class="code">01928.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 11.300 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-1.05%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">11.300</span> <span class="dn">-1.05%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>38.7</span></div>
-    <div><label>60日位置</label><span>0.11</span></div>
-    <div><label>5日涨跌</label><span class="dn">-0.10%</span></div>
-    <div><label>换手率</label><span>0.30%</span></div>
-    <div><label>量比</label><span>1.20</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">90 <span class="bar"><i style="width:90.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>38.7</b></span><span class="tag">60日位置 <b>11%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-0.10%</b></span>
+      <span class="tag">换手率 <b>0.3%</b></span><span class="tag">量比 <b>1.2</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">03700</span> <span class="nm">映宇宙</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>90</b></div>
+  <div class="chead"><div class="nm">映宇宙</div><div class="code">03700.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.680 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.74%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.680</span> <span class="up">+0.74%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>39.6</span></div>
-    <div><label>60日位置</label><span>0.16</span></div>
-    <div><label>5日涨跌</label><span class="dn">-1.50%</span></div>
-    <div><label>换手率</label><span>0.10%</span></div>
-    <div><label>量比</label><span>2.80</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">90 <span class="bar"><i style="width:90.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>39.6</b></span><span class="tag">60日位置 <b>16%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-1.50%</b></span>
+      <span class="tag">换手率 <b>0.1%</b></span><span class="tag">量比 <b>2.8</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">09981</span> <span class="nm">沃尔核材</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>90</b></div>
+  <div class="chead"><div class="nm">沃尔核材</div><div class="code">09981.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 7.925 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-1.49%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">7.925</span> <span class="dn">-1.49%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>31.9</span></div>
-    <div><label>60日位置</label><span>0.07</span></div>
-    <div><label>5日涨跌</label><span class="dn">-0.40%</span></div>
-    <div><label>换手率</label><span>1.00%</span></div>
-    <div><label>量比</label><span>0.90</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">90 <span class="bar"><i style="width:90.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>31.9</b></span><span class="tag">60日位置 <b>7%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-0.40%</b></span>
+      <span class="tag">换手率 <b>1.0%</b></span><span class="tag">量比 <b>0.9</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02889</span> <span class="nm">博泰车联</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>87</b></div>
+  <div class="chead"><div class="nm">博泰车联</div><div class="code">02889.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 60.950 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+12.45%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">60.950</span> <span class="up">+12.45%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>27.3</span></div>
-    <div><label>60日位置</label><span>0.03</span></div>
-    <div><label>5日涨跌</label><span class="up">+1.30%</span></div>
-    <div><label>换手率</label><span>0.60%</span></div>
-    <div><label>量比</label><span>1.20</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">87 <span class="bar"><i style="width:87.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>27.3</b></span><span class="tag">60日位置 <b>3%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+1.30%</b></span>
+      <span class="tag">换手率 <b>0.6%</b></span><span class="tag">量比 <b>1.2</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">00568</span> <span class="nm">山东墨龙</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>77</b></div>
+  <div class="chead"><div class="nm">山东墨龙</div><div class="code">00568.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 3.880 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+4.30%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">3.880</span> <span class="up">+4.30%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>39.3</span></div>
-    <div><label>60日位置</label><span>0.08</span></div>
-    <div><label>5日涨跌</label><span class="up">+5.10%</span></div>
-    <div><label>换手率</label><span>21.20%</span></div>
-    <div><label>量比</label><span>2.30</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">77 <span class="bar"><i style="width:77.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>39.3</b></span><span class="tag">60日位置 <b>8%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+5.10%</b></span>
+      <span class="tag">换手率 <b>21.2%</b></span><span class="tag">量比 <b>2.3</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">00881</span> <span class="nm">中升控股</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>77</b></div>
+  <div class="chead"><div class="nm">中升控股</div><div class="code">00881.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 2.340 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-1.68%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">2.340</span> <span class="dn">-1.68%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>18.8</span></div>
-    <div><label>60日位置</label><span>0.01</span></div>
-    <div><label>5日涨跌</label><span class="dn">-6.80%</span></div>
-    <div><label>换手率</label><span>0.60%</span></div>
-    <div><label>量比</label><span>0.70</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">77 <span class="bar"><i style="width:77.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>18.8</b></span><span class="tag">60日位置 <b>1%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-6.80%</b></span>
+      <span class="tag">换手率 <b>0.6%</b></span><span class="tag">量比 <b>0.7</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">01638</span> <span class="nm">佳兆业集团</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>77</b></div>
+  <div class="chead"><div class="nm">佳兆业集团</div><div class="code">01638.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.021 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">+0.00%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.021</span> <span class="">+0.00%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>27.4</span></div>
-    <div><label>60日位置</label><span>0.07</span></div>
-    <div><label>5日涨跌</label><span class="dn">-4.50%</span></div>
-    <div><label>换手率</label><span>1.00%</span></div>
-    <div><label>量比</label><span>2.80</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">77 <span class="bar"><i style="width:77.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>27.4</b></span><span class="tag">60日位置 <b>7%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-4.50%</b></span>
+      <span class="tag">换手率 <b>1.0%</b></span><span class="tag">量比 <b>2.8</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02097</span> <span class="nm">蜜雪集团</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>77</b></div>
+  <div class="chead"><div class="nm">蜜雪集团</div><div class="code">02097.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 168.500 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.72%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">168.500</span> <span class="up">+0.72%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>24.6</span></div>
-    <div><label>60日位置</label><span>0.00</span></div>
-    <div><label>5日涨跌</label><span class="dn">-2.60%</span></div>
-    <div><label>换手率</label><span>0.20%</span></div>
-    <div><label>量比</label><span>1.30</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">77 <span class="bar"><i style="width:77.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>24.6</b></span><span class="tag">60日位置 <b>0%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-2.60%</b></span>
+      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>1.3</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02272</span> <span class="nm">科拓股份</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>77</b></div>
+  <div class="chead"><div class="nm">科拓股份</div><div class="code">02272.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 53.750 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.47%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">53.750</span> <span class="up">+0.47%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>25.7</span></div>
-    <div><label>60日位置</label><span>0.02</span></div>
-    <div><label>5日涨跌</label><span class="dn">-6.10%</span></div>
-    <div><label>换手率</label><span>0.10%</span></div>
-    <div><label>量比</label><span>0.50</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">77 <span class="bar"><i style="width:77.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>25.7</b></span><span class="tag">60日位置 <b>2%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-6.10%</b></span>
+      <span class="tag">换手率 <b>0.1%</b></span><span class="tag">量比 <b>0.5</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02372</span> <span class="nm">伟立控股</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>77</b></div>
+  <div class="chead"><div class="nm">伟立控股</div><div class="code">02372.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.600 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-7.69%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.600</span> <span class="dn">-7.69%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>19.3</span></div>
-    <div><label>60日位置</label><span>0.00</span></div>
-    <div><label>5日涨跌</label><span class="dn">-30.90%</span></div>
-    <div><label>换手率</label><span>0.30%</span></div>
-    <div><label>量比</label><span>3.10</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">77 <span class="bar"><i style="width:77.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>19.3</b></span><span class="tag">60日位置 <b>0%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-30.90%</b></span>
+      <span class="tag">换手率 <b>0.3%</b></span><span class="tag">量比 <b>3.1</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02495</span> <span class="nm">声通科技</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>77</b></div>
+  <div class="chead"><div class="nm">声通科技</div><div class="code">02495.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 22.980 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-1.79%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">22.980</span> <span class="dn">-1.79%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>28.8</span></div>
-    <div><label>60日位置</label><span>0.00</span></div>
-    <div><label>5日涨跌</label><span class="dn">-10.90%</span></div>
-    <div><label>换手率</label><span>0.20%</span></div>
-    <div><label>量比</label><span>2.70</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">77 <span class="bar"><i style="width:77.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
-</div></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>28.8</b></span><span class="tag">60日位置 <b>0%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-10.90%</b></span>
+      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>2.7</b></span>
+    </div>
+  </details>
+</div>
 
-  <div class="sec">强势动量候选 <span class="cnt">12 只</span></div>
-  <div class="grid">
+<div class="sec"><h2>强势动量候选 <span class="cnt">12 只</span></h2><div class="sub">关注短线强势、放量突破信号</div></div>
+
 <div class="card">
-  <div class="chead">
-    <div><span class="code">01389</span> <span class="nm">美捷汇控股</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>78</b></div>
+  <div class="chead"><div class="nm">美捷汇控股</div><div class="code">01389.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.720 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-4.64%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.720</span> <span class="dn">-4.64%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>74.8</span></div>
-    <div><label>60日位置</label><span>1.00</span></div>
-    <div><label>5日涨跌</label><span class="up">+32.50%</span></div>
-    <div><label>换手率</label><span>2.40%</span></div>
-    <div><label>量比</label><span>3.20</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">78 <span class="bar"><i style="width:78.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>74.8</b></span><span class="tag">60日位置 <b>100%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+32.50%</b></span>
+      <span class="tag">换手率 <b>2.4%</b></span><span class="tag">量比 <b>3.2</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02450</span> <span class="nm">淮北绿金股份</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>78</b></div>
+  <div class="chead"><div class="nm">淮北绿金股份</div><div class="code">02450.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 18.000 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-2.70%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">18.000</span> <span class="dn">-2.70%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>77.7</span></div>
-    <div><label>60日位置</label><span>1.00</span></div>
-    <div><label>5日涨跌</label><span class="up">+28.90%</span></div>
-    <div><label>换手率</label><span>3.00%</span></div>
-    <div><label>量比</label><span>2.20</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">78 <span class="bar"><i style="width:78.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>77.7</b></span><span class="tag">60日位置 <b>100%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+28.90%</b></span>
+      <span class="tag">换手率 <b>3.0%</b></span><span class="tag">量比 <b>2.2</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02583</span> <span class="nm">西普尼</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>70</b></div>
+  <div class="chead"><div class="nm">西普尼</div><div class="code">02583.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 48.740 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-7.16%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">48.740</span> <span class="dn">-7.16%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>51.4</span></div>
-    <div><label>60日位置</label><span>0.28</span></div>
-    <div><label>5日涨跌</label><span class="up">+34.30%</span></div>
-    <div><label>换手率</label><span>7.80%</span></div>
-    <div><label>量比</label><span>2.50</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">70 <span class="bar"><i style="width:70.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>51.4</b></span><span class="tag">60日位置 <b>28%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+34.30%</b></span>
+      <span class="tag">换手率 <b>7.8%</b></span><span class="tag">量比 <b>2.5</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">00813</span> <span class="nm">世茂集团</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>55</b></div>
+  <div class="chead"><div class="nm">世茂集团</div><div class="code">00813.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.074 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-1.33%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.074</span> <span class="dn">-1.33%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>63.2</span></div>
-    <div><label>60日位置</label><span>0.65</span></div>
-    <div><label>5日涨跌</label><span class="up">+41.50%</span></div>
-    <div><label>换手率</label><span>1.20%</span></div>
-    <div><label>量比</label><span>2.00</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">55 <span class="bar"><i style="width:55.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>63.2</b></span><span class="tag">60日位置 <b>65%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+41.50%</b></span>
+      <span class="tag">换手率 <b>1.2%</b></span><span class="tag">量比 <b>2.0</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">00875</span> <span class="nm">从玉智农</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>55</b></div>
+  <div class="chead"><div class="nm">从玉智农</div><div class="code">00875.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.370 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">+0.00%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.370</span> <span class="">+0.00%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>59.8</span></div>
-    <div><label>60日位置</label><span>0.50</span></div>
-    <div><label>5日涨跌</label><span class="up">+42.30%</span></div>
-    <div><label>换手率</label><span>1.20%</span></div>
-    <div><label>量比</label><span>2.60</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">55 <span class="bar"><i style="width:55.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>59.8</b></span><span class="tag">60日位置 <b>50%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+42.30%</b></span>
+      <span class="tag">换手率 <b>1.2%</b></span><span class="tag">量比 <b>2.6</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02777</span> <span class="nm">富力地产</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>55</b></div>
+  <div class="chead"><div class="nm">富力地产</div><div class="code">02777.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.215 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-2.71%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.215</span> <span class="dn">-2.71%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>64.9</span></div>
-    <div><label>60日位置</label><span>0.73</span></div>
-    <div><label>5日涨跌</label><span class="up">+37.30%</span></div>
-    <div><label>换手率</label><span>0.10%</span></div>
-    <div><label>量比</label><span>2.40</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">55 <span class="bar"><i style="width:55.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>64.9</b></span><span class="tag">60日位置 <b>73%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+37.30%</b></span>
+      <span class="tag">换手率 <b>0.1%</b></span><span class="tag">量比 <b>2.4</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">06182</span> <span class="nm">乙德投资控股</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>55</b></div>
+  <div class="chead"><div class="nm">乙德投资控股</div><div class="code">06182.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.785 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+1.95%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.785</span> <span class="up">+1.95%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>60.2</span></div>
-    <div><label>60日位置</label><span>0.76</span></div>
-    <div><label>5日涨跌</label><span class="up">+26.20%</span></div>
-    <div><label>换手率</label><span>5.20%</span></div>
-    <div><label>量比</label><span>2.00</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">55 <span class="bar"><i style="width:55.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>60.2</b></span><span class="tag">60日位置 <b>76%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+26.20%</b></span>
+      <span class="tag">换手率 <b>5.2%</b></span><span class="tag">量比 <b>2.0</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">00376</span> <span class="nm">云锋金融</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>45</b></div>
+  <div class="chead"><div class="nm">云锋金融</div><div class="code">00376.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 2.065 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-4.18%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">2.065</span> <span class="dn">-4.18%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>59.0</span></div>
-    <div><label>60日位置</label><span>0.78</span></div>
-    <div><label>5日涨跌</label><span class="up">+14.60%</span></div>
-    <div><label>换手率</label><span>1.40%</span></div>
-    <div><label>量比</label><span>2.60</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>59.0</b></span><span class="tag">60日位置 <b>78%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+14.60%</b></span>
+      <span class="tag">换手率 <b>1.4%</b></span><span class="tag">量比 <b>2.6</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">00810</span> <span class="nm">中国铸晨８１</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>45</b></div>
+  <div class="chead"><div class="nm">中国铸晨８１</div><div class="code">00810.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.112 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-6.67%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.112</span> <span class="dn">-6.67%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>74.9</span></div>
-    <div><label>60日位置</label><span>0.98</span></div>
-    <div><label>5日涨跌</label><span class="up">+26.30%</span></div>
-    <div><label>换手率</label><span>1.50%</span></div>
-    <div><label>量比</label><span>2.80</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>74.9</b></span><span class="tag">60日位置 <b>98%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+26.30%</b></span>
+      <span class="tag">换手率 <b>1.5%</b></span><span class="tag">量比 <b>2.8</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">01536</span> <span class="nm">煜荣集团</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>40</b></div>
+  <div class="chead"><div class="nm">煜荣集团</div><div class="code">01536.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.395 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-8.14%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.395</span> <span class="dn">-8.14%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>53.0</span></div>
-    <div><label>60日位置</label><span>0.50</span></div>
-    <div><label>5日涨跌</label><span class="up">+22.90%</span></div>
-    <div><label>换手率</label><span>0.60%</span></div>
-    <div><label>量比</label><span>0.60</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>53.0</b></span><span class="tag">60日位置 <b>50%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+22.90%</b></span>
+      <span class="tag">换手率 <b>0.6%</b></span><span class="tag">量比 <b>0.6</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">02536</span> <span class="nm">百乐皇宫</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>40</b></div>
+  <div class="chead"><div class="nm">百乐皇宫</div><div class="code">02536.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.945 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+18.12%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.945</span> <span class="up">+18.12%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>66.6</span></div>
-    <div><label>60日位置</label><span>0.39</span></div>
-    <div><label>5日涨跌</label><span class="up">+25.00%</span></div>
-    <div><label>换手率</label><span>0.20%</span></div>
-    <div><label>量比</label><span>0.30</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>66.6</b></span><span class="tag">60日位置 <b>39%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+25.00%</b></span>
+      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>0.3</b></span>
+    </div>
+  </details>
 </div>
 
 <div class="card">
-  <div class="chead">
-    <div><span class="code">01613</span> <span class="nm">协同通信</span> <span class="badge ">—</span></div>
-    <div class="score">评分 <b>40</b></div>
+  <div class="chead"><div class="nm">协同通信</div><div class="code">01613.HK</div></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.960 <span class="live">盘中</span></div></div>
+    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+7.26%</span></div></div>
   </div>
-  <div class="cprice"><span class="p">0.960</span> <span class="up">+7.26%</span></div>
-  <div class="cgrid">
-    <div><label>买入参考</label><span>—</span></div>
-    <div><label>目标</label><span>—</span></div>
-    <div><label>止损</label><span>—</span></div>
-    <div><label>RSI</label><span>58.5</span></div>
-    <div><label>60日位置</label><span>0.50</span></div>
-    <div><label>5日涨跌</label><span class="up">+45.50%</span></div>
-    <div><label>换手率</label><span>0.10%</span></div>
-    <div><label>量比</label><span>1.00</span></div>
+  <div class="prow">
+    <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">—</span></div></div>
   </div>
-  <div class="cfac"></div>
-</div></div>
+  <details class="detail" open>
+    <summary>详情</summary>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">—</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">—</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">—</div>
+    <div class="tags">
+      <span class="tag">RSI <b>58.5</b></span><span class="tag">60日位置 <b>50%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+45.50%</b></span>
+      <span class="tag">换手率 <b>0.1%</b></span><span class="tag">量比 <b>1.0</b></span>
+    </div>
+  </details>
+</div>
 
-  <div class="sec">策略跟踪</div>
-  <div class="empty">策略跟踪数据积累中</div>
-
-  <div class="warn">量化筛选结果仅供研究参考，不构成投资建议。盘中价为轮询抓取可能延迟，下单以券商 App 实时行情为准。</div>
-  <div class="foot">shmily.work · 小墨自动更新</div>
+<div class="warn">量化筛选结果仅供研究参考，不构成投资建议。盘中价为轮询抓取可能延迟，下单以券商 App 实时行情为准。</div>
+<div class="foot">stock.shmily.work · 小墨自动更新<br><a href="./history.html">查看历史选股归档</a></div>
 </div>
 </body>
 </html>

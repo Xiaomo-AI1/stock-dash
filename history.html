@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>历史选股归档 · stock.shmily.work</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;margin:0;background:#f2f4f7;color:#222;-webkit-text-size-adjust:100%}
+.wrap{max-width:860px;margin:0 auto;padding:12px 12px 40px}
+.topbar{text-align:center;font-size:18px;font-weight:700;margin:6px 0 10px}
+.topbar small{color:#888;font-weight:400}
+.info{background:#fff;border-radius:12px;padding:14px 16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+.info .lbl{font-size:12px;color:#999}
+.info .dt{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px}
+.sec{margin:18px 0 4px}
+.sec h2{font-size:20px;margin:0;display:flex;align-items:center;gap:8px}
+.sec h2 .cnt{font-size:12px;font-weight:400;background:#dcefe0;color:#2e7d32;border-radius:10px;padding:2px 10px}
+.sec .sub{font-size:13px;color:#777;margin:4px 0 10px}
+.card{background:#fff;border-radius:14px;padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 4px rgba(20,40,80,.07)}
+.chead .nm{font-size:17px;font-weight:700}
+.chead .code{font-size:12.5px;color:#888;font-family:ui-monospace,Menlo,monospace;margin-top:2px}
+.prow{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.pcol{flex:1}
+.lbl{font-size:12px;color:#999;margin-bottom:3px}
+.pval{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.pval .live{font-size:11px;background:#fdecea;color:#c0392b;border-radius:8px;padding:2px 7px;vertical-align:2px;margin-left:4px}
+.pct .big{font-size:17px;font-weight:700}
+.pct .nopct{font-size:15px;color:#999;font-weight:600}
+.up{color:#c0392b}.dn{color:#1e8e3e}
+.score{font-size:17px;font-weight:700;display:flex;align-items:center;gap:8px}
+.bar{display:inline-block;width:120px;max-width:40vw;height:8px;background:#e8edf3;border-radius:6px;overflow:hidden;vertical-align:middle}
+.bar i{display:block;height:100%;background:#2e7d32;border-radius:6px}
+.vbadge{font-size:13px;background:#f1f3f6;color:#888;border-radius:8px;padding:4px 12px}
+.vbadge.vg{background:#e6f4ea;color:#1e8e3e}.vbadge.vb{background:#fdecea;color:#c0392b}.vbadge.vn{background:#e8f0fe;color:#1a73e8}
+.detail{margin-top:10px;border:1px solid #e5e9ef;border-radius:12px;padding:10px 12px;background:#fbfcfd}
+.detail summary{cursor:pointer;font-size:14px;color:#2e7d32;font-weight:600;list-style:none;text-align:right}
+.detail summary::-webkit-details-marker{display:none}
+.detail summary::after{content:" ⌃"}
+.detail[open] summary::after{content:" ⌄"}
+.dgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px}
+.dv{font-size:14px;font-weight:600}
+.reason{font-size:13.5px;line-height:1.7;color:#333;margin-top:4px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{font-size:12.5px;background:#f1f3f6;color:#555;border-radius:9px;padding:5px 11px}
+.tag b{font-weight:700;color:#333}
+.warn{background:#fff8e1;border:1px solid #ffe082;border-radius:10px;padding:11px 13px;font-size:12.5px;color:#7a5c00;margin-top:16px;line-height:1.7}
+.foot{font-size:11.5px;color:#aaa;margin-top:14px;text-align:center;line-height:1.8}
+.foot a{color:#3a5a8c}
+.nav{display:flex;gap:10px;margin:10px 0}
+.nav a{flex:1;text-align:center;background:#fff;border-radius:10px;padding:10px;font-size:14px;color:#1a2a6c;text-decoration:none;font-weight:600;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+.hist-date{font-size:15px;font-weight:700;margin:18px 0 8px}
+.hist-table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border-radius:10px;overflow:hidden}
+.hist-table th,.hist-table td{padding:7px 8px;border-bottom:1px solid #eef0f3;text-align:left;white-space:nowrap}
+.hist-table th{background:#f6f8fa;color:#666;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="./index.html">当日选股</a><a href="./history.html">历史归档</a></div>
+<div class="topbar">历史选股归档</div><div class="info"><div class="lbl">共收录</div><div class="dt">1 期</div></div>
+<div class="hist-date">20261013（反转 30 / 动量 12）</div>
+<div class="lbl" style="font-size:12px;color:#999;margin-bottom:4px">底部反转</div>
+<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>02652</td><td>长风药业</td><td>107</td><td>6.35</td><td>+3.76%</td><td></td></tr>
+<tr><td>08360</td><td>简朴新生活</td><td>100</td><td>0.24</td><td>+4.35%</td><td></td></tr>
+<tr><td>00751</td><td>创维集团</td><td>97</td><td>3.03</td><td>-3.19%</td><td></td></tr>
+<tr><td>02665</td><td>图达通</td><td>97</td><td>1.465</td><td>-12.80%</td><td></td></tr>
+<tr><td>01928</td><td>金沙中国有限公司</td><td>90</td><td>11.42</td><td>+3.35%</td><td></td></tr>
+<tr><td>03700</td><td>映宇宙</td><td>90</td><td>0.675</td><td>+13.45%</td><td></td></tr>
+<tr><td>09981</td><td>沃尔核材</td><td>90</td><td>8.045</td><td>+1.32%</td><td></td></tr>
+<tr><td>02889</td><td>博泰车联</td><td>87</td><td>54.2</td><td>+2.65%</td><td></td></tr>
+<tr><td>00568</td><td>山东墨龙</td><td>77</td><td>3.72</td><td>+0.27%</td><td></td></tr>
+<tr><td>00881</td><td>中升控股</td><td>77</td><td>2.38</td><td>+1.49%</td><td></td></tr>
+<tr><td>01638</td><td>佳兆业集团</td><td>77</td><td>0.021</td><td>+0.00%</td><td></td></tr>
+<tr><td>02097</td><td>蜜雪集团</td><td>77</td><td>167.3</td><td>-2.85%</td><td></td></tr>
+<tr><td>02272</td><td>科拓股份</td><td>77</td><td>53.5</td><td>+2.00%</td><td></td></tr>
+<tr><td>02372</td><td>伟立控股</td><td>77</td><td>0.65</td><td>-18.24%</td><td></td></tr>
+<tr><td>02495</td><td>声通科技</td><td>77</td><td>23.4</td><td>-1.76%</td><td></td></tr></table>
+<div class="lbl" style="font-size:12px;color:#999;margin:8px 0 4px">强势动量</div>
+<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>01389</td><td>美捷汇控股</td><td>78</td><td>0.755</td><td>+45.19%</td><td></td></tr>
+<tr><td>02450</td><td>淮北绿金股份</td><td>78</td><td>18.5</td><td>+9.73%</td><td></td></tr>
+<tr><td>02583</td><td>西普尼</td><td>70</td><td>52.5</td><td>+17.08%</td><td></td></tr>
+<tr><td>00813</td><td>世茂集团</td><td>55</td><td>0.075</td><td>-7.41%</td><td></td></tr>
+<tr><td>00875</td><td>从玉智农</td><td>55</td><td>0.37</td><td>-12.94%</td><td></td></tr>
+<tr><td>02777</td><td>富力地产</td><td>55</td><td>0.221</td><td>-2.21%</td><td></td></tr>
+<tr><td>06182</td><td>乙德投资控股</td><td>55</td><td>0.77</td><td>+0.65%</td><td></td></tr>
+<tr><td>00376</td><td>云锋金融</td><td>45</td><td>2.155</td><td>+5.12%</td><td></td></tr>
+<tr><td>00810</td><td>中国铸晨８１</td><td>45</td><td>0.12</td><td>+17.65%</td><td></td></tr>
+<tr><td>01536</td><td>煜荣集团</td><td>40</td><td>0.43</td><td>-6.52%</td><td></td></tr>
+<tr><td>02536</td><td>百乐皇宫</td><td>40</td><td>0.8</td><td>+16.79%</td><td></td></tr>
+<tr><td>01613</td><td>协同通信</td><td>40</td><td>0.895</td><td>+9.15%</td><td></td></tr></table>
+
+<div class="warn">量化筛选结果仅供研究参考，不构成投资建议。盘中价为轮询抓取可能延迟，下单以券商 App 实时行情为准。</div>
+<div class="foot">stock.shmily.work · 小墨自动更新<br><a href="./history.html">查看历史选股归档</a></div>
+</div>
+</body>
+</html>
