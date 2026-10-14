@@ -3,91 +3,569 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>港股短线选股</title>
+<title>港股短线选股 · shmily.work</title>
 <style>
-body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;margin:0;padding:12px;background:#f5f6f8;color:#222}
-h1{font-size:20px;margin:8px 0}h2{font-size:16px;margin:18px 0 8px;color:#333}
-.meta{color:#888;font-size:12px;margin-bottom:6px}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;font-size:13px}
-th,td{padding:8px 6px;text-align:left;border-bottom:1px solid #eee}
-th{background:#fafbfc;color:#666;font-weight:600}
-.num{text-align:right;font-variant-numeric:tabular-nums}
-.code{color:#666}.up{color:#c0392b}.dn{color:#1e8e3e}
-.note{font-size:12px;color:#999;margin-top:14px;line-height:1.6}
-.warn{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:10px;font-size:12px;color:#7a5c00;margin-top:12px}
+*{box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;margin:0;background:#eef1f5;color:#222;-webkit-text-size-adjust:100%}
+.wrap{max-width:860px;margin:0 auto;padding:14px 12px 40px}
+.hero{background:linear-gradient(135deg,#1a2a6c,#2a4d9b);color:#fff;border-radius:14px;padding:18px 16px;margin-bottom:14px}
+.hero h1{margin:0 0 6px;font-size:21px}
+.hero .sub{font-size:12.5px;opacity:.85;line-height:1.7}
+.sec{margin:16px 0 8px;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
+.sec .cnt{font-size:12px;font-weight:400;background:#dde5f0;color:#3a5a8c;border-radius:10px;padding:2px 9px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:12px;padding:13px 14px;box-shadow:0 1px 4px rgba(20,40,80,.08)}
+.chead{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.code{font-size:13px;color:#888;font-weight:600}
+.nm{font-size:15px;font-weight:700}
+.score{font-size:12px;color:#888}.score b{color:#1a2a6c;font-size:15px}
+.badge{font-size:11px;border-radius:8px;padding:2px 8px;background:#eef1f5;color:#666;margin-left:4px}
+.badge.vg{background:#e6f4ea;color:#1e8e3e}.badge.vb{background:#fdecea;color:#c0392b}.badge.vn{background:#e8f0fe;color:#1a73e8}
+.cprice{margin:2px 0 8px}.cprice .p{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.cprice span:last-child{font-size:14px;font-weight:600;margin-left:6px}
+.up{color:#c0392b}.dn{color:#1e8e3e}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px 6px;margin-bottom:8px}
+.cgrid label{display:block;font-size:11px;color:#999;margin-bottom:1px}
+.cgrid span{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.cfac{display:flex;flex-wrap:wrap;gap:6px}
+.ftag{font-size:11px;background:#f0f4fa;color:#3a5a8c;border-radius:8px;padding:2px 8px}
+.empty{background:#fff;border-radius:12px;padding:18px;text-align:center;color:#999;font-size:13px}
+.dim{font-size:12px;color:#888;font-weight:400}
+.warn{background:#fff8e1;border:1px solid #ffe082;border-radius:10px;padding:11px 13px;font-size:12.5px;color:#7a5c00;margin-top:16px;line-height:1.7}
+.foot{font-size:11.5px;color:#aaa;margin-top:10px;text-align:center}
 </style>
 </head>
 <body>
-<h1>港股短线选股</h1>
-<div class="meta">页面生成时间 2026-10-14 07:39 · 数据日期 </div>
+<div class="wrap">
+  <div class="hero">
+    <h1>港股短线选股</h1>
+    <div class="sub">页面生成 2026-10-14 17:27 · 数据日期 —<br>
+    盘中价更新 2026-10-14 15:38（27 只候选）· 全盘约 — 只</div>
+  </div>
 
-<h2>盘中价格（27 只候选 · 更新 2026-10-14 15:38）</h2>
-<table><tr><th>代码</th><th>名称</th><th style="text-align:right">现价</th><th style="text-align:right">涨跌幅</th></tr>
-<tr><td class="code">00376</td><td>云锋金融</td><td class="num">2.065</td><td class="num dn">-4.18%</td></tr>
-<tr><td class="code">00568</td><td>山东墨龙</td><td class="num">3.88</td><td class="num up">+4.30%</td></tr>
-<tr><td class="code">00751</td><td>创维集团</td><td class="num">3.24</td><td class="num up">+6.93%</td></tr>
-<tr><td class="code">00810</td><td>中国铸晨８１</td><td class="num">0.112</td><td class="num dn">-6.67%</td></tr>
-<tr><td class="code">00813</td><td>世茂集团</td><td class="num">0.074</td><td class="num dn">-1.33%</td></tr>
-<tr><td class="code">00875</td><td>从玉智农</td><td class="num">0.37</td><td class="num ">+0.00%</td></tr>
-<tr><td class="code">00881</td><td>中升控股</td><td class="num">2.34</td><td class="num dn">-1.68%</td></tr>
-<tr><td class="code">01389</td><td>美捷汇控股</td><td class="num">0.72</td><td class="num dn">-4.64%</td></tr>
-<tr><td class="code">01536</td><td>煜荣集团</td><td class="num">0.395</td><td class="num dn">-8.14%</td></tr>
-<tr><td class="code">01613</td><td>协同通信</td><td class="num">0.96</td><td class="num up">+7.26%</td></tr>
-<tr><td class="code">01638</td><td>佳兆业集团</td><td class="num">0.021</td><td class="num ">+0.00%</td></tr>
-<tr><td class="code">01928</td><td>金沙中国有限公司</td><td class="num">11.3</td><td class="num dn">-1.05%</td></tr>
-<tr><td class="code">02097</td><td>蜜雪集团</td><td class="num">168.5</td><td class="num up">+0.72%</td></tr>
-<tr><td class="code">02272</td><td>科拓股份</td><td class="num">53.75</td><td class="num up">+0.47%</td></tr>
-<tr><td class="code">02372</td><td>伟立控股</td><td class="num">0.6</td><td class="num dn">-7.69%</td></tr>
-<tr><td class="code">02450</td><td>淮北绿金股份</td><td class="num">18.0</td><td class="num dn">-2.70%</td></tr>
-<tr><td class="code">02495</td><td>声通科技</td><td class="num">22.98</td><td class="num dn">-1.79%</td></tr>
-<tr><td class="code">02536</td><td>百乐皇宫</td><td class="num">0.945</td><td class="num up">+18.12%</td></tr>
-<tr><td class="code">02583</td><td>西普尼</td><td class="num">48.74</td><td class="num dn">-7.16%</td></tr>
-<tr><td class="code">02652</td><td>长风药业</td><td class="num">6.155</td><td class="num dn">-3.07%</td></tr>
-<tr><td class="code">02665</td><td>图达通</td><td class="num">1.38</td><td class="num dn">-5.80%</td></tr>
-<tr><td class="code">02777</td><td>富力地产</td><td class="num">0.215</td><td class="num dn">-2.71%</td></tr>
-<tr><td class="code">02889</td><td>博泰车联</td><td class="num">60.95</td><td class="num up">+12.45%</td></tr>
-<tr><td class="code">03700</td><td>映宇宙</td><td class="num">0.68</td><td class="num up">+0.74%</td></tr>
-<tr><td class="code">06182</td><td>乙德投资控股</td><td class="num">0.785</td><td class="num up">+1.95%</td></tr>
-<tr><td class="code">08360</td><td>简朴新生活</td><td class="num">0.24</td><td class="num ">+0.00%</td></tr>
-<tr><td class="code">09981</td><td>沃尔核材</td><td class="num">7.925</td><td class="num dn">-1.49%</td></tr>
-</table>
+  <div class="sec">底部反转候选 <span class="cnt">15 只</span></div>
+  <div class="grid">
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02652</span> <span class="nm">长风药业</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>107</b></div>
+  </div>
+  <div class="cprice"><span class="p">6.155</span> <span class="dn">-3.07%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>26.9</span></div>
+    <div><label>60日位置</label><span>0.04</span></div>
+    <div><label>5日涨跌</label><span class="dn">-7.80%</span></div>
+    <div><label>换手率</label><span>2.50%</span></div>
+    <div><label>量比</label><span>2.50</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
 
-<h2>底部反转候选（2026-10-14 07:56）</h2>
-<table><tr><th>代码</th><th>名称</th><th style="text-align:right">价格</th><th style="text-align:right">涨跌幅</th><th style="text-align:right">评分</th><th>估值</th></tr>
-<tr><td class="code">02652</td><td>长风药业</td><td class="num">6.35</td><td class="num up">+3.76%</td><td class="num">107</td><td>—</td></tr>
-<tr><td class="code">08360</td><td>简朴新生活</td><td class="num">0.24</td><td class="num up">+4.35%</td><td class="num">100</td><td>—</td></tr>
-<tr><td class="code">00751</td><td>创维集团</td><td class="num">3.03</td><td class="num dn">-3.19%</td><td class="num">97</td><td>—</td></tr>
-<tr><td class="code">02665</td><td>图达通</td><td class="num">1.465</td><td class="num dn">-12.80%</td><td class="num">97</td><td>—</td></tr>
-<tr><td class="code">01928</td><td>金沙中国有限公司</td><td class="num">11.42</td><td class="num up">+3.35%</td><td class="num">90</td><td>—</td></tr>
-<tr><td class="code">03700</td><td>映宇宙</td><td class="num">0.675</td><td class="num up">+13.45%</td><td class="num">90</td><td>—</td></tr>
-<tr><td class="code">09981</td><td>沃尔核材</td><td class="num">8.045</td><td class="num up">+1.32%</td><td class="num">90</td><td>—</td></tr>
-<tr><td class="code">02889</td><td>博泰车联</td><td class="num">54.2</td><td class="num up">+2.65%</td><td class="num">87</td><td>—</td></tr>
-<tr><td class="code">00568</td><td>山东墨龙</td><td class="num">3.72</td><td class="num up">+0.27%</td><td class="num">77</td><td>—</td></tr>
-<tr><td class="code">00881</td><td>中升控股</td><td class="num">2.38</td><td class="num up">+1.49%</td><td class="num">77</td><td>—</td></tr>
-<tr><td class="code">01638</td><td>佳兆业集团</td><td class="num">0.021</td><td class="num ">+0.00%</td><td class="num">77</td><td>—</td></tr>
-<tr><td class="code">02097</td><td>蜜雪集团</td><td class="num">167.3</td><td class="num dn">-2.85%</td><td class="num">77</td><td>—</td></tr>
-<tr><td class="code">02272</td><td>科拓股份</td><td class="num">53.5</td><td class="num up">+2.00%</td><td class="num">77</td><td>—</td></tr>
-<tr><td class="code">02372</td><td>伟立控股</td><td class="num">0.65</td><td class="num dn">-18.24%</td><td class="num">77</td><td>—</td></tr>
-<tr><td class="code">02495</td><td>声通科技</td><td class="num">23.4</td><td class="num dn">-1.76%</td><td class="num">77</td><td>—</td></tr>
-</table>
+<div class="card">
+  <div class="chead">
+    <div><span class="code">08360</span> <span class="nm">简朴新生活</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>100</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.240</span> <span class="">+0.00%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>33.2</span></div>
+    <div><label>60日位置</label><span>0.06</span></div>
+    <div><label>5日涨跌</label><span class="dn">-9.40%</span></div>
+    <div><label>换手率</label><span>1.40%</span></div>
+    <div><label>量比</label><span>3.50</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
 
-<h2>强势动量候选</h2>
-<table><tr><th>代码</th><th>名称</th><th style="text-align:right">价格</th><th style="text-align:right">涨跌幅</th><th style="text-align:right">评分</th><th>估值</th></tr>
-<tr><td class="code">01389</td><td>美捷汇控股</td><td class="num">0.755</td><td class="num up">+45.19%</td><td class="num">78</td><td>—</td></tr>
-<tr><td class="code">02450</td><td>淮北绿金股份</td><td class="num">18.5</td><td class="num up">+9.73%</td><td class="num">78</td><td>—</td></tr>
-<tr><td class="code">02583</td><td>西普尼</td><td class="num">52.5</td><td class="num up">+17.08%</td><td class="num">70</td><td>—</td></tr>
-<tr><td class="code">00813</td><td>世茂集团</td><td class="num">0.075</td><td class="num dn">-7.41%</td><td class="num">55</td><td>—</td></tr>
-<tr><td class="code">00875</td><td>从玉智农</td><td class="num">0.37</td><td class="num dn">-12.94%</td><td class="num">55</td><td>—</td></tr>
-<tr><td class="code">02777</td><td>富力地产</td><td class="num">0.221</td><td class="num dn">-2.21%</td><td class="num">55</td><td>—</td></tr>
-<tr><td class="code">06182</td><td>乙德投资控股</td><td class="num">0.77</td><td class="num up">+0.65%</td><td class="num">55</td><td>—</td></tr>
-<tr><td class="code">00376</td><td>云锋金融</td><td class="num">2.155</td><td class="num up">+5.12%</td><td class="num">45</td><td>—</td></tr>
-<tr><td class="code">00810</td><td>中国铸晨８１</td><td class="num">0.12</td><td class="num up">+17.65%</td><td class="num">45</td><td>—</td></tr>
-<tr><td class="code">01536</td><td>煜荣集团</td><td class="num">0.43</td><td class="num dn">-6.52%</td><td class="num">40</td><td>—</td></tr>
-<tr><td class="code">02536</td><td>百乐皇宫</td><td class="num">0.8</td><td class="num up">+16.79%</td><td class="num">40</td><td>—</td></tr>
-<tr><td class="code">01613</td><td>协同通信</td><td class="num">0.895</td><td class="num up">+9.15%</td><td class="num">40</td><td>—</td></tr>
-</table>
+<div class="card">
+  <div class="chead">
+    <div><span class="code">00751</span> <span class="nm">创维集团</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>97</b></div>
+  </div>
+  <div class="cprice"><span class="p">3.240</span> <span class="up">+6.93%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>27.8</span></div>
+    <div><label>60日位置</label><span>0.09</span></div>
+    <div><label>5日涨跌</label><span class="up">+1.70%</span></div>
+    <div><label>换手率</label><span>0.20%</span></div>
+    <div><label>量比</label><span>3.00</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
 
-<div class="warn">仅供研究参考，不构成买卖建议。盘中价为轮询抓取可能延迟，下单以券商 App 为准。</div>
-<div class="note">shmily.work · 小墨自动更新</div>
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02665</span> <span class="nm">图达通</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>97</b></div>
+  </div>
+  <div class="cprice"><span class="p">1.380</span> <span class="dn">-5.80%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>29.9</span></div>
+    <div><label>60日位置</label><span>0.00</span></div>
+    <div><label>5日涨跌</label><span class="dn">-7.60%</span></div>
+    <div><label>换手率</label><span>3.20%</span></div>
+    <div><label>量比</label><span>3.10</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">01928</span> <span class="nm">金沙中国有限公司</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>90</b></div>
+  </div>
+  <div class="cprice"><span class="p">11.300</span> <span class="dn">-1.05%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>38.7</span></div>
+    <div><label>60日位置</label><span>0.11</span></div>
+    <div><label>5日涨跌</label><span class="dn">-0.10%</span></div>
+    <div><label>换手率</label><span>0.30%</span></div>
+    <div><label>量比</label><span>1.20</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">03700</span> <span class="nm">映宇宙</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>90</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.680</span> <span class="up">+0.74%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>39.6</span></div>
+    <div><label>60日位置</label><span>0.16</span></div>
+    <div><label>5日涨跌</label><span class="dn">-1.50%</span></div>
+    <div><label>换手率</label><span>0.10%</span></div>
+    <div><label>量比</label><span>2.80</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">09981</span> <span class="nm">沃尔核材</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>90</b></div>
+  </div>
+  <div class="cprice"><span class="p">7.925</span> <span class="dn">-1.49%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>31.9</span></div>
+    <div><label>60日位置</label><span>0.07</span></div>
+    <div><label>5日涨跌</label><span class="dn">-0.40%</span></div>
+    <div><label>换手率</label><span>1.00%</span></div>
+    <div><label>量比</label><span>0.90</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02889</span> <span class="nm">博泰车联</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>87</b></div>
+  </div>
+  <div class="cprice"><span class="p">60.950</span> <span class="up">+12.45%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>27.3</span></div>
+    <div><label>60日位置</label><span>0.03</span></div>
+    <div><label>5日涨跌</label><span class="up">+1.30%</span></div>
+    <div><label>换手率</label><span>0.60%</span></div>
+    <div><label>量比</label><span>1.20</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">00568</span> <span class="nm">山东墨龙</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>77</b></div>
+  </div>
+  <div class="cprice"><span class="p">3.880</span> <span class="up">+4.30%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>39.3</span></div>
+    <div><label>60日位置</label><span>0.08</span></div>
+    <div><label>5日涨跌</label><span class="up">+5.10%</span></div>
+    <div><label>换手率</label><span>21.20%</span></div>
+    <div><label>量比</label><span>2.30</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">00881</span> <span class="nm">中升控股</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>77</b></div>
+  </div>
+  <div class="cprice"><span class="p">2.340</span> <span class="dn">-1.68%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>18.8</span></div>
+    <div><label>60日位置</label><span>0.01</span></div>
+    <div><label>5日涨跌</label><span class="dn">-6.80%</span></div>
+    <div><label>换手率</label><span>0.60%</span></div>
+    <div><label>量比</label><span>0.70</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">01638</span> <span class="nm">佳兆业集团</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>77</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.021</span> <span class="">+0.00%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>27.4</span></div>
+    <div><label>60日位置</label><span>0.07</span></div>
+    <div><label>5日涨跌</label><span class="dn">-4.50%</span></div>
+    <div><label>换手率</label><span>1.00%</span></div>
+    <div><label>量比</label><span>2.80</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02097</span> <span class="nm">蜜雪集团</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>77</b></div>
+  </div>
+  <div class="cprice"><span class="p">168.500</span> <span class="up">+0.72%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>24.6</span></div>
+    <div><label>60日位置</label><span>0.00</span></div>
+    <div><label>5日涨跌</label><span class="dn">-2.60%</span></div>
+    <div><label>换手率</label><span>0.20%</span></div>
+    <div><label>量比</label><span>1.30</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02272</span> <span class="nm">科拓股份</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>77</b></div>
+  </div>
+  <div class="cprice"><span class="p">53.750</span> <span class="up">+0.47%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>25.7</span></div>
+    <div><label>60日位置</label><span>0.02</span></div>
+    <div><label>5日涨跌</label><span class="dn">-6.10%</span></div>
+    <div><label>换手率</label><span>0.10%</span></div>
+    <div><label>量比</label><span>0.50</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02372</span> <span class="nm">伟立控股</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>77</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.600</span> <span class="dn">-7.69%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>19.3</span></div>
+    <div><label>60日位置</label><span>0.00</span></div>
+    <div><label>5日涨跌</label><span class="dn">-30.90%</span></div>
+    <div><label>换手率</label><span>0.30%</span></div>
+    <div><label>量比</label><span>3.10</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02495</span> <span class="nm">声通科技</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>77</b></div>
+  </div>
+  <div class="cprice"><span class="p">22.980</span> <span class="dn">-1.79%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>28.8</span></div>
+    <div><label>60日位置</label><span>0.00</span></div>
+    <div><label>5日涨跌</label><span class="dn">-10.90%</span></div>
+    <div><label>换手率</label><span>0.20%</span></div>
+    <div><label>量比</label><span>2.70</span></div>
+  </div>
+  <div class="cfac"></div>
+</div></div>
+
+  <div class="sec">强势动量候选 <span class="cnt">12 只</span></div>
+  <div class="grid">
+<div class="card">
+  <div class="chead">
+    <div><span class="code">01389</span> <span class="nm">美捷汇控股</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>78</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.720</span> <span class="dn">-4.64%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>74.8</span></div>
+    <div><label>60日位置</label><span>1.00</span></div>
+    <div><label>5日涨跌</label><span class="up">+32.50%</span></div>
+    <div><label>换手率</label><span>2.40%</span></div>
+    <div><label>量比</label><span>3.20</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02450</span> <span class="nm">淮北绿金股份</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>78</b></div>
+  </div>
+  <div class="cprice"><span class="p">18.000</span> <span class="dn">-2.70%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>77.7</span></div>
+    <div><label>60日位置</label><span>1.00</span></div>
+    <div><label>5日涨跌</label><span class="up">+28.90%</span></div>
+    <div><label>换手率</label><span>3.00%</span></div>
+    <div><label>量比</label><span>2.20</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02583</span> <span class="nm">西普尼</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>70</b></div>
+  </div>
+  <div class="cprice"><span class="p">48.740</span> <span class="dn">-7.16%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>51.4</span></div>
+    <div><label>60日位置</label><span>0.28</span></div>
+    <div><label>5日涨跌</label><span class="up">+34.30%</span></div>
+    <div><label>换手率</label><span>7.80%</span></div>
+    <div><label>量比</label><span>2.50</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">00813</span> <span class="nm">世茂集团</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>55</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.074</span> <span class="dn">-1.33%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>63.2</span></div>
+    <div><label>60日位置</label><span>0.65</span></div>
+    <div><label>5日涨跌</label><span class="up">+41.50%</span></div>
+    <div><label>换手率</label><span>1.20%</span></div>
+    <div><label>量比</label><span>2.00</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">00875</span> <span class="nm">从玉智农</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>55</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.370</span> <span class="">+0.00%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>59.8</span></div>
+    <div><label>60日位置</label><span>0.50</span></div>
+    <div><label>5日涨跌</label><span class="up">+42.30%</span></div>
+    <div><label>换手率</label><span>1.20%</span></div>
+    <div><label>量比</label><span>2.60</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02777</span> <span class="nm">富力地产</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>55</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.215</span> <span class="dn">-2.71%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>64.9</span></div>
+    <div><label>60日位置</label><span>0.73</span></div>
+    <div><label>5日涨跌</label><span class="up">+37.30%</span></div>
+    <div><label>换手率</label><span>0.10%</span></div>
+    <div><label>量比</label><span>2.40</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">06182</span> <span class="nm">乙德投资控股</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>55</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.785</span> <span class="up">+1.95%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>60.2</span></div>
+    <div><label>60日位置</label><span>0.76</span></div>
+    <div><label>5日涨跌</label><span class="up">+26.20%</span></div>
+    <div><label>换手率</label><span>5.20%</span></div>
+    <div><label>量比</label><span>2.00</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">00376</span> <span class="nm">云锋金融</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>45</b></div>
+  </div>
+  <div class="cprice"><span class="p">2.065</span> <span class="dn">-4.18%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>59.0</span></div>
+    <div><label>60日位置</label><span>0.78</span></div>
+    <div><label>5日涨跌</label><span class="up">+14.60%</span></div>
+    <div><label>换手率</label><span>1.40%</span></div>
+    <div><label>量比</label><span>2.60</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">00810</span> <span class="nm">中国铸晨８１</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>45</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.112</span> <span class="dn">-6.67%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>74.9</span></div>
+    <div><label>60日位置</label><span>0.98</span></div>
+    <div><label>5日涨跌</label><span class="up">+26.30%</span></div>
+    <div><label>换手率</label><span>1.50%</span></div>
+    <div><label>量比</label><span>2.80</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">01536</span> <span class="nm">煜荣集团</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>40</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.395</span> <span class="dn">-8.14%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>53.0</span></div>
+    <div><label>60日位置</label><span>0.50</span></div>
+    <div><label>5日涨跌</label><span class="up">+22.90%</span></div>
+    <div><label>换手率</label><span>0.60%</span></div>
+    <div><label>量比</label><span>0.60</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">02536</span> <span class="nm">百乐皇宫</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>40</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.945</span> <span class="up">+18.12%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>66.6</span></div>
+    <div><label>60日位置</label><span>0.39</span></div>
+    <div><label>5日涨跌</label><span class="up">+25.00%</span></div>
+    <div><label>换手率</label><span>0.20%</span></div>
+    <div><label>量比</label><span>0.30</span></div>
+  </div>
+  <div class="cfac"></div>
+</div>
+
+<div class="card">
+  <div class="chead">
+    <div><span class="code">01613</span> <span class="nm">协同通信</span> <span class="badge ">—</span></div>
+    <div class="score">评分 <b>40</b></div>
+  </div>
+  <div class="cprice"><span class="p">0.960</span> <span class="up">+7.26%</span></div>
+  <div class="cgrid">
+    <div><label>买入参考</label><span>—</span></div>
+    <div><label>目标</label><span>—</span></div>
+    <div><label>止损</label><span>—</span></div>
+    <div><label>RSI</label><span>58.5</span></div>
+    <div><label>60日位置</label><span>0.50</span></div>
+    <div><label>5日涨跌</label><span class="up">+45.50%</span></div>
+    <div><label>换手率</label><span>0.10%</span></div>
+    <div><label>量比</label><span>1.00</span></div>
+  </div>
+  <div class="cfac"></div>
+</div></div>
+
+  <div class="sec">策略跟踪</div>
+  <div class="empty">策略跟踪数据积累中</div>
+
+  <div class="warn">量化筛选结果仅供研究参考，不构成投资建议。盘中价为轮询抓取可能延迟，下单以券商 App 实时行情为准。</div>
+  <div class="foot">shmily.work · 小墨自动更新</div>
+</div>
 </body>
 </html>
