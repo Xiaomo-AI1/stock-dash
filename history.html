@@ -58,6 +58,37 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 .foot a{color:#3a5a8c}
 .nav{display:flex;gap:10px;margin:10px 0}
 .nav a{flex:1;text-align:center;background:#fff;border-radius:10px;padding:10px;font-size:14px;color:#1a2a6c;text-decoration:none;font-weight:600;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+/* ---- 新增：模型胜率板块 ---- */
+.model-hero{display:flex;gap:12px;margin:12px 0}
+.model-num{flex:1;background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(20,40,80,.07)}
+.model-num .big{font-size:34px;font-weight:800;color:#1a73e8;font-variant-numeric:tabular-nums}
+.model-num .lbl2{font-size:12px;color:#888;margin-top:4px}
+.model-num .sub2{font-size:11px;color:#aaa;margin-top:2px}
+.fbar-row{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:13px}
+.fbar-row .fn{width:86px;text-align:right;color:#555;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex-shrink:0}
+.fbar-row .fbar{flex:1;height:10px;background:#eef1f5;border-radius:6px;overflow:hidden;position:relative}
+.fbar-row .fbar i{display:block;height:100%;border-radius:6px}
+.fbar-row .fbar i.pos{background:#2e7d32}
+.fbar-row .fbar i.neg{background:#c62828}
+.fbar-row .fbar i.nsig{background:#bdbdbd}
+.fbar-row .fv{width:64px;font-size:12px;color:#666;font-variant-numeric:tabular-nums;flex-shrink:0}
+.fbar-row .fsig{width:52px;font-size:11px;text-align:center;border-radius:6px;padding:2px 0;flex-shrink:0}
+.fsig.yes{background:#e8f5e9;color:#2e7d32}.fsig.no{background:#f5f5f5;color:#999}
+/* ---- 新增：九维状态 ---- */
+.dim-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px}
+.dim-card{background:#fff;border-radius:12px;padding:12px 10px;box-shadow:0 1px 3px rgba(20,40,80,.06);position:relative}
+.dim-card .dt2{font-size:13.5px;font-weight:700;margin-bottom:6px;padding-right:18px}
+.dim-card .dc{font-size:11.5px;color:#666;line-height:1.6}
+.dim-dot{position:absolute;top:12px;right:10px;width:10px;height:10px;border-radius:50%}
+.dim-dot.g{background:#2e7d32}.dim-dot.y{background:#f9a825}.dim-dot.r{background:#c62828}
+/* ---- 新增：历史规律对照 ---- */
+.check-list{background:#fff;border-radius:12px;padding:4px 14px;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+.check-item{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #f0f2f5;font-size:13.5px;line-height:1.6}
+.check-item:last-child{border-bottom:none}
+.check-item .st{flex-shrink:0;width:22px;height:22px;border-radius:50%;text-align:center;line-height:22px;font-size:13px;font-weight:700;color:#fff;margin-top:1px}
+.st.ok{background:#2e7d32}.st.no{background:#c62828}.st.wait{background:#f9a825}
+.check-item .tx b{font-weight:700}
+.check-item .tx .note{font-size:12px;color:#888}
 .hist-date{font-size:15px;font-weight:700;margin:18px 0 8px}
 .hist-table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border-radius:10px;overflow:hidden}
 .hist-table th,.hist-table td{padding:7px 8px;border-bottom:1px solid #eef0f3;text-align:left;white-space:nowrap}

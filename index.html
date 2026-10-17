@@ -58,6 +58,37 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 .foot a{color:#3a5a8c}
 .nav{display:flex;gap:10px;margin:10px 0}
 .nav a{flex:1;text-align:center;background:#fff;border-radius:10px;padding:10px;font-size:14px;color:#1a2a6c;text-decoration:none;font-weight:600;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+/* ---- 新增：模型胜率板块 ---- */
+.model-hero{display:flex;gap:12px;margin:12px 0}
+.model-num{flex:1;background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(20,40,80,.07)}
+.model-num .big{font-size:34px;font-weight:800;color:#1a73e8;font-variant-numeric:tabular-nums}
+.model-num .lbl2{font-size:12px;color:#888;margin-top:4px}
+.model-num .sub2{font-size:11px;color:#aaa;margin-top:2px}
+.fbar-row{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:13px}
+.fbar-row .fn{width:86px;text-align:right;color:#555;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex-shrink:0}
+.fbar-row .fbar{flex:1;height:10px;background:#eef1f5;border-radius:6px;overflow:hidden;position:relative}
+.fbar-row .fbar i{display:block;height:100%;border-radius:6px}
+.fbar-row .fbar i.pos{background:#2e7d32}
+.fbar-row .fbar i.neg{background:#c62828}
+.fbar-row .fbar i.nsig{background:#bdbdbd}
+.fbar-row .fv{width:64px;font-size:12px;color:#666;font-variant-numeric:tabular-nums;flex-shrink:0}
+.fbar-row .fsig{width:52px;font-size:11px;text-align:center;border-radius:6px;padding:2px 0;flex-shrink:0}
+.fsig.yes{background:#e8f5e9;color:#2e7d32}.fsig.no{background:#f5f5f5;color:#999}
+/* ---- 新增：九维状态 ---- */
+.dim-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px}
+.dim-card{background:#fff;border-radius:12px;padding:12px 10px;box-shadow:0 1px 3px rgba(20,40,80,.06);position:relative}
+.dim-card .dt2{font-size:13.5px;font-weight:700;margin-bottom:6px;padding-right:18px}
+.dim-card .dc{font-size:11.5px;color:#666;line-height:1.6}
+.dim-dot{position:absolute;top:12px;right:10px;width:10px;height:10px;border-radius:50%}
+.dim-dot.g{background:#2e7d32}.dim-dot.y{background:#f9a825}.dim-dot.r{background:#c62828}
+/* ---- 新增：历史规律对照 ---- */
+.check-list{background:#fff;border-radius:12px;padding:4px 14px;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+.check-item{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #f0f2f5;font-size:13.5px;line-height:1.6}
+.check-item:last-child{border-bottom:none}
+.check-item .st{flex-shrink:0;width:22px;height:22px;border-radius:50%;text-align:center;line-height:22px;font-size:13px;font-weight:700;color:#fff;margin-top:1px}
+.st.ok{background:#2e7d32}.st.no{background:#c62828}.st.wait{background:#f9a825}
+.check-item .tx b{font-weight:700}
+.check-item .tx .note{font-size:12px;color:#888}
 .hist-date{font-size:15px;font-weight:700;margin:18px 0 8px}
 .hist-table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border-radius:10px;overflow:hidden}
 .hist-table th,.hist-table td{padding:7px 8px;border-bottom:1px solid #eef0f3;text-align:left;white-space:nowrap}
@@ -70,7 +101,7 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 
 <div class="topbar">15 / 2 只 <small>（反转 / 动量）</small></div>
 <div class="info"><div class="lbl">量化基础数据更新</div><div class="dt">2026-10-16 11:14</div>
-<div class="lbl" style="margin-top:8px">页面生成 2026-10-17 01:29 · 盘中价更新 2026-10-16 收盘（7 只）· 全盘约 2815 只</div></div>
+<div class="lbl" style="margin-top:8px">页面生成 2026-10-17 14:17 · 盘中价更新 2026-10-16 收盘（7 只）· 全盘约 2815 只</div></div>
 
 <div class="sec"><h2>🎯 我的盯盘 <span class="cnt">3 只</span></h2><div class="sub">持仓与观察名单，15分钟轮询更新</div></div>
 
@@ -770,6 +801,58 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
     <button class="trend-btn" onclick='showTrend('02583', '西普尼', [])'>查看走势图</button>
   </details>
 </div>
+
+
+<div class="sec"><h2>📊 模型胜率 <span class="cnt">logistic</span></h2>
+<div class="sub">14.4万样本训练，时间切分样本外验证 · 2026-10-17</div></div>
+<div class="model-hero">
+  <div class="model-num"><div class="big">42.9%</div><div class="lbl2">模型选中命中率</div><div class="sub2">v3启发式为27.2%</div></div>
+  <div class="model-num"><div class="big">0.745</div><div class="lbl2">AUC</div><div class="sub2">0.5为随机，1为完美</div></div>
+</div>
+<div class="info"><div class="lbl">因子系数（logistic回归，标准化后）</div>
+<div style="margin-top:8px"><div class="fbar-row"><div class="fn">vol20 波动率</div><div class="fbar"><i class="pos" style="width:100%"></i></div><div class="fv">+0.675</div><span class="fsig yes">显著</span></div>
+<div class="fbar-row"><div class="fn">vr 量比</div><div class="fbar"><i class="pos" style="width:19%"></i></div><div class="fv">+0.127</div><span class="fsig yes">显著</span></div>
+<div class="fbar-row"><div class="fn">bias10 乖离</div><div class="fbar"><i class="pos" style="width:15%"></i></div><div class="fv">+0.103</div><span class="fsig yes">显著</span></div>
+<div class="fbar-row"><div class="fn">turnover 换手</div><div class="fbar"><i class="pos" style="width:10%"></i></div><div class="fv">+0.070</div><span class="fsig yes">显著</span></div>
+<div class="fbar-row"><div class="fn">pos60 位置</div><div class="fbar"><i class="pos" style="width:7%"></i></div><div class="fv">+0.050</div><span class="fsig yes">显著</span></div>
+<div class="fbar-row"><div class="fn">pos250 长周期</div><div class="fbar"><i class="neg" style="width:16%"></i></div><div class="fv">-0.111</div><span class="fsig yes">显著</span></div>
+<div class="fbar-row"><div class="fn">ret5 5日涨幅</div><div class="fbar"><i class="neg" style="width:13%"></i></div><div class="fv">-0.085</div><span class="fsig yes">显著</span></div>
+<div class="fbar-row"><div class="fn">rsi</div><div class="fbar"><i class="nsig" style="width:3%"></i></div><div class="fv">-0.020</div><span class="fsig no">不显著</span></div>
+<div class="fbar-row"><div class="fn">day_pct 当日</div><div class="fbar"><i class="nsig" style="width:3%"></i></div><div class="fv">+0.013</div><span class="fsig no">不显著</span></div>
+<div class="fbar-row"><div class="fn">macd_dif</div><div class="fbar"><i class="nsig" style="width:3%"></i></div><div class="fv">+0.003</div><span class="fsig no">不显著</span></div>
+<div class="fbar-row"><div class="fn">macd_dea</div><div class="fbar"><i class="nsig" style="width:3%"></i></div><div class="fv">-0.002</div><span class="fsig no">不显著</span></div>
+<div class="fbar-row"><div class="fn">macd_cross 金叉</div><div class="fbar"><i class="nsig" style="width:3%"></i></div><div class="fv">+0.002</div><span class="fsig no">不显著</span></div></div>
+<div class="lbl" style="margin-top:10px;line-height:1.8">💡 <b>技术因子只解释6%</b>（伪R²=0.064），剩下94%靠政策、情绪、资金。<br>
+vol20（波动率）是最强因子：短线本质是在买波动。</div></div>
+
+
+
+<div class="sec"><h2>🧭 九维状态 <span class="cnt">2026-10-17</span></h2>
+<div class="sub">政策·产业·情绪·资金·国际·行业·历史·新闻·数学 —— 多维交叉</div></div>
+<div class="dim-grid">
+<div class="dim-card"><span class="dim-dot g"></span><div class="dt2">政策风向</div><div class="dc">扶新质稳内需治内卷：AI/半导体/机器人/生物医药最高优先级</div></div><div class="dim-card"><span class="dim-dot g"></span><div class="dt2">产业周期</div><div class="dc">AI算力/半导体/机器人成长期；地产链/教培收缩期</div></div><div class="dim-card"><span class="dim-dot y"></span><div class="dt2">舆论情绪</div><div class="dc">分歧偏谨慎：恒科跌回起点悲观极致，打新退烧</div></div><div class="dim-card"><span class="dim-dot y"></span><div class="dt2">资金流向</div><div class="dc">南向一周由买转卖，大市缩量至1782亿</div></div><div class="dim-card"><span class="dim-dot y"></span><div class="dt2">国际环境</div><div class="dc">关税降温、科技加压、金融平稳，三线分化</div></div><div class="dim-card"><span class="dim-dot g"></span><div class="dt2">行业板块</div><div class="dc">政策点名交集：生物医药/AI半导体/机器人/低空</div></div><div class="dim-card"><span class="dim-dot y"></span><div class="dt2">历史规律</div><div class="dc">启动需三合一：悲观缩量+政策拳+放量2-4倍</div></div><div class="dim-card"><span class="dim-dot g"></span><div class="dt2">新闻反指</div><div class="dc">当前是悲观不是亢奋，见顶信号一条没触发</div></div><div class="dim-card"><span class="dim-dot g"></span><div class="dt2">数学模型</div><div class="dc">AUC 0.745，技术面解释6%，已上线v3权重</div></div>
+</div>
+<div class="lbl" style="margin-top:8px;font-size:12px;color:#999">🟢利好/正常 🟡谨慎/观望 🔴风险 —— 截至10-16收盘快照，非实时</div>
+
+
+
+<div class="sec"><h2>📜 历史规律对照 <span class="cnt">启动/见顶</span></h2>
+<div class="sub">对照历史大涨启动与见顶的共同信号</div></div>
+<div class="lbl" style="font-size:13px;font-weight:700;margin:10px 0 6px">🚀 大涨启动三合一（当前状态）</div>
+<div class="check-list"><div class="check-item"><span class="st ok">✓</span><div class="tx"><b>极度悲观+缩量</b><br><span class="note">恒科跌回2024-9起点，悲观接近极致；大市缩量至1782亿</span></div></div>
+<div class="check-item"><span class="st wait">…</span><div class="tx"><b>超预期政策组合拳</b><br><span class="note">暂无新组合拳；10月9日19项新质措施已落地</span></div></div>
+<div class="check-item"><span class="st no">✗</span><div class="tx"><b>成交量级跃升2-4倍</b><br><span class="note">未出现，大市反而缩量</span></div></div>
+<div class="check-item"><span class="st no">✗</span><div class="tx"><b>南向/外资回流</b><br><span class="note">南向连续卖出，未回流</span></div></div></div>
+<div class="lbl" style="font-size:13px;font-weight:700;margin:14px 0 6px">📰 新闻反指：5条见顶信号（当前状态）</div>
+<div class="check-list"><div class="check-item"><span class="st no">✗</span><div class="tx"><b>大众媒体封面讲股市</b><br><span class="note">未出现</span></div></div>
+<div class="check-item"><span class="st no">✗</span><div class="tx"><b>官媒“只是开始”定性背书</b><br><span class="note">未出现</span></div></div>
+<div class="check-item"><span class="st no">✗</span><div class="tx"><b>话题出圈：出租车司机都在聊</b><br><span class="note">未出现</span></div></div>
+<div class="check-item"><span class="st no">✗</span><div class="tx"><b>标题党造富叙事刷屏</b><br><span class="note">未出现</span></div></div>
+<div class="check-item"><span class="st no">✗</span><div class="tx"><b>融资/成交极端值</b><br><span class="note">未出现（大市缩量）</span></div></div></div>
+<div class="lbl" style="margin-top:8px;font-size:12px;color:#999;line-height:1.7">
+💡 当前：启动条件只满足1/4（悲观到位，其他没来）；见顶信号0/5触发。<br>
+这是描述性对照，不是预测。新闻反指需满足"趋势已久+涨幅巨大"前提才有效。</div>
+
 
 <div class="warn">量化筛选结果仅供研究参考，不构成投资建议。盘中价为轮询抓取可能延迟，下单以券商 App 实时行情为准。</div>
 <div class="foot">stock.shmily.work · 小墨自动更新<br><a href="./history.html">查看历史选股归档</a></div>
