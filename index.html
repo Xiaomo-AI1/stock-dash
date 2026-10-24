@@ -102,12 +102,58 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 </style>
 </head>
 <body>
+<!-- SIDEBAR-START -->
+<!-- 共享边栏片段：index.html / history.html / a.html / us.html 共用同一份。
+     生成器把当前页入口替换为 active，其余一字不动。
+     样式与脚本自带，随片段一起注入，不改各页原有 CSS 与正文。 -->
+<style>
+.sb{position:fixed;left:12px;top:12px;bottom:12px;width:196px;z-index:60;background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(20,40,80,.12);padding:14px 12px;display:flex;flex-direction:column;gap:8px;transition:transform .2s ease}
+.sb h3{margin:2px 4px 0;font-size:16px}
+.sb .sbsub{font-size:11.5px;color:#999;margin:0 4px 6px;line-height:1.6}
+.sb-link{display:block;text-decoration:none;color:#222;background:#f1f3f6;border-radius:10px;padding:10px 12px;font-size:14px;font-weight:600}
+.sb-link small{display:block;font-size:11.5px;color:#888;font-weight:400;margin-top:2px}
+.sb-link.active{background:#e8f0fe;color:#1a73e8;box-shadow:inset 0 0 0 1px #aecbfa}
+.sb-link.active small{color:#1a73e8}
+.sb-collapse{margin-top:auto;background:#fff;border:1px solid #e5e9ef;border-radius:10px;padding:9px;font-size:13px;cursor:pointer;color:#555}
+.sb-expand{position:fixed;left:12px;top:12px;z-index:60;display:none;background:#1976d2;color:#fff;border:none;border-radius:10px;padding:10px 14px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 1px 4px rgba(20,40,80,.2)}
+body.sb-hidden .sb{transform:translateX(-120%)}
+body.sb-hidden .sb-expand{display:block}
+@media (min-width:761px){body:not(.sb-hidden) .wrap{margin-left:212px;margin-right:12px}}
+@media (max-width:760px){.sb{top:0;bottom:0;left:0;border-radius:0 14px 14px 0}}
+</style>
+<aside class="sb" aria-label="市场导航">
+  <h3>📊 市场</h3>
+  <div class="sbsub">stock.shmily.work<br>切换市场，不改变持仓数据</div>
+  <a class="sb-link active" href="./index.html">港股<small>港股短线选股 · 当日 / 历史</small></a>
+  <a class="sb-link " href="./a.html">A股<small>A股短线选股</small></a>
+  <a class="sb-link " href="./us.html">美股<small>美股短线选股</small></a>
+  <button class="sb-collapse" onclick="sbToggle()">‹ 收起边栏</button>
+</aside>
+<button class="sb-expand" onclick="sbToggle()">☰ 市场</button>
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('sb-hidden');
+    if (saved === '1') document.body.classList.add('sb-hidden');
+    else if (saved === '0') document.body.classList.remove('sb-hidden');
+    else if (window.innerWidth <= 760) document.body.classList.add('sb-hidden');
+  }catch(e){
+    if (window.innerWidth <= 760) document.body.classList.add('sb-hidden');
+  }
+})();
+function sbToggle(){
+  var hidden = document.body.classList.toggle('sb-hidden');
+  try{ localStorage.setItem('sb-hidden', hidden ? '1' : '0'); }catch(e){}
+}
+</script>
+<!-- SIDEBAR-END -->
+
 <div class="wrap">
 <div class="nav"><a href="./index.html">当日选股</a><a href="./history.html">历史归档</a></div>
 
 <div class="topbar">13 / 15 只 <small>（反转 / 动量）</small></div>
 <div class="info"><div class="lbl">量化基础数据更新</div><div class="dt">2026-10-22 10:20</div>
-<div class="lbl" style="margin-top:8px">页面生成 2026-10-23 10:05 · 盘中价更新 2026-10-23 收盘（31 只）· 全盘约 2813 只</div></div>
+<div class="lbl" style="margin-top:8px">页面生成 2026-10-24 19:00 · 盘中价更新 2026-10-23 收盘（31 只）· 全盘约 2813 只</div></div>
 
 <div class="sec"><h2>🎯 我的盯盘 <span class="cnt">3 只</span></h2><div class="sub">持仓与观察名单，15分钟轮询更新</div></div>
 
@@ -1393,6 +1439,14 @@ vol20（波动率）是最强因子：短线本质是在买波动。</div></div>
 💡 当前：启动条件只满足1/4（悲观到位，其他没来）；见顶信号0/5触发。<br>
 这是描述性对照，不是预测。新闻反指需满足"趋势已久+涨幅巨大"前提才有效。</div>
 
+
+<!-- ARCHIVE-START -->
+<div class="sec"><h2>🗂️ 存档 <span class="cnt">港股</span></h2>
+<div class="sub">每日存盘小分类：数据、预测、方法、战绩各归一框；缺失字段写“暂无/待更新”，不填假数</div></div>
+<div class="dim-grid">
+<div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">🗃️ 数据源</div><div class="lbl" style="margin-top:8px">数据来源</div><div style="font-size:13.5px;line-height:1.7">新浪全盘快照＋东方财富日K（前复权）</div><div class="lbl" style="margin-top:8px">覆盖范围</div><div style="font-size:13.5px;line-height:1.7">约 2813 只 · 数据日 20261022</div><div class="lbl" style="margin-top:8px">更新时间</div><div style="font-size:13.5px;line-height:1.7">2026-10-22 10:20</div><div class="lbl" style="margin-top:8px">已知缺口</div><div style="font-size:13.5px;line-height:1.7">暂无/待更新</div></div><div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">🔮 当日预测</div><div class="lbl" style="margin-top:8px">当日预测条数</div><div style="font-size:13.5px;line-height:1.7">15</div><div class="lbl" style="margin-top:8px">偏涨 / 偏跌分布</div><div style="font-size:13.5px;line-height:1.7">偏涨 9 只 / 偏跌 6 只</div><div class="lbl" style="margin-top:8px">概率口径</div><div style="font-size:13.5px;line-height:1.7">模型预测短期（1–2 天）涨到 +5–7% 目标的概率，不是涨跌保证。</div><div class="lbl" style="margin-top:8px">方向说明</div><div style="font-size:13.5px;line-height:1.7">偏跌仅指 2 天内涨到 +5% 以上的概率不到一半，不是预测会跌；请按概率排序看头部。</div><div class="lbl" style="margin-top:8px">分布统计口径</div><div style="font-size:13.5px;line-height:1.7">按 prob_data.json 有概率条目计；无概率/数据缺口条目不计入</div></div><div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">🧪 方法说明</div><div class="lbl" style="margin-top:8px">模型</div><div style="font-size:13.5px;line-height:1.7">随机森林＋校准（生产模型）</div><div class="lbl" style="margin-top:8px">因子数</div><div style="font-size:13.5px;line-height:1.7">32 个</div><div class="lbl" style="margin-top:8px">主要因子族</div><div style="font-size:13.5px;line-height:1.7">暂无/待更新</div><div class="lbl" style="margin-top:8px">标签定义</div><div style="font-size:13.5px;line-height:1.7">后 2 日最高价涨幅 ≥5% 为正样本。</div><div class="lbl" style="margin-top:8px">回测留出集指标</div><div style="font-size:13.5px;line-height:1.7">AUC 0.766；前 20 命中率 49.3%；log-loss 0.4551；2026-10-24 32 因子换装报告（留出集）；页面上方「模型胜率」板块为旧 logistic 版，待统一</div></div><div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">📒 准确率战绩</div><div class="lbl" style="margin-top:8px">累计 / 已核验 / 正确</div><div style="font-size:13.5px;line-height:1.7">27 / 12 / 3</div><div class="lbl" style="margin-top:8px">准确率</div><div style="font-size:13.5px;line-height:1.7">25.0%</div><div class="lbl" style="margin-top:8px">待核验条数</div><div style="font-size:13.5px;line-height:1.7">15</div><div class="lbl" style="margin-top:8px">最近预测明细（前 5 条，含待核验）</div><div style="font-size:13.5px;line-height:1.7"><table class="prob-table" style="margin-top:8px"><tr><th>预测日</th><th>代码</th><th>名称</th><th>方向</th><th>概率</th><th>实际涨跌</th><th>结果</th></tr><tr><td>2026-10-23</td><td>01196</td><td>伟禄科技股份</td><td>偏涨</td><td>68.2%</td><td>—</td><td>待核验</td></tr><tr><td>2026-10-23</td><td>02477</td><td>经纬天地</td><td>偏涨</td><td>65.5%</td><td>—</td><td>待核验</td></tr><tr><td>2026-10-23</td><td>00553</td><td>南京熊猫电子股份</td><td>偏跌</td><td>16.7%</td><td>—</td><td>待核验</td></tr><tr><td>2026-10-23</td><td>00209</td><td>万维智能科技</td><td>偏涨</td><td>60.8%</td><td>—</td><td>待核验</td></tr><tr><td>2026-10-23</td><td>06608</td><td>百融智能－Ｗ</td><td>偏跌</td><td>34.9%</td><td>—</td><td>待核验</td></tr></table></div></div>
+</div>
+<!-- ARCHIVE-END -->
 
 <div class="warn">量化筛选结果仅供研究参考，不构成投资建议。盘中价为轮询抓取可能延迟，下单以券商 App 实时行情为准。</div>
 <div class="foot">stock.shmily.work · 小墨自动更新<br><a href="./history.html">查看历史选股归档</a></div>

@@ -102,6 +102,52 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 </style>
 </head>
 <body>
+<!-- SIDEBAR-START -->
+<!-- 共享边栏片段：index.html / history.html / a.html / us.html 共用同一份。
+     生成器把当前页入口替换为 active，其余一字不动。
+     样式与脚本自带，随片段一起注入，不改各页原有 CSS 与正文。 -->
+<style>
+.sb{position:fixed;left:12px;top:12px;bottom:12px;width:196px;z-index:60;background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(20,40,80,.12);padding:14px 12px;display:flex;flex-direction:column;gap:8px;transition:transform .2s ease}
+.sb h3{margin:2px 4px 0;font-size:16px}
+.sb .sbsub{font-size:11.5px;color:#999;margin:0 4px 6px;line-height:1.6}
+.sb-link{display:block;text-decoration:none;color:#222;background:#f1f3f6;border-radius:10px;padding:10px 12px;font-size:14px;font-weight:600}
+.sb-link small{display:block;font-size:11.5px;color:#888;font-weight:400;margin-top:2px}
+.sb-link.active{background:#e8f0fe;color:#1a73e8;box-shadow:inset 0 0 0 1px #aecbfa}
+.sb-link.active small{color:#1a73e8}
+.sb-collapse{margin-top:auto;background:#fff;border:1px solid #e5e9ef;border-radius:10px;padding:9px;font-size:13px;cursor:pointer;color:#555}
+.sb-expand{position:fixed;left:12px;top:12px;z-index:60;display:none;background:#1976d2;color:#fff;border:none;border-radius:10px;padding:10px 14px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 1px 4px rgba(20,40,80,.2)}
+body.sb-hidden .sb{transform:translateX(-120%)}
+body.sb-hidden .sb-expand{display:block}
+@media (min-width:761px){body:not(.sb-hidden) .wrap{margin-left:212px;margin-right:12px}}
+@media (max-width:760px){.sb{top:0;bottom:0;left:0;border-radius:0 14px 14px 0}}
+</style>
+<aside class="sb" aria-label="市场导航">
+  <h3>📊 市场</h3>
+  <div class="sbsub">stock.shmily.work<br>切换市场，不改变持仓数据</div>
+  <a class="sb-link active" href="./index.html">港股<small>港股短线选股 · 当日 / 历史</small></a>
+  <a class="sb-link " href="./a.html">A股<small>A股短线选股</small></a>
+  <a class="sb-link " href="./us.html">美股<small>美股短线选股</small></a>
+  <button class="sb-collapse" onclick="sbToggle()">‹ 收起边栏</button>
+</aside>
+<button class="sb-expand" onclick="sbToggle()">☰ 市场</button>
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('sb-hidden');
+    if (saved === '1') document.body.classList.add('sb-hidden');
+    else if (saved === '0') document.body.classList.remove('sb-hidden');
+    else if (window.innerWidth <= 760) document.body.classList.add('sb-hidden');
+  }catch(e){
+    if (window.innerWidth <= 760) document.body.classList.add('sb-hidden');
+  }
+})();
+function sbToggle(){
+  var hidden = document.body.classList.toggle('sb-hidden');
+  try{ localStorage.setItem('sb-hidden', hidden ? '1' : '0'); }catch(e){}
+}
+</script>
+<!-- SIDEBAR-END -->
+
 <div class="wrap">
 <div class="nav"><a href="./index.html">当日选股</a><a href="./history.html">历史归档</a></div>
 <div class="topbar">历史选股归档</div><div class="info"><div class="lbl">共收录</div><div class="dt">6 期</div><div class="lbl" style="margin-top:6px">按准确率排序（高→低）<br>标准：1-2天涨≥5% 或 3-7天涨≥15% 算准</div></div>
