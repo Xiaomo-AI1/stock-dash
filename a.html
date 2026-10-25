@@ -6,7 +6,7 @@
 <title>A股短线选股 · stock.shmily.work</title>
 <style>
 *{box-sizing:border-box}
-body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;margin:0;background:#f2f4f7;color:#222;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;margin:0;background:#f2f4f7;color:#222;-webkit-text-size-adjust:100%;overflow-x:hidden}
 .wrap{max-width:860px;margin:0 auto;padding:12px 12px 40px}
 .topbar{text-align:center;font-size:18px;font-weight:700;margin:6px 0 10px}
 .topbar small{color:#888;font-weight:400}
@@ -21,7 +21,7 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 .chead .nm{font-size:17px;font-weight:700}
 .chead .code{font-size:12.5px;color:#888;font-family:ui-monospace,Menlo,monospace;margin-top:2px}
 .prow{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
-.pcol{flex:1}
+.pcol{flex:1;min-width:0}
 .lbl{font-size:12px;color:#999;margin-bottom:3px}
 .pval{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
 .pct .big{font-size:17px;font-weight:700}
@@ -103,7 +103,7 @@ document.addEventListener('click', function(e){
 
 <div class="topbar">A股短线选股 <small>（4928 只）</small></div>
 <div class="info"><div class="lbl">量化基础数据更新</div><div class="dt">2026-10-25</div>
-<div class="lbl" style="margin-top:8px">页面生成 2026-10-25 15:37 · 全盘约 5061 只</div></div>
+<div class="lbl" style="margin-top:8px">页面生成 2026-10-25 16:39 · 全盘约 5061 只</div></div>
 
 <div class="sec"><h2>当日候选 <span class="cnt">4928 只</span></h2><div class="sub">模型当日候选</div></div>
 
