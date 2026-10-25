@@ -10,7 +10,7 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 .wrap{max-width:860px;margin:0 auto;padding:12px 12px 40px}
 .topbar{text-align:center;font-size:18px;font-weight:700;margin:6px 0 10px}
 .topbar small{color:#888;font-weight:400}
-.info{background:#fff;border-radius:12px;padding:14px 16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+.info{background:#fff;border-radius:14px;padding:14px 16px;margin-bottom:12px;box-shadow:0 1px 4px rgba(20,40,80,.07)}
 .info .lbl{font-size:12px;color:#999}
 .info .dt{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px}
 .sec{margin:18px 0 4px}
@@ -82,7 +82,7 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 .dim-dot{position:absolute;top:12px;right:10px;width:10px;height:10px;border-radius:50%}
 .dim-dot.g{background:#2e7d32}.dim-dot.y{background:#f9a825}.dim-dot.r{background:#c62828}
 /* ---- 新增：历史规律对照 ---- */
-.check-list{background:#fff;border-radius:12px;padding:4px 14px;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+.check-list{background:#fff;border-radius:14px;padding:4px 14px;margin-bottom:12px;box-shadow:0 1px 4px rgba(20,40,80,.07)}
 .check-item{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #f0f2f5;font-size:13.5px;line-height:1.6}
 .check-item:last-child{border-bottom:none}
 .check-item .st{flex-shrink:0;width:22px;height:22px;border-radius:50%;text-align:center;line-height:22px;font-size:13px;font-weight:700;color:#fff;margin-top:1px}
@@ -92,11 +92,12 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 .hist-date{font-size:15px;font-weight:700;margin:18px 0 8px}
 .hist-day{margin:0 0 12px}
 .hist-day summary{cursor:pointer;list-style-position:inside}
-.hist-table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border-radius:10px;overflow:hidden}
+.hist-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.tbl-wrap{overflow-x:auto;background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(20,40,80,.07);margin-bottom:12px}
 .hist-table th,.hist-table td{padding:7px 8px;border-bottom:1px solid #eef0f3;text-align:left;white-space:nowrap}
 .hist-table th{background:#f6f8fa;color:#666;font-weight:600}
 /* ---- 概率推送板块 ---- */
-.prob-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(20,40,80,.06)}
+.prob-table{width:100%;border-collapse:collapse;font-size:13px}
 .prob-table th,.prob-table td{padding:7px 8px;border-bottom:1px solid #eef0f3;text-align:left;white-space:nowrap}
 .prob-table th{background:#f6f8fa;color:#666;font-weight:600}
 .prob-table td.num{font-variant-numeric:tabular-nums}
@@ -162,7 +163,7 @@ document.addEventListener('click', function(e){
 <details class="hist-day">
 <summary class="hist-date">2026-10-22（反转 13 / 动量 15） <span class="vbadge">暂无数据</span></summary>
 <div class="lbl" style="font-size:12px;color:#999;margin-bottom:4px">底部反转</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>00068</td><td>MANYCORE TECH</td><td>50</td><td>2.95</td><td>-4.53%</td><td>贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(16)</td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>00068</td><td>MANYCORE TECH</td><td>50</td><td>2.95</td><td>-4.53%</td><td>贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(16)</td></tr>
 <tr><td>01196</td><td>伟禄科技股份</td><td>50</td><td>0.275</td><td>-89.81%</td><td>贴近52周低点(1%)；贴近60日低点(0%)；RSI超卖(18)</td></tr>
 <tr><td>01779</td><td>天辰生物－Ｂ</td><td>50</td><td>62.5</td><td>-9.62%</td><td>贴近52周低点(1%)；贴近60日低点(0%)；RSI超卖(26)</td></tr>
 <tr><td>02477</td><td>经纬天地</td><td>50</td><td>0.106</td><td>-17.19%</td><td>贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(17)</td></tr>
@@ -174,9 +175,9 @@ document.addEventListener('click', function(e){
 <tr><td>09611</td><td>龙旗科技</td><td>45</td><td>19.66</td><td>-2.77%</td><td>贴近52周低点(8%)；60日低位区(18%)；MACD近3日金叉</td></tr>
 <tr><td>00638</td><td>广和通</td><td>40</td><td>6.465</td><td>-4.43%</td><td>贴近52周低点(5%)；60日中低位(30%)；MACD近3日金叉</td></tr>
 <tr><td>03828</td><td>明辉国际</td><td>40</td><td>0.69</td><td>+0.73%</td><td>贴近52周低点(14%)；60日低位区(12%)；量比2.7放量</td></tr>
-<tr><td>06651</td><td>五一视界</td><td>40</td><td>49.88</td><td>-1.62%</td><td>贴近52周低点(13%)；60日中低位(23%)；MACD近3日金叉</td></tr></table>
+<tr><td>06651</td><td>五一视界</td><td>40</td><td>49.88</td><td>-1.62%</td><td>贴近52周低点(13%)；60日中低位(23%)；MACD近3日金叉</td></tr></table></div>
 <div class="lbl" style="font-size:12px;color:#999;margin:8px 0 4px">强势动量</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>02692</td><td>兆威机电</td><td>85</td><td>34.18</td><td>+21.29%</td><td>5日+18%；换手26.8%；量比3.1</td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>02692</td><td>兆威机电</td><td>85</td><td>34.18</td><td>+21.29%</td><td>5日+18%；换手26.8%；量比3.1</td></tr>
 <tr><td>08090</td><td>宝盖新材</td><td>80</td><td>4.95</td><td>+10.00%</td><td>5日+24%；量比3.4；RSI强势(61)</td></tr>
 <tr><td>01936</td><td>利特米</td><td>70</td><td>3.715</td><td>+21.01%</td><td>5日+50%；创60日新高；入选日大涨(+21.0%)</td></tr>
 <tr><td>00209</td><td>万维智能科技</td><td>65</td><td>0.95</td><td>-5.00%</td><td>5日+54%；量比2.1；RSI强势(56)</td></tr>
@@ -190,13 +191,13 @@ document.addEventListener('click', function(e){
 <tr><td>01825</td><td>STERLING GP</td><td>50</td><td>1.91</td><td>+6.11%</td><td>5日+13%；换手5.8%；入选日大涨(+6.1%)</td></tr>
 <tr><td>02663</td><td>应力控股</td><td>45</td><td>0.595</td><td>-9.16%</td><td>5日+49%；量比3.7</td></tr>
 <tr><td>00368</td><td>德合集团</td><td>40</td><td>3.7</td><td>-2.63%</td><td>5日+18%；RSI强势(58)</td></tr>
-<tr><td>01333</td><td>博雷顿</td><td>40</td><td>15.3</td><td>+0.66%</td><td>5日+13%；RSI强势(56)</td></tr></table>
+<tr><td>01333</td><td>博雷顿</td><td>40</td><td>15.3</td><td>+0.66%</td><td>5日+13%；RSI强势(56)</td></tr></table></div>
 </details>
 
 <details class="hist-day">
 <summary class="hist-date">2026-10-21（反转 17 / 动量 26） <span class="vbadge">暂无数据</span></summary>
 <div class="lbl" style="font-size:12px;color:#999;margin-bottom:4px">底部反转</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>03310</td><td>云英谷科技</td><td>55</td><td>18.99</td><td>+20.19%</td><td>贴近52周低点(12%)；60日低位区(20%)；RSI上穿30(19→35)</td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>03310</td><td>云英谷科技</td><td>55</td><td>18.99</td><td>+20.19%</td><td>贴近52周低点(12%)；60日低位区(20%)；RSI上穿30(19→35)</td></tr>
 <tr><td>06681</td><td>脑动极光－Ｂ</td><td>55</td><td>0.755</td><td>+17.05%</td><td>贴近52周低点(2%)；60日低位区(12%)；RSI超卖(28)</td></tr>
 <tr><td>00068</td><td>MANYCORE TECH</td><td>50</td><td>3.09</td><td>-13.20%</td><td>贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(16)</td></tr>
 <tr><td>01384</td><td>滴普科技</td><td>50</td><td>17.35</td><td>+10.30%</td><td>贴近52周低点(2%)；贴近60日低点(10%)；RSI超卖(28)</td></tr>
@@ -210,9 +211,9 @@ document.addEventListener('click', function(e){
 <tr><td>02635</td><td>诺比侃</td><td>45</td><td>8.2</td><td>-1.44%</td><td>贴近52周低点(0%)；贴近60日低点(0%)；量比2.7放量</td></tr>
 <tr><td>00206</td><td>华商能源</td><td>40</td><td>0.202</td><td>+9.19%</td><td>贴近52周低点(5%)；60日中低位(29%)；MACD近3日金叉</td></tr>
 <tr><td>00209</td><td>万维智能科技</td><td>40</td><td>1.0</td><td>+3.63%</td><td>贴近52周低点(10%)；60日低位区(11%)；量比2.7放量</td></tr>
-<tr><td>00328</td><td>ALCO HOLDINGS</td><td>40</td><td>0.49</td><td>+4.26%</td><td>贴近52周低点(6%)；量比2.9放量；止跌首阳(+4.3%)</td></tr></table>
+<tr><td>00328</td><td>ALCO HOLDINGS</td><td>40</td><td>0.49</td><td>+4.26%</td><td>贴近52周低点(6%)；量比2.9放量；止跌首阳(+4.3%)</td></tr></table></div>
 <div class="lbl" style="font-size:12px;color:#999;margin:8px 0 4px">强势动量</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>02515</td><td>天津建发</td><td>105</td><td>5.755</td><td>+8.69%</td><td>5日+21%；创60日新高；量比2.1</td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>02515</td><td>天津建发</td><td>105</td><td>5.755</td><td>+8.69%</td><td>5日+21%；创60日新高；量比2.1</td></tr>
 <tr><td>01753</td><td>兑吧</td><td>100</td><td>1.05</td><td>+40.94%</td><td>5日+119%；创60日新高；换手7.5%</td></tr>
 <tr><td>01521</td><td>方达控股</td><td>85</td><td>1.49</td><td>+13.31%</td><td>5日+35%；创60日新高；量比3.4</td></tr>
 <tr><td>01705</td><td>宾仕国际</td><td>85</td><td>1.265</td><td>+42.13%</td><td>5日+37%；创60日新高；量比2.4</td></tr>
@@ -226,13 +227,13 @@ document.addEventListener('click', function(e){
 <tr><td>00638</td><td>广和通</td><td>63</td><td>6.765</td><td>+2.66%</td><td>5日+11%；换手3.3%；量比2.4</td></tr>
 <tr><td>02436</td><td>凌雄科技</td><td>60</td><td>22.96</td><td>+7.09%</td><td>5日+18%；创60日新高；入选日大涨(+7.1%)</td></tr>
 <tr><td>08223</td><td>紫元元</td><td>58</td><td>0.192</td><td>-15.79%</td><td>5日+28%；换手2.6%；RSI强势(62)</td></tr>
-<tr><td>01489</td><td>GC CONSTRUCTION</td><td>55</td><td>3.91</td><td>+9.83%</td><td>5日+19%；RSI强势(60)；入选日大涨(+9.8%)</td></tr></table>
+<tr><td>01489</td><td>GC CONSTRUCTION</td><td>55</td><td>3.91</td><td>+9.83%</td><td>5日+19%；RSI强势(60)；入选日大涨(+9.8%)</td></tr></table></div>
 </details>
 
 <details class="hist-day">
 <summary class="hist-date">2026-10-16（反转 30 / 动量 2） <span class="vbadge">暂无数据</span></summary>
 <div class="lbl" style="font-size:12px;color:#999;margin-bottom:4px">底部反转</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>00187</td><td>京城机电股份</td><td>92</td><td>2.54</td><td>+6.95%</td><td>贴近52周低点(4%)；60日中低位(21%)；RSI上穿30(26→46)</td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>00187</td><td>京城机电股份</td><td>92</td><td>2.54</td><td>+6.95%</td><td>贴近52周低点(4%)；60日中低位(21%)；RSI上穿30(26→46)</td></tr>
 <tr><td>01378</td><td>中国宏桥</td><td>82</td><td>19.64</td><td>+0.67%</td><td>贴近52周低点(7%)；贴近60日低点(3%)；RSI上穿30(30→32)</td></tr>
 <tr><td>02256</td><td>和誉－Ｂ</td><td>82</td><td>7.75</td><td>+6.60%</td><td>贴近52周低点(6%)；60日低位区(12%)；RSI上穿30(26→38)</td></tr>
 <tr><td>02487</td><td>科笛－Ｂ</td><td>82</td><td>0.86</td><td>+28.36%</td><td>贴近52周低点(3%)；贴近60日低点(10%)；RSI上穿30(18→36)</td></tr>
@@ -246,27 +247,27 @@ document.addEventListener('click', function(e){
 <tr><td>01475</td><td>日清食品</td><td>77</td><td>6.235</td><td>+0.73%</td><td>贴近52周低点(15%)；贴近60日低点(7%)；RSI超卖(28)</td></tr>
 <tr><td>02665</td><td>图达通</td><td>77</td><td>1.275</td><td>-1.92%</td><td>贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(24)</td></tr>
 <tr><td>00100</td><td>MINIMAX-W</td><td>70</td><td>182.1</td><td>+1.45%</td><td>贴近52周低点(0%)；贴近60日低点(1%)；RSI上穿30(29→30)</td></tr>
-<tr><td>00327</td><td>百富环球</td><td>70</td><td>3.41</td><td>+0.15%</td><td>贴近52周低点(13%)；贴近60日低点(1%)；RSI上穿30(30→30)</td></tr></table>
+<tr><td>00327</td><td>百富环球</td><td>70</td><td>3.41</td><td>+0.15%</td><td>贴近52周低点(13%)；贴近60日低点(1%)；RSI上穿30(30→30)</td></tr></table></div>
 <div class="lbl" style="font-size:12px;color:#999;margin:8px 0 4px">强势动量</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>00209</td><td>万维智能科技</td><td>70</td><td>0.8</td><td>-24.88%</td><td>5日+95%；换手8.8%；量比3.5</td></tr>
-<tr><td>02583</td><td>西普尼</td><td>50</td><td>45.0</td><td>+1.31%</td><td>5日+10%；换手8.1%；量比2.7</td></tr></table>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>00209</td><td>万维智能科技</td><td>70</td><td>0.8</td><td>-24.88%</td><td>5日+95%；换手8.8%；量比3.5</td></tr>
+<tr><td>02583</td><td>西普尼</td><td>50</td><td>45.0</td><td>+1.31%</td><td>5日+10%；换手8.1%；量比2.7</td></tr></table></div>
 </details>
 
 <details class="hist-day">
 <summary class="hist-date">2026-10-15（反转 4 / 动量 0） <span class="vbadge">暂无数据</span></summary>
 <div class="lbl" style="font-size:12px;color:#999;margin-bottom:4px">底部反转</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>01347</td><td>华虹宏力</td><td>69</td><td>76.55</td><td>-7.83%</td><td>贴近52周低点(8%)；贴近60日低点(0%)；RSI超卖(22)</td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>01347</td><td>华虹宏力</td><td>69</td><td>76.55</td><td>-7.83%</td><td>贴近52周低点(8%)；贴近60日低点(0%)；RSI超卖(22)</td></tr>
 <tr><td>01880</td><td>中国中免</td><td>69</td><td>42.46</td><td>-3.19%</td><td>贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(27)</td></tr>
 <tr><td>00425</td><td>敏实集团</td><td>45</td><td>21.86</td><td>-2.32%</td><td>贴近52周低点(1%)；贴近60日低点(0%)</td></tr>
-<tr><td>01357</td><td>美图公司</td><td>45</td><td>3.525</td><td>-5.62%</td><td>贴近52周低点(0%)；贴近60日低点(0%)</td></tr></table>
+<tr><td>01357</td><td>美图公司</td><td>45</td><td>3.525</td><td>-5.62%</td><td>贴近52周低点(0%)；贴近60日低点(0%)</td></tr></table></div>
 <div class="lbl" style="font-size:12px;color:#999;margin:8px 0 4px">强势动量</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td colspan="6" style="color:#999">暂无</td></tr></table>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td colspan="6" style="color:#999">暂无</td></tr></table></div>
 </details>
 
 <details class="hist-day">
 <summary class="hist-date">2026-10-14（反转 30 / 动量 14） <span class="vbadge vb">准确率 27.3%（12/44，短期12/中期4）</span></summary>
 <div class="lbl" style="font-size:12px;color:#999;margin-bottom:4px">底部反转</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>00209</td><td>万维智能科技</td><td>100</td><td>0.615</td><td>+39.77%</td><td>贴近52周低点(4%)；贴近60日低点(4%)；RSI上穿30(25→42)</td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>00209</td><td>万维智能科技</td><td>100</td><td>0.615</td><td>+39.77%</td><td>贴近52周低点(4%)；贴近60日低点(4%)；RSI上穿30(25→42)</td></tr>
 <tr><td>00751</td><td>创维集团</td><td>100</td><td>3.245</td><td>+7.10%</td><td>贴近52周低点(6%)；60日中低位(22%)；RSI上穿30(28→40)</td></tr>
 <tr><td>02652</td><td>长风药业</td><td>97</td><td>6.175</td><td>-2.76%</td><td>贴近52周低点(3%)；贴近60日低点(3%)；RSI超卖(26)</td></tr>
 <tr><td>02665</td><td>图达通</td><td>97</td><td>1.385</td><td>-5.46%</td><td>贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(27)</td></tr>
@@ -280,9 +281,9 @@ document.addEventListener('click', function(e){
 <tr><td>02272</td><td>科拓股份</td><td>77</td><td>53.3</td><td>-0.37%</td><td>贴近52周低点(2%)；贴近60日低点(1%)；RSI超卖(26)</td></tr>
 <tr><td>02689</td><td>玖龙纸业</td><td>77</td><td>5.14</td><td>-1.44%</td><td>贴近52周低点(1%)；贴近60日低点(0%)；RSI超卖(23)</td></tr>
 <tr><td>02697</td><td>真健康医疗－Ｂ</td><td>77</td><td>65.65</td><td>-22.63%</td><td>贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(19)</td></tr>
-<tr><td>09981</td><td>沃尔核材</td><td>77</td><td>7.915</td><td>-1.62%</td><td>贴近52周低点(2%)；贴近60日低点(3%)；RSI超卖(30)</td></tr></table>
+<tr><td>09981</td><td>沃尔核材</td><td>77</td><td>7.915</td><td>-1.62%</td><td>贴近52周低点(2%)；贴近60日低点(3%)；RSI超卖(30)</td></tr></table></div>
 <div class="lbl" style="font-size:12px;color:#999;margin:8px 0 4px">强势动量</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>01753</td><td>兑吧</td><td>70</td><td>0.66</td><td>+37.50%</td><td>5日+43%；换手5.1%；量比2.1</td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>01753</td><td>兑吧</td><td>70</td><td>0.66</td><td>+37.50%</td><td>5日+43%；换手5.1%；量比2.1</td></tr>
 <tr><td>01094</td><td>承辉国际</td><td>63</td><td>0.54</td><td>+12.50%</td><td>5日+35%；创60日新高；换手3.2%</td></tr>
 <tr><td>00209</td><td>万维智能科技</td><td>60</td><td>0.615</td><td>+39.77%</td><td>5日+48%；换手17.4%；量比2.8</td></tr>
 <tr><td>06182</td><td>乙德投资控股</td><td>60</td><td>0.795</td><td>+3.25%</td><td>5日+18%；换手7.7%；量比2.8</td></tr>
@@ -295,13 +296,13 @@ document.addEventListener('click', function(e){
 <tr><td>00875</td><td>从玉智农</td><td>45</td><td>0.375</td><td>+1.35%</td><td>5日+17%；量比2.5；RSI强势(60)</td></tr>
 <tr><td>01087</td><td>威讯控股</td><td>45</td><td>1.79</td><td>+7.51%</td><td>5日+11%；量比2.1；RSI强势(60)</td></tr>
 <tr><td>08098</td><td>昌利控股</td><td>45</td><td>0.42</td><td>+20.00%</td><td>5日+136%；创60日新高；RSI过热(98)</td></tr>
-<tr><td>02583</td><td>西普尼</td><td>43</td><td>44.64</td><td>-14.97%</td><td>5日+14%；换手3.2%；量比2.7</td></tr></table>
+<tr><td>02583</td><td>西普尼</td><td>43</td><td>44.64</td><td>-14.97%</td><td>5日+14%；换手3.2%；量比2.7</td></tr></table></div>
 </details>
 
 <details class="hist-day">
 <summary class="hist-date">2026-10-13（反转 30 / 动量 12） <span class="vbadge vn">准确率 38.1%（16/42，短期16/中期4）</span></summary>
 <div class="lbl" style="font-size:12px;color:#999;margin-bottom:4px">底部反转</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>02652</td><td>长风药业</td><td>107</td><td>6.35</td><td>+3.76%</td><td></td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>02652</td><td>长风药业</td><td>107</td><td>6.35</td><td>+3.76%</td><td></td></tr>
 <tr><td>08360</td><td>简朴新生活</td><td>100</td><td>0.24</td><td>+4.35%</td><td></td></tr>
 <tr><td>00751</td><td>创维集团</td><td>97</td><td>3.03</td><td>-3.19%</td><td></td></tr>
 <tr><td>02665</td><td>图达通</td><td>97</td><td>1.465</td><td>-12.80%</td><td></td></tr>
@@ -315,9 +316,9 @@ document.addEventListener('click', function(e){
 <tr><td>02097</td><td>蜜雪集团</td><td>77</td><td>167.3</td><td>-2.85%</td><td></td></tr>
 <tr><td>02272</td><td>科拓股份</td><td>77</td><td>53.5</td><td>+2.00%</td><td></td></tr>
 <tr><td>02372</td><td>伟立控股</td><td>77</td><td>0.65</td><td>-18.24%</td><td></td></tr>
-<tr><td>02495</td><td>声通科技</td><td>77</td><td>23.4</td><td>-1.76%</td><td></td></tr></table>
+<tr><td>02495</td><td>声通科技</td><td>77</td><td>23.4</td><td>-1.76%</td><td></td></tr></table></div>
 <div class="lbl" style="font-size:12px;color:#999;margin:8px 0 4px">强势动量</div>
-<table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>01389</td><td>美捷汇控股</td><td>78</td><td>0.755</td><td>+45.19%</td><td></td></tr>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>01389</td><td>美捷汇控股</td><td>78</td><td>0.755</td><td>+45.19%</td><td></td></tr>
 <tr><td>02450</td><td>淮北绿金股份</td><td>78</td><td>18.5</td><td>+9.73%</td><td></td></tr>
 <tr><td>02583</td><td>西普尼</td><td>70</td><td>52.5</td><td>+17.08%</td><td></td></tr>
 <tr><td>00813</td><td>世茂集团</td><td>55</td><td>0.075</td><td>-7.41%</td><td></td></tr>
@@ -328,7 +329,7 @@ document.addEventListener('click', function(e){
 <tr><td>00810</td><td>中国铸晨８１</td><td>45</td><td>0.12</td><td>+17.65%</td><td></td></tr>
 <tr><td>01536</td><td>煜荣集团</td><td>40</td><td>0.43</td><td>-6.52%</td><td></td></tr>
 <tr><td>02536</td><td>百乐皇宫</td><td>40</td><td>0.8</td><td>+16.79%</td><td></td></tr>
-<tr><td>01613</td><td>协同通信</td><td>40</td><td>0.895</td><td>+9.15%</td><td></td></tr></table>
+<tr><td>01613</td><td>协同通信</td><td>40</td><td>0.895</td><td>+9.15%</td><td></td></tr></table></div>
 </details>
 
 <div class="warn">量化筛选结果仅供研究参考，不构成投资建议。盘中价为轮询抓取可能延迟，下单以券商 App 实时行情为准。</div>
