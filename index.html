@@ -114,20 +114,21 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 .sb-link small{display:block;font-size:11.5px;color:#888;font-weight:400;margin-top:2px}
 .sb-link.active{background:#e8f0fe;color:#1a73e8;box-shadow:inset 0 0 0 1px #aecbfa}
 .sb-link.active small{color:#1a73e8}
-.sb-collapse{margin-top:auto;background:#fff;border:1px solid #e5e9ef;border-radius:10px;padding:9px;font-size:13px;cursor:pointer;color:#555}
+.sb-collapse{margin-top:2px;background:#fff;border:1px solid #e5e9ef;border-radius:10px;padding:9px;font-size:13px;cursor:pointer;color:#555}
 .sb-expand{position:fixed;left:12px;top:12px;z-index:60;display:none;background:#1976d2;color:#fff;border:none;border-radius:10px;padding:10px 14px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 1px 4px rgba(20,40,80,.2)}
 body.sb-hidden .sb{transform:translateX(-120%)}
 body.sb-hidden .sb-expand{display:block}
+body.sb-hidden .wrap{padding-top:64px}
 @media (min-width:761px){body:not(.sb-hidden) .wrap{margin-left:212px;margin-right:12px}}
 @media (max-width:760px){.sb{top:0;bottom:0;left:0;border-radius:0 14px 14px 0}}
 </style>
 <aside class="sb" aria-label="市场导航">
   <h3>📊 市场</h3>
   <div class="sbsub">stock.shmily.work<br>切换市场，不改变持仓数据</div>
+  <button class="sb-collapse" onclick="sbToggle()">‹ 收起边栏</button>
   <a class="sb-link active" href="./index.html">港股<small>港股短线选股 · 当日 / 历史</small></a>
   <a class="sb-link " href="./a.html">A股<small>A股短线选股</small></a>
   <a class="sb-link " href="./us.html">美股<small>美股短线选股</small></a>
-  <button class="sb-collapse" onclick="sbToggle()">‹ 收起边栏</button>
 </aside>
 <button class="sb-expand" onclick="sbToggle()">☰ 市场</button>
 <script>
@@ -153,7 +154,7 @@ function sbToggle(){
 
 <div class="topbar">13 / 15 只 <small>（反转 / 动量）</small></div>
 <div class="info"><div class="lbl">量化基础数据更新</div><div class="dt">2026-10-22 10:20</div>
-<div class="lbl" style="margin-top:8px">页面生成 2026-10-24 19:00 · 盘中价更新 2026-10-23 收盘（31 只）· 全盘约 2813 只</div></div>
+<div class="lbl" style="margin-top:8px">页面生成 2026-10-25 14:22 · 盘中价更新 2026-10-23 收盘（31 只）· 全盘约 2813 只</div></div>
 
 <div class="sec"><h2>🎯 我的盯盘 <span class="cnt">3 只</span></h2><div class="sub">持仓与观察名单，15分钟轮询更新</div></div>
 
