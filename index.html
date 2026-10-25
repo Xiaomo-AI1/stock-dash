@@ -18,6 +18,9 @@ body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei
 .sec h2 .cnt{font-size:12px;font-weight:400;background:#dcefe0;color:#2e7d32;border-radius:10px;padding:2px 10px}
 .sec .sub{font-size:13px;color:#777;margin:4px 0 10px}
 .card{background:#fff;border-radius:14px;padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 4px rgba(20,40,80,.07)}
+.card-sum{cursor:pointer}
+.card-sum .pval{font-size:17px}
+.card-body{margin-top:12px;padding-top:12px;border-top:1px solid #eef0f3}
 .trend-btn{margin-top:10px;background:#1976d2;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:14px;cursor:pointer}
 .trend-btn:active{opacity:.8}
 .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:99;align-items:center;justify-content:center;padding:16px}
@@ -162,7 +165,7 @@ document.addEventListener('click', function(e){
 
 <div class="topbar">13 / 15 只 <small>（反转 / 动量）</small></div>
 <div class="info"><div class="lbl">量化基础数据更新</div><div class="dt">2026-10-22 10:20</div>
-<div class="lbl" style="margin-top:8px">页面生成 2026-10-25 15:50 · 盘中价更新 2026-10-23 收盘（31 只）· 全盘约 2813 只</div></div>
+<div class="lbl" style="margin-top:8px">页面生成 2026-10-25 15:53 · 盘中价更新 2026-10-23 收盘（31 只）· 全盘约 2813 只</div></div>
 
 <div class="sec"><h2>🎯 我的盯盘 <span class="cnt">3 只</span></h2><div class="sub">持仓与观察名单，15分钟轮询更新</div></div>
 
@@ -219,21 +222,20 @@ document.addEventListener('click', function(e){
 
 <div class="sec"><h2>低位反转候选 <span class="cnt">13 只</span></h2><div class="sub">关注低位、超卖与放量止跌信号</div></div>
 
-<div class="card">
-  <div class="chead"><div class="nm">MANYCORE TECH</div><div class="code">00068.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 3.030 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+2.37%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">MANYCORE TECH</div><div class="code">00068.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 3.030 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+2.37%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">2.95</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">12.47</div></div>
@@ -258,24 +260,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>4.976</b></span><span class="tag">MA20 <b>6.183</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('00068', 'MANYCORE TECH', [{"d": "2026-09-09", "c": 11.2}, {"d": "2026-09-10", "c": 9.975}, {"d": "2026-09-11", "c": 9.095}, {"d": "2026-09-14", "c": 8.28}, {"d": "2026-09-15", "c": 7.9}, {"d": "2026-09-16", "c": 8.045}, {"d": "2026-09-17", "c": 8.65}, {"d": "2026-09-18", "c": 8.485}, {"d": "2026-09-21", "c": 8.49}, {"d": "2026-09-22", "c": 8.175}, {"d": "2026-09-23", "c": 7.795}, {"d": "2026-09-24", "c": 7.85}, {"d": "2026-09-25", "c": 7.995}, {"d": "2026-09-28", "c": 7.5}, {"d": "2026-09-29", "c": 7.105}, {"d": "2026-09-30", "c": 7.06}, {"d": "2026-10-02", "c": 7.13}, {"d": "2026-10-05", "c": 7.185}, {"d": "2026-10-06", "c": 7.15}, {"d": "2026-10-07", "c": 7.12}, {"d": "2026-10-08", "c": 6.86}, {"d": "2026-10-09", "c": 6.7}, {"d": "2026-10-12", "c": 6.305}, {"d": "2026-10-13", "c": 5.675}, {"d": "2026-10-14", "c": 5.13}, {"d": "2026-10-15", "c": 4.72}, {"d": "2026-10-16", "c": 4.77}, {"d": "2026-10-20", "c": 3.56}, {"d": "2026-10-21", "c": 3.09}, {"d": "2026-10-22", "c": 2.95}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">伟禄科技股份</div><div class="code">01196.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.295 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+7.27%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">68.9%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">伟禄科技股份</div><div class="code">01196.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.295 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+7.27%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">68.9%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">0.275</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">4.0</div></div>
@@ -300,24 +301,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>3.035</b></span><span class="tag">MA20 <b>3.118</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('01196', '伟禄科技股份', [{"d": "2026-08-26", "c": 2.069}, {"d": "2026-08-27", "c": 2.1}, {"d": "2026-08-28", "c": 2.16}, {"d": "2026-08-31", "c": 2.281}, {"d": "2026-09-01", "c": 2.378}, {"d": "2026-09-02", "c": 2.375}, {"d": "2026-09-03", "c": 2.408}, {"d": "2026-09-04", "c": 2.49}, {"d": "2026-09-07", "c": 2.47}, {"d": "2026-09-08", "c": 2.633}, {"d": "2026-09-09", "c": 2.728}, {"d": "2026-09-10", "c": 2.608}, {"d": "2026-09-11", "c": 2.713}, {"d": "2026-09-28", "c": 2.76}, {"d": "2026-09-29", "c": 2.89}, {"d": "2026-09-30", "c": 2.98}, {"d": "2026-10-02", "c": 3.5}, {"d": "2026-10-05", "c": 3.94}, {"d": "2026-10-06", "c": 4.0}, {"d": "2026-10-07", "c": 3.9}, {"d": "2026-10-08", "c": 3.56}, {"d": "2026-10-09", "c": 3.6}, {"d": "2026-10-12", "c": 3.625}, {"d": "2026-10-13", "c": 3.63}, {"d": "2026-10-14", "c": 3.285}, {"d": "2026-10-15", "c": 3.265}, {"d": "2026-10-16", "c": 3.2}, {"d": "2026-10-20", "c": 3.21}, {"d": "2026-10-21", "c": 2.7}, {"d": "2026-10-22", "c": 0.275}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">天辰生物－Ｂ</div><div class="code">01779.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 61.050 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-2.32%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">天辰生物－Ｂ</div><div class="code">01779.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 61.050 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-2.32%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">62.5</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">131.6</div></div>
@@ -342,24 +342,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>80.885</b></span><span class="tag">MA20 <b>93.468</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('01779', '天辰生物－Ｂ', [{"d": "2026-09-09", "c": 114.3}, {"d": "2026-09-10", "c": 106.0}, {"d": "2026-09-11", "c": 97.0}, {"d": "2026-09-14", "c": 96.1}, {"d": "2026-09-15", "c": 92.6}, {"d": "2026-09-16", "c": 97.4}, {"d": "2026-09-17", "c": 101.9}, {"d": "2026-09-18", "c": 105.0}, {"d": "2026-09-21", "c": 114.5}, {"d": "2026-09-22", "c": 113.1}, {"d": "2026-09-23", "c": 119.4}, {"d": "2026-09-24", "c": 117.4}, {"d": "2026-09-25", "c": 113.5}, {"d": "2026-09-28", "c": 102.7}, {"d": "2026-09-29", "c": 100.7}, {"d": "2026-09-30", "c": 105.8}, {"d": "2026-10-02", "c": 101.7}, {"d": "2026-10-05", "c": 99.75}, {"d": "2026-10-06", "c": 101.5}, {"d": "2026-10-07", "c": 98.05}, {"d": "2026-10-08", "c": 95.0}, {"d": "2026-10-09", "c": 98.0}, {"d": "2026-10-12", "c": 89.3}, {"d": "2026-10-13", "c": 89.75}, {"d": "2026-10-14", "c": 84.55}, {"d": "2026-10-15", "c": 72.4}, {"d": "2026-10-16", "c": 74.4}, {"d": "2026-10-20", "c": 73.8}, {"d": "2026-10-21", "c": 69.15}, {"d": "2026-10-22", "c": 62.5}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">经纬天地</div><div class="code">02477.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.109 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+2.83%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">69.2%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">经纬天地</div><div class="code">02477.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.109 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+2.83%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">69.2%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">0.106</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">0.285</div></div>
@@ -384,24 +383,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>0.173</b></span><span class="tag">MA20 <b>0.188</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('02477', '经纬天地', [{"d": "2026-09-09", "c": 0.209}, {"d": "2026-09-10", "c": 0.21}, {"d": "2026-09-11", "c": 0.223}, {"d": "2026-09-14", "c": 0.215}, {"d": "2026-09-15", "c": 0.208}, {"d": "2026-09-16", "c": 0.206}, {"d": "2026-09-17", "c": 0.205}, {"d": "2026-09-18", "c": 0.205}, {"d": "2026-09-21", "c": 0.206}, {"d": "2026-09-22", "c": 0.201}, {"d": "2026-09-23", "c": 0.213}, {"d": "2026-09-24", "c": 0.209}, {"d": "2026-09-25", "c": 0.207}, {"d": "2026-09-28", "c": 0.202}, {"d": "2026-09-29", "c": 0.204}, {"d": "2026-09-30", "c": 0.208}, {"d": "2026-10-02", "c": 0.2}, {"d": "2026-10-05", "c": 0.189}, {"d": "2026-10-06", "c": 0.195}, {"d": "2026-10-07", "c": 0.193}, {"d": "2026-10-08", "c": 0.193}, {"d": "2026-10-09", "c": 0.203}, {"d": "2026-10-12", "c": 0.197}, {"d": "2026-10-13", "c": 0.19}, {"d": "2026-10-14", "c": 0.18}, {"d": "2026-10-15", "c": 0.178}, {"d": "2026-10-16", "c": 0.18}, {"d": "2026-10-20", "c": 0.179}, {"d": "2026-10-21", "c": 0.128}, {"d": "2026-10-22", "c": 0.106}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">宝济药业－Ｂ</div><div class="code">02659.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 7.790 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+3.66%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">宝济药业－Ｂ</div><div class="code">02659.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 7.790 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+3.66%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">7.51</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">18.47</div></div>
@@ -426,24 +424,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>10.030</b></span><span class="tag">MA20 <b>11.230</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('02659', '宝济药业－Ｂ', [{"d": "2026-09-09", "c": 15.8}, {"d": "2026-09-10", "c": 14.9}, {"d": "2026-09-11", "c": 14.31}, {"d": "2026-09-14", "c": 14.25}, {"d": "2026-09-15", "c": 13.49}, {"d": "2026-09-16", "c": 13.06}, {"d": "2026-09-17", "c": 13.15}, {"d": "2026-09-18", "c": 13.86}, {"d": "2026-09-21", "c": 14.24}, {"d": "2026-09-22", "c": 13.68}, {"d": "2026-09-23", "c": 13.24}, {"d": "2026-09-24", "c": 13.11}, {"d": "2026-09-25", "c": 12.7}, {"d": "2026-09-28", "c": 12.62}, {"d": "2026-09-29", "c": 12.35}, {"d": "2026-09-30", "c": 12.31}, {"d": "2026-10-02", "c": 12.08}, {"d": "2026-10-05", "c": 12.43}, {"d": "2026-10-06", "c": 11.86}, {"d": "2026-10-07", "c": 11.61}, {"d": "2026-10-08", "c": 11.7}, {"d": "2026-10-09", "c": 11.35}, {"d": "2026-10-12", "c": 11.24}, {"d": "2026-10-13", "c": 10.6}, {"d": "2026-10-14", "c": 10.2}, {"d": "2026-10-15", "c": 9.695}, {"d": "2026-10-16", "c": 9.6}, {"d": "2026-10-20", "c": 9.2}, {"d": "2026-10-21", "c": 9.2}, {"d": "2026-10-22", "c": 7.51}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">礼邦医药－Ｂ</div><div class="code">09637.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 15.590 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.58%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">礼邦医药－Ｂ</div><div class="code">09637.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 15.590 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.58%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">15.55</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">36.5</div></div>
@@ -468,24 +465,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>20.780</b></span><span class="tag">MA20 <b>23.212</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('09637', '礼邦医药－Ｂ', [{"d": "2026-09-09", "c": 25.74}, {"d": "2026-09-10", "c": 25.0}, {"d": "2026-09-11", "c": 24.02}, {"d": "2026-09-14", "c": 23.0}, {"d": "2026-09-15", "c": 23.58}, {"d": "2026-09-16", "c": 24.12}, {"d": "2026-09-17", "c": 26.06}, {"d": "2026-09-18", "c": 25.42}, {"d": "2026-09-21", "c": 26.76}, {"d": "2026-09-22", "c": 26.26}, {"d": "2026-09-23", "c": 25.7}, {"d": "2026-09-24", "c": 25.9}, {"d": "2026-09-25", "c": 24.78}, {"d": "2026-09-28", "c": 23.44}, {"d": "2026-09-29", "c": 24.7}, {"d": "2026-09-30", "c": 24.98}, {"d": "2026-10-02", "c": 25.4}, {"d": "2026-10-05", "c": 26.3}, {"d": "2026-10-06", "c": 26.66}, {"d": "2026-10-07", "c": 28.58}, {"d": "2026-10-08", "c": 27.0}, {"d": "2026-10-09", "c": 26.3}, {"d": "2026-10-12", "c": 24.8}, {"d": "2026-10-13", "c": 22.22}, {"d": "2026-10-14", "c": 21.98}, {"d": "2026-10-15", "c": 18.62}, {"d": "2026-10-16", "c": 17.48}, {"d": "2026-10-20", "c": 16.87}, {"d": "2026-10-21", "c": 16.98}, {"d": "2026-10-22", "c": 15.55}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">京城机电股份</div><div class="code">00187.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 2.325 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">+0.00%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">京城机电股份</div><div class="code">00187.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 2.325 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">+0.00%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">2.315</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">3.16</div></div>
@@ -510,24 +506,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>2.490</b></span><span class="tag">MA20 <b>2.510</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('00187', '京城机电股份', [{"d": "2026-09-09", "c": 2.83}, {"d": "2026-09-10", "c": 2.795}, {"d": "2026-09-11", "c": 2.74}, {"d": "2026-09-14", "c": 2.73}, {"d": "2026-09-15", "c": 2.66}, {"d": "2026-09-16", "c": 2.655}, {"d": "2026-09-17", "c": 2.73}, {"d": "2026-09-18", "c": 2.715}, {"d": "2026-09-21", "c": 2.61}, {"d": "2026-09-22", "c": 2.6}, {"d": "2026-09-23", "c": 2.58}, {"d": "2026-09-24", "c": 2.56}, {"d": "2026-09-25", "c": 2.54}, {"d": "2026-09-28", "c": 2.53}, {"d": "2026-09-29", "c": 2.55}, {"d": "2026-09-30", "c": 2.56}, {"d": "2026-10-02", "c": 2.52}, {"d": "2026-10-05", "c": 2.5}, {"d": "2026-10-06", "c": 2.5}, {"d": "2026-10-07", "c": 2.46}, {"d": "2026-10-08", "c": 2.535}, {"d": "2026-10-09", "c": 2.505}, {"d": "2026-10-12", "c": 2.49}, {"d": "2026-10-13", "c": 2.485}, {"d": "2026-10-14", "c": 2.43}, {"d": "2026-10-15", "c": 2.375}, {"d": "2026-10-16", "c": 2.54}, {"d": "2026-10-20", "c": 2.74}, {"d": "2026-10-21", "c": 2.485}, {"d": "2026-10-22", "c": 2.315}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">南京熊猫电子股份</div><div class="code">00553.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 2.845 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.71%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">16.7%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">南京熊猫电子股份</div><div class="code">00553.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 2.845 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.71%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">16.7%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">2.825</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">3.53</div></div>
@@ -552,24 +547,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>2.829</b></span><span class="tag">MA20 <b>2.904</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('00553', '南京熊猫电子股份', [{"d": "2026-09-09", "c": 3.24}, {"d": "2026-09-10", "c": 3.16}, {"d": "2026-09-11", "c": 3.145}, {"d": "2026-09-14", "c": 3.12}, {"d": "2026-09-15", "c": 3.04}, {"d": "2026-09-16", "c": 3.03}, {"d": "2026-09-17", "c": 3.0}, {"d": "2026-09-18", "c": 3.05}, {"d": "2026-09-21", "c": 3.125}, {"d": "2026-09-22", "c": 3.125}, {"d": "2026-09-23", "c": 3.055}, {"d": "2026-09-24", "c": 3.04}, {"d": "2026-09-25", "c": 3.015}, {"d": "2026-09-28", "c": 2.97}, {"d": "2026-09-29", "c": 2.98}, {"d": "2026-09-30", "c": 3.02}, {"d": "2026-10-02", "c": 2.945}, {"d": "2026-10-05", "c": 2.9}, {"d": "2026-10-06", "c": 2.94}, {"d": "2026-10-07", "c": 2.925}, {"d": "2026-10-08", "c": 2.935}, {"d": "2026-10-09", "c": 2.915}, {"d": "2026-10-12", "c": 2.86}, {"d": "2026-10-13", "c": 2.81}, {"d": "2026-10-14", "c": 2.825}, {"d": "2026-10-15", "c": 2.695}, {"d": "2026-10-16", "c": 2.785}, {"d": "2026-10-20", "c": 2.825}, {"d": "2026-10-21", "c": 2.82}, {"d": "2026-10-22", "c": 2.825}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">麦科医药－Ｂ</div><div class="code">02335.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 14.420 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-6.36%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">麦科医药－Ｂ</div><div class="code">02335.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 14.420 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-6.36%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">15.21</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">31.74</div></div>
@@ -594,24 +588,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>18.961</b></span><span class="tag">MA20 <b>20.211</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('02335', '麦科医药－Ｂ', [{"d": "2026-09-09", "c": 26.04}, {"d": "2026-09-10", "c": 24.1}, {"d": "2026-09-11", "c": 21.98}, {"d": "2026-09-14", "c": 20.82}, {"d": "2026-09-15", "c": 20.96}, {"d": "2026-09-16", "c": 21.02}, {"d": "2026-09-17", "c": 21.6}, {"d": "2026-09-18", "c": 22.02}, {"d": "2026-09-21", "c": 22.46}, {"d": "2026-09-22", "c": 22.16}, {"d": "2026-09-23", "c": 21.88}, {"d": "2026-09-24", "c": 21.94}, {"d": "2026-09-25", "c": 21.14}, {"d": "2026-09-28", "c": 19.91}, {"d": "2026-09-29", "c": 20.66}, {"d": "2026-09-30", "c": 20.8}, {"d": "2026-10-02", "c": 21.78}, {"d": "2026-10-05", "c": 21.94}, {"d": "2026-10-06", "c": 22.7}, {"d": "2026-10-07", "c": 21.86}, {"d": "2026-10-08", "c": 22.64}, {"d": "2026-10-09", "c": 22.08}, {"d": "2026-10-12", "c": 21.9}, {"d": "2026-10-13", "c": 19.04}, {"d": "2026-10-14", "c": 16.25}, {"d": "2026-10-15", "c": 14.63}, {"d": "2026-10-16", "c": 24.0}, {"d": "2026-10-20", "c": 17.54}, {"d": "2026-10-21", "c": 16.32}, {"d": "2026-10-22", "c": 15.21}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">龙旗科技</div><div class="code">09611.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 20.660 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+5.09%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">龙旗科技</div><div class="code">09611.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 20.660 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+5.09%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">19.66</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">25.78</div></div>
@@ -636,24 +629,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>19.572</b></span><span class="tag">MA20 <b>20.181</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('09611', '龙旗科技', [{"d": "2026-09-09", "c": 21.78}, {"d": "2026-09-10", "c": 21.28}, {"d": "2026-09-11", "c": 20.58}, {"d": "2026-09-14", "c": 20.36}, {"d": "2026-09-15", "c": 20.28}, {"d": "2026-09-16", "c": 20.54}, {"d": "2026-09-17", "c": 20.42}, {"d": "2026-09-18", "c": 20.76}, {"d": "2026-09-21", "c": 21.3}, {"d": "2026-09-22", "c": 21.84}, {"d": "2026-09-23", "c": 21.46}, {"d": "2026-09-24", "c": 21.32}, {"d": "2026-09-25", "c": 21.32}, {"d": "2026-09-28", "c": 21.2}, {"d": "2026-09-29", "c": 21.2}, {"d": "2026-09-30", "c": 21.08}, {"d": "2026-10-02", "c": 20.16}, {"d": "2026-10-05", "c": 20.2}, {"d": "2026-10-06", "c": 20.2}, {"d": "2026-10-07", "c": 19.77}, {"d": "2026-10-08", "c": 19.65}, {"d": "2026-10-09", "c": 19.91}, {"d": "2026-10-12", "c": 19.8}, {"d": "2026-10-13", "c": 19.89}, {"d": "2026-10-14", "c": 19.77}, {"d": "2026-10-15", "c": 18.36}, {"d": "2026-10-16", "c": 18.69}, {"d": "2026-10-20", "c": 19.77}, {"d": "2026-10-21", "c": 20.22}, {"d": "2026-10-22", "c": 19.66}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">广和通</div><div class="code">00638.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 6.590 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+2.49%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">广和通</div><div class="code">00638.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 6.590 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+2.49%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">6.465</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">8.23</div></div>
@@ -678,24 +670,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>6.216</b></span><span class="tag">MA20 <b>6.623</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('00638', '广和通', [{"d": "2026-09-09", "c": 7.33}, {"d": "2026-09-10", "c": 7.2}, {"d": "2026-09-11", "c": 7.12}, {"d": "2026-09-14", "c": 7.01}, {"d": "2026-09-15", "c": 7.0}, {"d": "2026-09-16", "c": 7.1}, {"d": "2026-09-17", "c": 7.185}, {"d": "2026-09-18", "c": 7.35}, {"d": "2026-09-21", "c": 7.505}, {"d": "2026-09-22", "c": 7.585}, {"d": "2026-09-23", "c": 7.515}, {"d": "2026-09-24", "c": 7.39}, {"d": "2026-09-25", "c": 7.305}, {"d": "2026-09-28", "c": 7.06}, {"d": "2026-09-29", "c": 7.105}, {"d": "2026-09-30", "c": 7.16}, {"d": "2026-10-02", "c": 6.81}, {"d": "2026-10-05", "c": 6.725}, {"d": "2026-10-06", "c": 6.615}, {"d": "2026-10-07", "c": 6.62}, {"d": "2026-10-08", "c": 6.245}, {"d": "2026-10-09", "c": 6.315}, {"d": "2026-10-12", "c": 6.175}, {"d": "2026-10-13", "c": 6.09}, {"d": "2026-10-14", "c": 6.005}, {"d": "2026-10-15", "c": 5.725}, {"d": "2026-10-16", "c": 5.78}, {"d": "2026-10-20", "c": 6.59}, {"d": "2026-10-21", "c": 6.765}, {"d": "2026-10-22", "c": 6.465}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">明辉国际</div><div class="code">03828.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.690 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">-0.00%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">8.7%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">明辉国际</div><div class="code">03828.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.690 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">-0.00%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">8.7%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">0.69</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">0.76</div></div>
@@ -720,24 +711,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>0.708</b></span><span class="tag">MA20 <b>0.718</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('03828', '明辉国际', [{"d": "2026-09-09", "c": 0.695}, {"d": "2026-09-10", "c": 0.695}, {"d": "2026-09-11", "c": 0.7}, {"d": "2026-09-14", "c": 0.685}, {"d": "2026-09-15", "c": 0.7}, {"d": "2026-09-16", "c": 0.75}, {"d": "2026-09-17", "c": 0.74}, {"d": "2026-09-18", "c": 0.755}, {"d": "2026-09-21", "c": 0.74}, {"d": "2026-09-22", "c": 0.74}, {"d": "2026-09-23", "c": 0.74}, {"d": "2026-09-24", "c": 0.75}, {"d": "2026-09-25", "c": 0.76}, {"d": "2026-09-28", "c": 0.745}, {"d": "2026-09-29", "c": 0.72}, {"d": "2026-09-30", "c": 0.71}, {"d": "2026-10-02", "c": 0.705}, {"d": "2026-10-05", "c": 0.72}, {"d": "2026-10-06", "c": 0.72}, {"d": "2026-10-07", "c": 0.715}, {"d": "2026-10-08", "c": 0.72}, {"d": "2026-10-09", "c": 0.725}, {"d": "2026-10-12", "c": 0.725}, {"d": "2026-10-13", "c": 0.73}, {"d": "2026-10-14", "c": 0.725}, {"d": "2026-10-15", "c": 0.7}, {"d": "2026-10-16", "c": 0.7}, {"d": "2026-10-20", "c": 0.685}, {"d": "2026-10-21", "c": 0.685}, {"d": "2026-10-22", "c": 0.69}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">五一视界</div><div class="code">06651.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 65.000 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+30.31%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">五一视界</div><div class="code">06651.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 65.000 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+30.31%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">49.88</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">80.2</div></div>
@@ -762,26 +752,25 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>47.093</b></span><span class="tag">MA20 <b>50.937</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('06651', '五一视界', [{"d": "2026-09-09", "c": 61.55}, {"d": "2026-09-10", "c": 58.2}, {"d": "2026-09-11", "c": 59.0}, {"d": "2026-09-14", "c": 56.4}, {"d": "2026-09-15", "c": 53.75}, {"d": "2026-09-16", "c": 55.8}, {"d": "2026-09-17", "c": 54.1}, {"d": "2026-09-18", "c": 56.6}, {"d": "2026-09-21", "c": 57.8}, {"d": "2026-09-22", "c": 57.5}, {"d": "2026-09-23", "c": 56.5}, {"d": "2026-09-24", "c": 56.15}, {"d": "2026-09-25", "c": 55.7}, {"d": "2026-09-28", "c": 52.0}, {"d": "2026-09-29", "c": 52.8}, {"d": "2026-09-30", "c": 55.4}, {"d": "2026-10-02", "c": 52.95}, {"d": "2026-10-05", "c": 53.0}, {"d": "2026-10-06", "c": 55.35}, {"d": "2026-10-07", "c": 57.95}, {"d": "2026-10-08", "c": 52.45}, {"d": "2026-10-09", "c": 49.72}, {"d": "2026-10-12", "c": 47.3}, {"d": "2026-10-13", "c": 45.56}, {"d": "2026-10-14", "c": 43.6}, {"d": "2026-10-15", "c": 40.82}, {"d": "2026-10-16", "c": 40.9}, {"d": "2026-10-20", "c": 50.0}, {"d": "2026-10-21", "c": 50.7}, {"d": "2026-10-22", "c": 49.88}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
 <div class="sec"><h2>强势动量候选 <span class="cnt">15 只</span></h2><div class="sub">关注短线强势、放量突破信号</div></div>
 
-<div class="card">
-  <div class="chead"><div class="nm">兆威机电</div><div class="code">02692.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 39.800 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+16.44%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">85 <span class="bar"><i style="width:85.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">兆威机电</div><div class="code">02692.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 39.800 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+16.44%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">85 <span class="bar"><i style="width:85.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">33.155</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">39.307</div></div>
@@ -806,24 +795,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>29.406</b></span><span class="tag">MA20 <b>32.879</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('02692', '兆威机电', [{"d": "2026-09-09", "c": 38.66}, {"d": "2026-09-10", "c": 38.0}, {"d": "2026-09-11", "c": 37.46}, {"d": "2026-09-14", "c": 37.3}, {"d": "2026-09-15", "c": 37.38}, {"d": "2026-09-16", "c": 37.28}, {"d": "2026-09-17", "c": 36.8}, {"d": "2026-09-18", "c": 38.24}, {"d": "2026-09-21", "c": 38.6}, {"d": "2026-09-22", "c": 38.6}, {"d": "2026-09-23", "c": 38.06}, {"d": "2026-09-24", "c": 38.66}, {"d": "2026-09-25", "c": 37.16}, {"d": "2026-09-28", "c": 36.4}, {"d": "2026-09-29", "c": 35.82}, {"d": "2026-09-30", "c": 36.14}, {"d": "2026-10-02", "c": 37.54}, {"d": "2026-10-05", "c": 34.8}, {"d": "2026-10-06", "c": 34.5}, {"d": "2026-10-07", "c": 34.44}, {"d": "2026-10-08", "c": 30.46}, {"d": "2026-10-09", "c": 31.22}, {"d": "2026-10-12", "c": 30.0}, {"d": "2026-10-13", "c": 30.8}, {"d": "2026-10-14", "c": 28.88}, {"d": "2026-10-15", "c": 26.5}, {"d": "2026-10-16", "c": 26.3}, {"d": "2026-10-20", "c": 27.54}, {"d": "2026-10-21", "c": 28.18}, {"d": "2026-10-22", "c": 34.18}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">宝盖新材</div><div class="code">08090.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 4.950 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">-0.00%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">80 <span class="bar"><i style="width:80.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">宝盖新材</div><div class="code">08090.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 4.950 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">-0.00%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">80 <span class="bar"><i style="width:80.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">4.801</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">5.692</div></div>
@@ -848,24 +836,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>4.162</b></span><span class="tag">MA20 <b>4.354</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('08090', '宝盖新材', [{"d": "2026-09-09", "c": 5.54}, {"d": "2026-09-10", "c": 5.54}, {"d": "2026-09-11", "c": 5.3}, {"d": "2026-09-14", "c": 5.3}, {"d": "2026-09-15", "c": 5.2}, {"d": "2026-09-16", "c": 5.2}, {"d": "2026-09-17", "c": 4.995}, {"d": "2026-09-18", "c": 4.995}, {"d": "2026-09-21", "c": 4.8}, {"d": "2026-09-22", "c": 4.7}, {"d": "2026-09-23", "c": 4.6}, {"d": "2026-09-24", "c": 4.55}, {"d": "2026-09-25", "c": 4.55}, {"d": "2026-09-28", "c": 4.5}, {"d": "2026-09-29", "c": 4.495}, {"d": "2026-09-30", "c": 4.55}, {"d": "2026-10-02", "c": 4.55}, {"d": "2026-10-05", "c": 4.55}, {"d": "2026-10-06", "c": 4.555}, {"d": "2026-10-07", "c": 4.565}, {"d": "2026-10-08", "c": 4.56}, {"d": "2026-10-09", "c": 4.05}, {"d": "2026-10-12", "c": 3.96}, {"d": "2026-10-13", "c": 3.95}, {"d": "2026-10-14", "c": 4.0}, {"d": "2026-10-15", "c": 3.95}, {"d": "2026-10-16", "c": 3.85}, {"d": "2026-10-20", "c": 3.85}, {"d": "2026-10-21", "c": 4.5}, {"d": "2026-10-22", "c": 4.95}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">利特米</div><div class="code">01936.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 4.495 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+21.00%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">70 <span class="bar"><i style="width:70.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">68.8%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">利特米</div><div class="code">01936.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 4.495 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+21.00%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">68.8%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">70 <span class="bar"><i style="width:70.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">3.604</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">4.272</div></div>
@@ -890,24 +877,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>2.804</b></span><span class="tag">MA20 <b>2.403</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('01936', '利特米', [{"d": "2026-08-05", "c": 0.84}, {"d": "2026-08-06", "c": 0.84}, {"d": "2026-08-07", "c": 0.84}, {"d": "2026-08-11", "c": 0.84}, {"d": "2026-08-12", "c": 0.845}, {"d": "2026-08-14", "c": 0.86}, {"d": "2026-08-21", "c": 0.87}, {"d": "2026-08-27", "c": 0.87}, {"d": "2026-08-28", "c": 0.89}, {"d": "2026-08-31", "c": 0.89}, {"d": "2026-09-01", "c": 0.93}, {"d": "2026-09-02", "c": 0.895}, {"d": "2026-09-03", "c": 0.87}, {"d": "2026-09-28", "c": 1.88}, {"d": "2026-09-29", "c": 1.95}, {"d": "2026-09-30", "c": 2.58}, {"d": "2026-10-02", "c": 3.15}, {"d": "2026-10-05", "c": 2.85}, {"d": "2026-10-06", "c": 2.55}, {"d": "2026-10-07", "c": 2.365}, {"d": "2026-10-08", "c": 2.445}, {"d": "2026-10-09", "c": 2.9}, {"d": "2026-10-12", "c": 3.085}, {"d": "2026-10-13", "c": 2.745}, {"d": "2026-10-14", "c": 2.475}, {"d": "2026-10-15", "c": 2.555}, {"d": "2026-10-16", "c": 2.55}, {"d": "2026-10-20", "c": 2.5}, {"d": "2026-10-21", "c": 3.07}, {"d": "2026-10-22", "c": 3.715}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">万维智能科技</div><div class="code">00209.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.825 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-14.06%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">65.8%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">万维智能科技</div><div class="code">00209.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.825 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-14.06%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">65.8%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">0.921</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">1.092</div></div>
@@ -932,24 +918,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>0.710</b></span><span class="tag">MA20 <b>0.564</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('00209', '万维智能科技', [{"d": "2026-09-09", "c": 0.405}, {"d": "2026-09-10", "c": 0.41}, {"d": "2026-09-11", "c": 0.4}, {"d": "2026-09-14", "c": 0.4}, {"d": "2026-09-15", "c": 0.405}, {"d": "2026-09-16", "c": 0.405}, {"d": "2026-09-17", "c": 0.41}, {"d": "2026-09-18", "c": 0.415}, {"d": "2026-09-21", "c": 0.41}, {"d": "2026-09-22", "c": 0.41}, {"d": "2026-09-23", "c": 0.415}, {"d": "2026-09-24", "c": 0.405}, {"d": "2026-09-25", "c": 0.405}, {"d": "2026-09-28", "c": 0.415}, {"d": "2026-09-29", "c": 0.435}, {"d": "2026-09-30", "c": 0.435}, {"d": "2026-10-02", "c": 0.405}, {"d": "2026-10-05", "c": 0.425}, {"d": "2026-10-06", "c": 0.415}, {"d": "2026-10-07", "c": 0.415}, {"d": "2026-10-08", "c": 0.41}, {"d": "2026-10-09", "c": 0.41}, {"d": "2026-10-12", "c": 0.445}, {"d": "2026-10-13", "c": 0.44}, {"d": "2026-10-14", "c": 0.615}, {"d": "2026-10-15", "c": 1.065}, {"d": "2026-10-16", "c": 0.8}, {"d": "2026-10-20", "c": 0.965}, {"d": "2026-10-21", "c": 1.0}, {"d": "2026-10-22", "c": 0.95}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">百融智能－Ｗ</div><div class="code">06608.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 5.665 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-3.00%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">30.1%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">百融智能－Ｗ</div><div class="code">06608.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 5.665 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-3.00%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">30.1%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">5.665</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">6.716</div></div>
@@ -974,24 +959,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>5.516</b></span><span class="tag">MA20 <b>5.236</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('06608', '百融智能－Ｗ', [{"d": "2026-09-09", "c": 4.89}, {"d": "2026-09-10", "c": 4.73}, {"d": "2026-09-11", "c": 4.71}, {"d": "2026-09-14", "c": 4.66}, {"d": "2026-09-15", "c": 4.415}, {"d": "2026-09-16", "c": 4.5}, {"d": "2026-09-17", "c": 4.465}, {"d": "2026-09-18", "c": 4.32}, {"d": "2026-09-21", "c": 4.33}, {"d": "2026-09-22", "c": 4.315}, {"d": "2026-09-23", "c": 4.62}, {"d": "2026-09-24", "c": 4.46}, {"d": "2026-09-25", "c": 4.605}, {"d": "2026-09-28", "c": 4.885}, {"d": "2026-09-29", "c": 4.9}, {"d": "2026-09-30", "c": 4.905}, {"d": "2026-10-02", "c": 5.075}, {"d": "2026-10-05", "c": 5.195}, {"d": "2026-10-06", "c": 5.195}, {"d": "2026-10-07", "c": 5.715}, {"d": "2026-10-08", "c": 5.47}, {"d": "2026-10-09", "c": 5.68}, {"d": "2026-10-12", "c": 5.4}, {"d": "2026-10-13", "c": 5.25}, {"d": "2026-10-14", "c": 5.215}, {"d": "2026-10-15", "c": 5.29}, {"d": "2026-10-16", "c": 5.515}, {"d": "2026-10-20", "c": 5.785}, {"d": "2026-10-21", "c": 5.715}, {"d": "2026-10-22", "c": 5.84}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">华南职业教育</div><div class="code">06913.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.127 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+13.39%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">华南职业教育</div><div class="code">06913.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.127 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+13.39%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">0.109</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">0.129</div></div>
@@ -1016,24 +1000,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>0.087</b></span><span class="tag">MA20 <b>0.089</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('06913', '华南职业教育', [{"d": "2026-09-09", "c": 0.111}, {"d": "2026-09-10", "c": 0.107}, {"d": "2026-09-11", "c": 0.104}, {"d": "2026-09-14", "c": 0.092}, {"d": "2026-09-15", "c": 0.093}, {"d": "2026-09-16", "c": 0.097}, {"d": "2026-09-17", "c": 0.094}, {"d": "2026-09-18", "c": 0.096}, {"d": "2026-09-21", "c": 0.095}, {"d": "2026-09-22", "c": 0.096}, {"d": "2026-09-23", "c": 0.097}, {"d": "2026-09-24", "c": 0.095}, {"d": "2026-09-25", "c": 0.094}, {"d": "2026-09-28", "c": 0.09}, {"d": "2026-09-29", "c": 0.088}, {"d": "2026-09-30", "c": 0.09}, {"d": "2026-10-02", "c": 0.09}, {"d": "2026-10-05", "c": 0.09}, {"d": "2026-10-06", "c": 0.087}, {"d": "2026-10-07", "c": 0.083}, {"d": "2026-10-08", "c": 0.079}, {"d": "2026-10-09", "c": 0.082}, {"d": "2026-10-12", "c": 0.085}, {"d": "2026-10-13", "c": 0.09}, {"d": "2026-10-14", "c": 0.082}, {"d": "2026-10-15", "c": 0.081}, {"d": "2026-10-16", "c": 0.081}, {"d": "2026-10-20", "c": 0.081}, {"d": "2026-10-21", "c": 0.095}, {"d": "2026-10-22", "c": 0.112}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">北森控股</div><div class="code">09669.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 3.255 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-3.41%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">21.6%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">北森控股</div><div class="code">09669.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 3.255 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-3.41%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">21.6%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">3.269</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">3.875</div></div>
@@ -1058,24 +1041,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>3.253</b></span><span class="tag">MA20 <b>3.226</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('09669', '北森控股', [{"d": "2026-09-09", "c": 3.085}, {"d": "2026-09-10", "c": 3.045}, {"d": "2026-09-11", "c": 2.99}, {"d": "2026-09-14", "c": 3.0}, {"d": "2026-09-15", "c": 2.995}, {"d": "2026-09-16", "c": 3.0}, {"d": "2026-09-17", "c": 3.0}, {"d": "2026-09-18", "c": 3.0}, {"d": "2026-09-21", "c": 3.07}, {"d": "2026-09-22", "c": 3.04}, {"d": "2026-09-23", "c": 3.145}, {"d": "2026-09-24", "c": 3.145}, {"d": "2026-09-25", "c": 3.255}, {"d": "2026-09-28", "c": 3.22}, {"d": "2026-09-29", "c": 3.18}, {"d": "2026-09-30", "c": 3.24}, {"d": "2026-10-02", "c": 3.18}, {"d": "2026-10-05", "c": 3.155}, {"d": "2026-10-06", "c": 3.175}, {"d": "2026-10-07", "c": 3.29}, {"d": "2026-10-08", "c": 3.295}, {"d": "2026-10-09", "c": 3.275}, {"d": "2026-10-12", "c": 3.16}, {"d": "2026-10-13", "c": 3.2}, {"d": "2026-10-14", "c": 3.06}, {"d": "2026-10-15", "c": 3.145}, {"d": "2026-10-16", "c": 3.33}, {"d": "2026-10-20", "c": 3.35}, {"d": "2026-10-21", "c": 3.35}, {"d": "2026-10-22", "c": 3.37}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">海昌海洋公园</div><div class="code">02255.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.280 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+5.66%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">66.7%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">海昌海洋公园</div><div class="code">02255.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.280 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+5.66%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">66.7%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">0.257</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">0.305</div></div>
@@ -1100,24 +1082,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>0.185</b></span><span class="tag">MA20 <b>0.174</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('02255', '海昌海洋公园', [{"d": "2026-09-09", "c": 0.2}, {"d": "2026-09-10", "c": 0.193}, {"d": "2026-09-11", "c": 0.205}, {"d": "2026-09-14", "c": 0.189}, {"d": "2026-09-15", "c": 0.189}, {"d": "2026-09-16", "c": 0.199}, {"d": "2026-09-17", "c": 0.185}, {"d": "2026-09-18", "c": 0.171}, {"d": "2026-09-21", "c": 0.175}, {"d": "2026-09-22", "c": 0.167}, {"d": "2026-09-23", "c": 0.171}, {"d": "2026-09-24", "c": 0.156}, {"d": "2026-09-25", "c": 0.171}, {"d": "2026-09-28", "c": 0.161}, {"d": "2026-09-29", "c": 0.165}, {"d": "2026-09-30", "c": 0.165}, {"d": "2026-10-02", "c": 0.165}, {"d": "2026-10-05", "c": 0.159}, {"d": "2026-10-06", "c": 0.158}, {"d": "2026-10-07", "c": 0.156}, {"d": "2026-10-08", "c": 0.146}, {"d": "2026-10-09", "c": 0.152}, {"d": "2026-10-12", "c": 0.191}, {"d": "2026-10-13", "c": 0.15}, {"d": "2026-10-14", "c": 0.157}, {"d": "2026-10-15", "c": 0.158}, {"d": "2026-10-16", "c": 0.176}, {"d": "2026-10-20", "c": 0.23}, {"d": "2026-10-21", "c": 0.224}, {"d": "2026-10-22", "c": 0.265}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">脑动极光－Ｂ</div><div class="code">06681.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.875 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-8.85%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">60 <span class="bar"><i style="width:60.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">63.6%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">脑动极光－Ｂ</div><div class="code">06681.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.875 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-8.85%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">63.6%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">60 <span class="bar"><i style="width:60.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">0.931</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">1.104</div></div>
@@ -1142,24 +1123,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>0.792</b></span><span class="tag">MA20 <b>0.966</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('06681', '脑动极光－Ｂ', [{"d": "2026-09-09", "c": 1.27}, {"d": "2026-09-10", "c": 1.27}, {"d": "2026-09-11", "c": 1.26}, {"d": "2026-09-14", "c": 1.27}, {"d": "2026-09-15", "c": 1.25}, {"d": "2026-09-16", "c": 1.26}, {"d": "2026-09-17", "c": 1.26}, {"d": "2026-09-18", "c": 1.275}, {"d": "2026-09-21", "c": 1.315}, {"d": "2026-09-22", "c": 1.25}, {"d": "2026-09-23", "c": 1.24}, {"d": "2026-09-24", "c": 1.23}, {"d": "2026-09-25", "c": 1.18}, {"d": "2026-09-28", "c": 1.165}, {"d": "2026-09-29", "c": 1.15}, {"d": "2026-09-30", "c": 1.145}, {"d": "2026-10-02", "c": 1.085}, {"d": "2026-10-05", "c": 1.065}, {"d": "2026-10-06", "c": 1.085}, {"d": "2026-10-07", "c": 1.06}, {"d": "2026-10-08", "c": 1.03}, {"d": "2026-10-09", "c": 0.96}, {"d": "2026-10-12", "c": 0.845}, {"d": "2026-10-13", "c": 0.75}, {"d": "2026-10-14", "c": 0.69}, {"d": "2026-10-15", "c": 0.655}, {"d": "2026-10-16", "c": 0.63}, {"d": "2026-10-20", "c": 0.645}, {"d": "2026-10-21", "c": 0.755}, {"d": "2026-10-22", "c": 0.96}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">山东墨龙</div><div class="code">00568.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 4.000 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-1.60%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">50.9%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">山东墨龙</div><div class="code">00568.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 4.000 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-1.60%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">50.9%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">3.943</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">4.675</div></div>
@@ -1184,24 +1164,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>3.827</b></span><span class="tag">MA20 <b>3.766</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('00568', '山东墨龙', [{"d": "2026-09-09", "c": 5.085}, {"d": "2026-09-10", "c": 4.87}, {"d": "2026-09-11", "c": 4.76}, {"d": "2026-09-14", "c": 4.83}, {"d": "2026-09-15", "c": 4.655}, {"d": "2026-09-16", "c": 4.595}, {"d": "2026-09-17", "c": 4.425}, {"d": "2026-09-18", "c": 4.46}, {"d": "2026-09-21", "c": 4.43}, {"d": "2026-09-22", "c": 4.36}, {"d": "2026-09-23", "c": 4.175}, {"d": "2026-09-24", "c": 4.09}, {"d": "2026-09-25", "c": 3.95}, {"d": "2026-09-28", "c": 3.59}, {"d": "2026-09-29", "c": 3.565}, {"d": "2026-09-30", "c": 3.585}, {"d": "2026-10-02", "c": 3.54}, {"d": "2026-10-05", "c": 3.51}, {"d": "2026-10-06", "c": 3.54}, {"d": "2026-10-07", "c": 3.51}, {"d": "2026-10-08", "c": 4.075}, {"d": "2026-10-09", "c": 3.815}, {"d": "2026-10-12", "c": 3.71}, {"d": "2026-10-13", "c": 3.72}, {"d": "2026-10-14", "c": 3.855}, {"d": "2026-10-15", "c": 3.68}, {"d": "2026-10-16", "c": 3.735}, {"d": "2026-10-20", "c": 3.84}, {"d": "2026-10-21", "c": 3.78}, {"d": "2026-10-22", "c": 4.065}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">龙翼航空科技</div><div class="code">00918.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.790 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-5.04%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">60.7%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">龙翼航空科技</div><div class="code">00918.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.790 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-5.04%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">60.7%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">1.761</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">2.087</div></div>
@@ -1226,24 +1205,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>1.562</b></span><span class="tag">MA20 <b>1.469</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('00918', '龙翼航空科技', [{"d": "2026-09-09", "c": 1.975}, {"d": "2026-09-10", "c": 2.0}, {"d": "2026-09-11", "c": 2.0}, {"d": "2026-09-14", "c": 1.815}, {"d": "2026-09-15", "c": 1.76}, {"d": "2026-09-16", "c": 1.73}, {"d": "2026-09-17", "c": 1.685}, {"d": "2026-09-18", "c": 1.69}, {"d": "2026-09-21", "c": 1.68}, {"d": "2026-09-22", "c": 1.545}, {"d": "2026-09-23", "c": 1.465}, {"d": "2026-09-24", "c": 1.465}, {"d": "2026-09-25", "c": 1.6}, {"d": "2026-09-28", "c": 1.45}, {"d": "2026-09-29", "c": 1.41}, {"d": "2026-09-30", "c": 0.955}, {"d": "2026-10-02", "c": 1.18}, {"d": "2026-10-05", "c": 1.43}, {"d": "2026-10-06", "c": 1.295}, {"d": "2026-10-07", "c": 1.52}, {"d": "2026-10-08", "c": 1.46}, {"d": "2026-10-09", "c": 1.39}, {"d": "2026-10-12", "c": 1.375}, {"d": "2026-10-13", "c": 1.32}, {"d": "2026-10-14", "c": 1.425}, {"d": "2026-10-15", "c": 1.56}, {"d": "2026-10-16", "c": 1.6}, {"d": "2026-10-20", "c": 1.68}, {"d": "2026-10-21", "c": 1.99}, {"d": "2026-10-22", "c": 1.815}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">STERLING GP</div><div class="code">01825.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.780 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-6.81%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">55.0%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">STERLING GP</div><div class="code">01825.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.780 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-6.81%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">55.0%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">1.853</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">2.196</div></div>
@@ -1268,24 +1246,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>1.679</b></span><span class="tag">MA20 <b>1.764</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('01825', 'STERLING GP', [{"d": "2026-09-09", "c": 10.58}, {"d": "2026-09-10", "c": 10.6}, {"d": "2026-09-11", "c": 11.25}, {"d": "2026-09-14", "c": 12.46}, {"d": "2026-09-15", "c": 12.65}, {"d": "2026-09-16", "c": 7.985}, {"d": "2026-09-17", "c": 2.42}, {"d": "2026-09-18", "c": 1.935}, {"d": "2026-09-21", "c": 2.0}, {"d": "2026-09-22", "c": 1.95}, {"d": "2026-09-23", "c": 2.09}, {"d": "2026-09-24", "c": 1.93}, {"d": "2026-09-25", "c": 1.93}, {"d": "2026-09-28", "c": 1.955}, {"d": "2026-09-29", "c": 1.81}, {"d": "2026-09-30", "c": 1.78}, {"d": "2026-10-02", "c": 1.825}, {"d": "2026-10-05", "c": 1.75}, {"d": "2026-10-06", "c": 1.725}, {"d": "2026-10-07", "c": 1.7}, {"d": "2026-10-08", "c": 1.5}, {"d": "2026-10-09", "c": 1.545}, {"d": "2026-10-12", "c": 1.68}, {"d": "2026-10-13", "c": 1.685}, {"d": "2026-10-14", "c": 1.685}, {"d": "2026-10-15", "c": 1.71}, {"d": "2026-10-16", "c": 1.615}, {"d": "2026-10-20", "c": 1.655}, {"d": "2026-10-21", "c": 1.8}, {"d": "2026-10-22", "c": 1.91}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">应力控股</div><div class="code">02663.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.675 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+13.45%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">66.7%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">应力控股</div><div class="code">02663.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.675 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+13.45%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">66.7%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">0.577</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">0.684</div></div>
@@ -1310,24 +1287,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>0.475</b></span><span class="tag">MA20 <b>0.424</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('02663', '应力控股', [{"d": "2026-09-04", "c": 0.435}, {"d": "2026-09-07", "c": 0.44}, {"d": "2026-09-08", "c": 0.44}, {"d": "2026-09-09", "c": 0.465}, {"d": "2026-09-11", "c": 0.445}, {"d": "2026-09-14", "c": 0.445}, {"d": "2026-09-15", "c": 0.39}, {"d": "2026-09-16", "c": 0.375}, {"d": "2026-09-17", "c": 0.375}, {"d": "2026-09-18", "c": 0.395}, {"d": "2026-09-21", "c": 0.38}, {"d": "2026-09-23", "c": 0.37}, {"d": "2026-09-24", "c": 0.38}, {"d": "2026-09-25", "c": 0.38}, {"d": "2026-09-28", "c": 0.37}, {"d": "2026-09-29", "c": 0.37}, {"d": "2026-09-30", "c": 0.37}, {"d": "2026-10-02", "c": 0.37}, {"d": "2026-10-05", "c": 0.36}, {"d": "2026-10-06", "c": 0.365}, {"d": "2026-10-07", "c": 0.355}, {"d": "2026-10-09", "c": 0.355}, {"d": "2026-10-12", "c": 0.36}, {"d": "2026-10-13", "c": 0.365}, {"d": "2026-10-14", "c": 0.4}, {"d": "2026-10-15", "c": 0.43}, {"d": "2026-10-16", "c": 0.62}, {"d": "2026-10-20", "c": 0.62}, {"d": "2026-10-21", "c": 0.655}, {"d": "2026-10-22", "c": 0.595}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">德合集团</div><div class="code">00368.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 3.785 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+2.30%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">42.6%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">德合集团</div><div class="code">00368.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 3.785 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+2.30%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">42.6%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">3.589</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">4.255</div></div>
@@ -1352,24 +1328,23 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>3.295</b></span><span class="tag">MA20 <b>3.154</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('00368', '德合集团', [{"d": "2026-09-09", "c": 4.33}, {"d": "2026-09-10", "c": 4.4}, {"d": "2026-09-11", "c": 4.45}, {"d": "2026-09-14", "c": 4.685}, {"d": "2026-09-15", "c": 4.6}, {"d": "2026-09-16", "c": 3.12}, {"d": "2026-09-17", "c": 3.39}, {"d": "2026-09-18", "c": 3.96}, {"d": "2026-09-21", "c": 3.445}, {"d": "2026-09-22", "c": 2.95}, {"d": "2026-09-23", "c": 3.03}, {"d": "2026-09-24", "c": 2.96}, {"d": "2026-09-25", "c": 2.89}, {"d": "2026-09-28", "c": 3.0}, {"d": "2026-09-29", "c": 3.005}, {"d": "2026-09-30", "c": 3.17}, {"d": "2026-10-02", "c": 2.98}, {"d": "2026-10-05", "c": 2.975}, {"d": "2026-10-06", "c": 3.025}, {"d": "2026-10-07", "c": 3.095}, {"d": "2026-10-08", "c": 3.12}, {"d": "2026-10-09", "c": 3.065}, {"d": "2026-10-12", "c": 3.18}, {"d": "2026-10-13", "c": 3.185}, {"d": "2026-10-14", "c": 3.135}, {"d": "2026-10-15", "c": 3.125}, {"d": "2026-10-16", "c": 3.22}, {"d": "2026-10-20", "c": 3.42}, {"d": "2026-10-21", "c": 3.8}, {"d": "2026-10-22", "c": 3.7}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
-<div class="card">
-  <div class="chead"><div class="nm">博雷顿</div><div class="code">01333.HK</div></div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 16.270 <span class="live">盘中</span></div></div>
-    <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+6.34%</span></div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
-    <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">55.3%</div></div>
-  </div>
-  <div class="prow">
-    <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-  </div>
-  <details class="detail" open>
-    <summary>详情</summary>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">博雷顿</div><div class="code">01333.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 16.270 <span class="live">盘中</span></div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+6.34%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">55.3%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
     <div class="dgrid">
       <div><div class="lbl">买入参考</div><div class="dv">14.841</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">17.595</div></div>
@@ -1394,8 +1369,8 @@ document.addEventListener('click', function(e){
       <span class="tag">MA10 <b>13.995</b></span><span class="tag">MA20 <b>14.825</b></span>
     </div>
     <button class="trend-btn" onclick='showTrend('01333', '博雷顿', [{"d": "2026-09-09", "c": 12.03}, {"d": "2026-09-10", "c": 12.03}, {"d": "2026-09-11", "c": 12.34}, {"d": "2026-09-14", "c": 11.94}, {"d": "2026-09-15", "c": 11.56}, {"d": "2026-09-16", "c": 11.83}, {"d": "2026-09-17", "c": 11.96}, {"d": "2026-09-18", "c": 12.35}, {"d": "2026-09-21", "c": 11.99}, {"d": "2026-09-22", "c": 12.02}, {"d": "2026-09-23", "c": 12.16}, {"d": "2026-09-24", "c": 12.35}, {"d": "2026-09-25", "c": 12.37}, {"d": "2026-09-28", "c": 12.99}, {"d": "2026-09-29", "c": 14.35}, {"d": "2026-09-30", "c": 16.12}, {"d": "2026-10-02", "c": 20.0}, {"d": "2026-10-05", "c": 19.9}, {"d": "2026-10-06", "c": 18.7}, {"d": "2026-10-07", "c": 17.6}, {"d": "2026-10-08", "c": 13.15}, {"d": "2026-10-09", "c": 13.02}, {"d": "2026-10-12", "c": 12.88}, {"d": "2026-10-13", "c": 12.9}, {"d": "2026-10-14", "c": 13.56}, {"d": "2026-10-15", "c": 14.07}, {"d": "2026-10-16", "c": 14.7}, {"d": "2026-10-20", "c": 15.17}, {"d": "2026-10-21", "c": 15.2}, {"d": "2026-10-22", "c": 15.3}])'>查看走势图</button>
-  </details>
-</div>
+  </div>
+</details>
 
 
 <div class="sec"><h2>📊 模型胜率 <span class="cnt">logistic</span></h2>
