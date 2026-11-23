@@ -165,9 +165,9 @@ document.addEventListener('click', function(e){
 <div class="wrap">
 <div class="nav"><a href="./index.html">当日选股</a><a href="./history.html">历史归档</a></div>
 
-<div class="topbar">8 / 12 只 <small>（反转 / 动量）</small></div>
-<div class="info"><div class="lbl">量化基础数据更新</div><div class="dt">2026-11-20 10:27</div>
-<div class="lbl" style="margin-top:8px">页面生成 2026-11-23 08:39 · 盘中价更新 2026-11-23 收盘（22 只）· 全盘约 2806 只</div></div>
+<div class="topbar">15 / 15 只 <small>（反转 / 动量）</small></div>
+<div class="info"><div class="lbl">量化基础数据更新</div><div class="dt">2026-11-23 10:07</div>
+<div class="lbl" style="margin-top:8px">页面生成 2026-11-23 10:08 · 盘中价更新 2026-11-23 收盘（22 只）· 全盘约 2805 只</div></div>
 
 <div class="sec"><h2>🎯 我的盯盘 <span class="cnt">3 只</span></h2><div class="sub">持仓与观察名单，15分钟轮询更新</div></div>
 
@@ -212,17 +212,58 @@ document.addEventListener('click', function(e){
 <div class="lbl" style="margin-top:8px;font-size:12px;color:#999">模型概率仅供研究参考，不构成投资建议；最终以券商 App 实时行情为准。无概率 = 近 20 日有零成交额日等触发数据有效性条件，模型不出数（常见于极低流动性股票）。</div>
 
 
-<div class="sec"><h2>📒 预测战绩 <span class="cnt">准确率 47.5%</span></h2>
-<div class="sub">累计预测 393 条 · 已核验 377 条 · 预测正确 179 次 · 准确率 47.5% · 待核验 16 条<br>
+<div class="sec"><h2>📒 预测战绩 <span class="cnt">准确率 47.6%</span></h2>
+<div class="sub">累计预测 401 条 · 已核验 393 条 · 预测正确 187 次 · 准确率 47.6% · 待核验 8 条<br>
 核验口径：预测日之后第一个有成交的交易日收盘对账——偏涨看收盘涨没涨、偏跌看收盘跌没跌；实际涨跌 = 核验日收盘价 ÷ 预测时价格 − 1</div></div>
 <div class="tbl-wrap"><table class="prob-table"><tr><th>预测日</th><th>代码</th><th>名称</th><th>方向</th><th>概率</th><th>预测价</th><th>核验日</th><th>实际涨跌</th><th>结果</th></tr>
-<tr><td>2026-11-20</td><td>00348</td><td>中国智能健康</td><td><span class="up"><b>偏涨</b></span></td><td class="num">61.1%</td><td class="num">0.086</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>02567</td><td>七牛智能</td><td><span class="up"><b>偏涨</b></span></td><td class="num">60.9%</td><td class="num">0.201</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>01347</td><td>华虹宏力</td><td><span class="up"><b>偏涨</b></span></td><td class="num">56.3%</td><td class="num">75.050</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>00017</td><td>新世界发展</td><td><span class="up"><b>偏涨</b></span></td><td class="num">56.6%</td><td class="num">2.315</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>00209</td><td>万维智能科技</td><td><span class="up"><b>偏涨</b></span></td><td class="num">55.5%</td><td class="num">1.680</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>02211</td><td>大健康国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">53.8%</td><td class="num">0.690</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>02583</td><td>西普尼</td><td><span class="up"><b>偏涨</b></span></td><td class="num">52.8%</td><td class="num">63.300</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>00866</td><td>中国秦发</td><td><span class="up"><b>偏涨</b></span></td><td class="num">51.8%</td><td class="num">1.335</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>00290</td><td>国富量子</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">30.8%</td><td class="num">1.885</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>00308</td><td>香港中旅</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">31.0%</td><td class="num">0.670</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>03708</td><td>世界数字经济产业</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">38.7%</td><td class="num">0.230</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>01520</td><td>天机控股</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">40.4%</td><td class="num">0.460</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>02699</td><td>新明中国</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">44.0%</td><td class="num">5.500</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>02580</td><td>奥克斯电气</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">48.0%</td><td class="num">7.800</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>09926</td><td>康方生物</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">48.7%</td><td class="num">56.550</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-19</td><td>02442</td><td>怡俊集团控股</td><td><span class="up"><b>偏涨</b></span></td><td class="num">68.8%</td><td class="num">73.450</td><td>2026-11-20</td><td class="num"><span class="up">+8.78%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>00209</td><td>万维智能科技</td><td><span class="up"><b>偏涨</b></span></td><td class="num">66.3%</td><td class="num">1.650</td><td>2026-11-20</td><td class="num"><span class="">+0.00%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>02580</td><td>奥克斯电气</td><td><span class="up"><b>偏涨</b></span></td><td class="num">54.9%</td><td class="num">8.520</td><td>2026-11-20</td><td class="num"><span class="dn">-7.86%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>00017</td><td>新世界发展</td><td><span class="up"><b>偏涨</b></span></td><td class="num">53.0%</td><td class="num">2.275</td><td>2026-11-20</td><td class="num"><span class="up">+1.10%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>02211</td><td>大健康国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">52.9%</td><td class="num">0.685</td><td>2026-11-20</td><td class="num"><span class="dn">-0.73%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>01428</td><td>耀才证券金融</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">26.0%</td><td class="num">5.175</td><td>2026-11-20</td><td class="num"><span class="dn">-3.38%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>09922</td><td>九毛九</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">35.0%</td><td class="num">0.880</td><td>2026-11-20</td><td class="num"><span class="dn">-6.82%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>00290</td><td>国富量子</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">36.1%</td><td class="num">1.870</td><td>2026-11-20</td><td class="num"><span class="up">+2.67%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>02158</td><td>医渡科技</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">45.2%</td><td class="num">2.245</td><td>2026-11-20</td><td class="num"><span class="dn">-8.69%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>01650</td><td>HYGIEIA GROUP</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">46.7%</td><td class="num">0.241</td><td>2026-11-20</td><td class="num"><span class="dn">-7.88%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>00821</td><td>汇盈控股</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">48.4%</td><td class="num">0.495</td><td>2026-11-20</td><td class="num"><span class="up">+1.01%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>01421</td><td>恒昌集团国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">53.0%</td><td class="num">0.455</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-18</td><td>02442</td><td>怡俊集团控股</td><td><span class="up"><b>偏涨</b></span></td><td class="num">62.8%</td><td class="num">85.900</td><td>2026-11-19</td><td class="num"><span class="dn">-11.58%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>01421</td><td>恒昌集团国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">62.7%</td><td class="num">0.465</td><td>2026-11-19</td><td class="num"><span class="dn">-2.15%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>00209</td><td>万维智能科技</td><td><span class="up"><b>偏涨</b></span></td><td class="num">62.2%</td><td class="num">1.375</td><td>2026-11-19</td><td class="num"><span class="up">+20.73%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-18</td><td>01176</td><td>珠光控股</td><td><span class="up"><b>偏涨</b></span></td><td class="num">60.5%</td><td class="num">0.014</td><td>2026-11-19</td><td class="num"><span class="">+0.00%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>02211</td><td>大健康国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">60.8%</td><td class="num">0.715</td><td>2026-11-19</td><td class="num"><span class="dn">-4.20%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>01500</td><td>现恒建筑</td><td><span class="up"><b>偏涨</b></span></td><td class="num">57.8%</td><td class="num">0.840</td><td>2026-11-19</td><td class="num"><span class="dn">-2.38%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>02885</td><td>彼岸控股</td><td><span class="up"><b>偏涨</b></span></td><td class="num">53.2%</td><td class="num">3.165</td><td>2026-11-19</td><td class="num"><span class="up">+1.42%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-18</td><td>00017</td><td>新世界发展</td><td><span class="up"><b>偏涨</b></span></td><td class="num">50.4%</td><td class="num">2.355</td><td>2026-11-19</td><td class="num"><span class="dn">-4.46%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>01540</td><td>澳狮环球</td><td><span class="up"><b>偏涨</b></span></td><td class="num">51.3%</td><td class="num">0.770</td><td>2026-11-19</td><td class="num"><span class="dn">-1.95%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>09998</td><td>光荣控股</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">21.7%</td><td class="num">0.530</td><td>2026-11-19</td><td class="num"><span class="">+0.00%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>09890</td><td>贪玩</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">29.6%</td><td class="num">8.040</td><td>2026-11-19</td><td class="num"><span class="up">+5.47%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>02580</td><td>奥克斯电气</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">37.4%</td><td class="num">7.270</td><td>2026-11-19</td><td class="num"><span class="up">+16.92%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>00866</td><td>中国秦发</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">41.6%</td><td class="num">1.245</td><td>2026-11-19</td><td class="num"><span class="up">+6.43%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr>
+<tr><td>2026-11-23</td><td>00928</td><td>帝王国际投资</td><td><span class="up"><b>偏涨</b></span></td><td class="num">68.1%</td><td class="num">1.490</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-23</td><td>06681</td><td>脑动极光－Ｂ</td><td><span class="up"><b>偏涨</b></span></td><td class="num">67.4%</td><td class="num">1.490</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-23</td><td>02625</td><td>江苏宏信</td><td><span class="up"><b>偏涨</b></span></td><td class="num">66.4%</td><td class="num">0.275</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-23</td><td>00017</td><td>新世界发展</td><td><span class="up"><b>偏涨</b></span></td><td class="num">57.9%</td><td class="num">2.080</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-23</td><td>01280</td><td>奇点国峰</td><td><span class="up"><b>偏涨</b></span></td><td class="num">53.7%</td><td class="num">4.595</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-23</td><td>00290</td><td>国富量子</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">29.1%</td><td class="num">1.880</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-23</td><td>00308</td><td>香港中旅</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">41.6%</td><td class="num">0.660</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-23</td><td>01679</td><td>瑞斯康集团</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">42.0%</td><td class="num">0.695</td><td>—</td><td class="num">—</td><td><span class="grey">待核验</span></td></tr><tr><td>2026-11-20</td><td>00348</td><td>中国智能健康</td><td><span class="up"><b>偏涨</b></span></td><td class="num">61.1%</td><td class="num">0.086</td><td>2026-11-23</td><td class="num"><span class="dn">-1.16%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-20</td><td>02567</td><td>七牛智能</td><td><span class="up"><b>偏涨</b></span></td><td class="num">60.9%</td><td class="num">0.201</td><td>2026-11-23</td><td class="num"><span class="up">+1.49%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-20</td><td>01347</td><td>华虹宏力</td><td><span class="up"><b>偏涨</b></span></td><td class="num">56.3%</td><td class="num">75.050</td><td>2026-11-23</td><td class="num"><span class="dn">-0.87%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-20</td><td>00017</td><td>新世界发展</td><td><span class="up"><b>偏涨</b></span></td><td class="num">56.6%</td><td class="num">2.315</td><td>2026-11-23</td><td class="num"><span class="dn">-10.58%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-20</td><td>00209</td><td>万维智能科技</td><td><span class="up"><b>偏涨</b></span></td><td class="num">55.5%</td><td class="num">1.680</td><td>2026-11-23</td><td class="num"><span class="">+0.00%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-20</td><td>02211</td><td>大健康国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">53.8%</td><td class="num">0.690</td><td>2026-11-23</td><td class="num"><span class="dn">-16.67%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-20</td><td>02583</td><td>西普尼</td><td><span class="up"><b>偏涨</b></span></td><td class="num">52.8%</td><td class="num">63.300</td><td>2026-11-23</td><td class="num"><span class="up">+8.45%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-20</td><td>00866</td><td>中国秦发</td><td><span class="up"><b>偏涨</b></span></td><td class="num">51.8%</td><td class="num">1.335</td><td>2026-11-23</td><td class="num"><span class="up">+2.62%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-20</td><td>00290</td><td>国富量子</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">30.8%</td><td class="num">1.885</td><td>2026-11-23</td><td class="num"><span class="dn">-0.53%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-20</td><td>00308</td><td>香港中旅</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">31.0%</td><td class="num">0.670</td><td>2026-11-23</td><td class="num"><span class="dn">-0.75%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-20</td><td>03708</td><td>世界数字经济产业</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">38.7%</td><td class="num">0.230</td><td>2026-11-23</td><td class="num"><span class="up">+6.09%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-20</td><td>01520</td><td>天机控股</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">40.4%</td><td class="num">0.460</td><td>2026-11-23</td><td class="num"><span class="dn">-9.78%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-20</td><td>02699</td><td>新明中国</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">44.0%</td><td class="num">5.500</td><td>2026-11-23</td><td class="num"><span class="dn">-4.55%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-20</td><td>02580</td><td>奥克斯电气</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">48.0%</td><td class="num">7.800</td><td>2026-11-23</td><td class="num"><span class="up">+2.82%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-20</td><td>09926</td><td>康方生物</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">48.7%</td><td class="num">56.550</td><td>2026-11-23</td><td class="num"><span class="up">+0.18%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>01421</td><td>恒昌集团国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">53.0%</td><td class="num">0.455</td><td>2026-11-23</td><td class="num"><span class="up">+1.10%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>02442</td><td>怡俊集团控股</td><td><span class="up"><b>偏涨</b></span></td><td class="num">68.8%</td><td class="num">73.450</td><td>2026-11-20</td><td class="num"><span class="up">+8.78%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>00209</td><td>万维智能科技</td><td><span class="up"><b>偏涨</b></span></td><td class="num">66.3%</td><td class="num">1.650</td><td>2026-11-20</td><td class="num"><span class="">+0.00%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>02580</td><td>奥克斯电气</td><td><span class="up"><b>偏涨</b></span></td><td class="num">54.9%</td><td class="num">8.520</td><td>2026-11-20</td><td class="num"><span class="dn">-7.86%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>00017</td><td>新世界发展</td><td><span class="up"><b>偏涨</b></span></td><td class="num">53.0%</td><td class="num">2.275</td><td>2026-11-20</td><td class="num"><span class="up">+1.10%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>02211</td><td>大健康国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">52.9%</td><td class="num">0.685</td><td>2026-11-20</td><td class="num"><span class="dn">-0.73%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>01428</td><td>耀才证券金融</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">26.0%</td><td class="num">5.175</td><td>2026-11-20</td><td class="num"><span class="dn">-3.38%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>09922</td><td>九毛九</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">35.0%</td><td class="num">0.880</td><td>2026-11-20</td><td class="num"><span class="dn">-6.82%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>00290</td><td>国富量子</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">36.1%</td><td class="num">1.870</td><td>2026-11-20</td><td class="num"><span class="up">+2.67%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-19</td><td>02158</td><td>医渡科技</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">45.2%</td><td class="num">2.245</td><td>2026-11-20</td><td class="num"><span class="dn">-8.69%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>01650</td><td>HYGIEIA GROUP</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">46.7%</td><td class="num">0.241</td><td>2026-11-20</td><td class="num"><span class="dn">-7.88%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-19</td><td>00821</td><td>汇盈控股</td><td><span class="dn"><b>偏跌</b></span></td><td class="num">48.4%</td><td class="num">0.495</td><td>2026-11-20</td><td class="num"><span class="up">+1.01%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>02442</td><td>怡俊集团控股</td><td><span class="up"><b>偏涨</b></span></td><td class="num">62.8%</td><td class="num">85.900</td><td>2026-11-19</td><td class="num"><span class="dn">-11.58%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>01421</td><td>恒昌集团国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">62.7%</td><td class="num">0.465</td><td>2026-11-19</td><td class="num"><span class="dn">-2.15%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>00209</td><td>万维智能科技</td><td><span class="up"><b>偏涨</b></span></td><td class="num">62.2%</td><td class="num">1.375</td><td>2026-11-19</td><td class="num"><span class="up">+20.73%</span></td><td><span class="up"><b>✅ 中</b></span></td></tr><tr><td>2026-11-18</td><td>01176</td><td>珠光控股</td><td><span class="up"><b>偏涨</b></span></td><td class="num">60.5%</td><td class="num">0.014</td><td>2026-11-19</td><td class="num"><span class="">+0.00%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr><tr><td>2026-11-18</td><td>02211</td><td>大健康国际</td><td><span class="up"><b>偏涨</b></span></td><td class="num">60.8%</td><td class="num">0.715</td><td>2026-11-19</td><td class="num"><span class="dn">-4.20%</span></td><td><span class="grey"><b>✖ 未中</b></span></td></tr>
 </table></div>
 <div class="lbl" style="margin-top:6px">仅显示最近 40 条，共 90 条。</div>
 <div class="lbl" style="margin-top:8px;font-size:12px;color:#999">战绩为模型历史表现记录，不代表未来结果；不构成投资建议。</div>
 
 
-<div class="sec"><h2>低位反转候选 <span class="cnt">8 只</span> <span class="cnt">2026-11-20</span></h2><div class="sub">关注低位、超卖与放量止跌信号</div></div>
+<div class="sec"><h2>低位反转候选 <span class="cnt">15 只</span> <span class="cnt">2026-11-23</span></h2><div class="sub">关注低位、超卖与放量止跌信号</div></div>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">重塑能源</div><div class="code">02570.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 4.850 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+76.04%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">69.8%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">4.85</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">15.01</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">2.7</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">贴近52周低点(2%)；60日低位区(17%)；RSI上穿30(28→49)；MACD近3日金叉；量比2.1；止跌首阳(+76.0%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>49.2</b></span><span class="tag">60日位置 <b>17%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+29.00%</b></span>
+      <span class="tag">换手率 <b>0.9%</b></span><span class="tag">量比 <b>2.1</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">209.5%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">反转候选：现价 4.85 附近可分批建仓，目标 15.01（+209.5%空间），跌破 2.7 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>20.6%</b></span><span class="tag">10日乖离 <b>16.1%</b></span>
+      <span class="tag">成交额 <b>0.03亿</b></span><span class="tag">MACD <b>-0.64/-0.66</b></span>
+      <span class="tag">MA10 <b>4.179</b></span><span class="tag">MA20 <b>4.770</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('02570', '重塑能源', [{"d": "2026-10-12", "c": 4.84}, {"d": "2026-10-13", "c": 5.41}, {"d": "2026-10-14", "c": 5.395}, {"d": "2026-10-15", "c": 4.82}, {"d": "2026-10-16", "c": 4.52}, {"d": "2026-10-20", "c": 4.68}, {"d": "2026-10-21", "c": 5.105}, {"d": "2026-10-22", "c": 4.9}, {"d": "2026-10-23", "c": 5.0}, {"d": "2026-10-26", "c": 5.3}, {"d": "2026-10-27", "c": 5.5}, {"d": "2026-10-28", "c": 5.84}, {"d": "2026-10-29", "c": 5.41}, {"d": "2026-10-30", "c": 5.54}, {"d": "2026-11-02", "c": 5.875}, {"d": "2026-11-03", "c": 5.0}, {"d": "2026-11-04", "c": 5.265}, {"d": "2026-11-05", "c": 5.25}, {"d": "2026-11-06", "c": 5.265}, {"d": "2026-11-09", "c": 4.66}, {"d": "2026-11-10", "c": 5.01}, {"d": "2026-11-11", "c": 4.63}, {"d": "2026-11-12", "c": 4.75}, {"d": "2026-11-13", "c": 4.6}, {"d": "2026-11-16", "c": 3.76}, {"d": "2026-11-17", "c": 3.65}, {"d": "2026-11-18", "c": 4.02}, {"d": "2026-11-19", "c": 3.765}, {"d": "2026-11-20", "c": 2.755}, {"d": "2026-11-23", "c": 4.85}])'>查看走势图</button>
+  </div>
+</details>
 
 <details class="card">
   <summary class="card-sum">
@@ -230,7 +271,7 @@ document.addEventListener('click', function(e){
     <div class="prow">
       <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.275 <span class="live">盘中</span></div></div>
       <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-15.38%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">65.4%</div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">66.4%</div></div>
     </div>
   </summary>
   <div class="card-body">
@@ -239,70 +280,70 @@ document.addEventListener('click', function(e){
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">0.325</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">0.275</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">2.005</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">0.319</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">0.27</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">贴近52周低点(1%)；贴近60日低点(0%)；RSI超卖(17)；量比2.5放量</div>
+    <div class="reason">贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(15)；量比2.8放量</div>
     <div class="tags">
-      <span class="tag">RSI <b>16.8</b></span><span class="tag">60日位置 <b>0%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-52.60%</b></span>
-      <span class="tag">换手率 <b>8.8%</b></span><span class="tag">量比 <b>2.5</b></span>
+      <span class="tag">RSI <b>15.5</b></span><span class="tag">60日位置 <b>0%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-60.70%</b></span>
+      <span class="tag">换手率 <b>3.4%</b></span><span class="tag">量比 <b>2.8</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
       <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">37.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">516.9%</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">629.1%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">反转候选：现价 0.325 附近可分批建仓，目标 2.005（+516.9%空间），跌破 0.319 止损</div>
+    <div class="reason">反转候选：现价 0.275 附近可分批建仓，目标 2.005（+629.1%空间），跌破 0.27 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>9.5%</b></span><span class="tag">10日乖离 <b>-49.4%</b></span>
-      <span class="tag">成交额 <b>0.07亿</b></span><span class="tag">MACD <b>-0.09/-0.07</b></span>
-      <span class="tag">MA10 <b>0.642</b></span><span class="tag">MA20 <b>0.701</b></span>
+      <span class="tag">20日波动率 <b>9.7%</b></span><span class="tag">10日乖离 <b>-53.6%</b></span>
+      <span class="tag">成交额 <b>0.02亿</b></span><span class="tag">MACD <b>-0.11/-0.08</b></span>
+      <span class="tag">MA10 <b>0.593</b></span><span class="tag">MA20 <b>0.677</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('02625', '江苏宏信', [{"d": "2026-10-09", "c": 0.8}, {"d": "2026-10-12", "c": 0.8}, {"d": "2026-10-13", "c": 0.79}, {"d": "2026-10-14", "c": 0.79}, {"d": "2026-10-15", "c": 0.745}, {"d": "2026-10-16", "c": 0.73}, {"d": "2026-10-20", "c": 0.67}, {"d": "2026-10-21", "c": 0.64}, {"d": "2026-10-22", "c": 0.72}, {"d": "2026-10-23", "c": 0.675}, {"d": "2026-10-26", "c": 0.75}, {"d": "2026-10-27", "c": 0.76}, {"d": "2026-10-28", "c": 0.755}, {"d": "2026-10-29", "c": 0.755}, {"d": "2026-10-30", "c": 0.75}, {"d": "2026-11-02", "c": 0.765}, {"d": "2026-11-03", "c": 0.76}, {"d": "2026-11-04", "c": 0.745}, {"d": "2026-11-05", "c": 0.76}, {"d": "2026-11-06", "c": 0.795}, {"d": "2026-11-09", "c": 0.77}, {"d": "2026-11-10", "c": 0.75}, {"d": "2026-11-11", "c": 0.695}, {"d": "2026-11-12", "c": 0.69}, {"d": "2026-11-13", "c": 0.685}, {"d": "2026-11-16", "c": 0.7}, {"d": "2026-11-17", "c": 0.705}, {"d": "2026-11-18", "c": 0.59}, {"d": "2026-11-19", "c": 0.51}, {"d": "2026-11-20", "c": 0.325}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('02625', '江苏宏信', [{"d": "2026-10-12", "c": 0.8}, {"d": "2026-10-13", "c": 0.79}, {"d": "2026-10-14", "c": 0.79}, {"d": "2026-10-15", "c": 0.745}, {"d": "2026-10-16", "c": 0.73}, {"d": "2026-10-20", "c": 0.67}, {"d": "2026-10-21", "c": 0.64}, {"d": "2026-10-22", "c": 0.72}, {"d": "2026-10-23", "c": 0.675}, {"d": "2026-10-26", "c": 0.75}, {"d": "2026-10-27", "c": 0.76}, {"d": "2026-10-28", "c": 0.755}, {"d": "2026-10-29", "c": 0.755}, {"d": "2026-10-30", "c": 0.75}, {"d": "2026-11-02", "c": 0.765}, {"d": "2026-11-03", "c": 0.76}, {"d": "2026-11-04", "c": 0.745}, {"d": "2026-11-05", "c": 0.76}, {"d": "2026-11-06", "c": 0.795}, {"d": "2026-11-09", "c": 0.77}, {"d": "2026-11-10", "c": 0.75}, {"d": "2026-11-11", "c": 0.695}, {"d": "2026-11-12", "c": 0.69}, {"d": "2026-11-13", "c": 0.685}, {"d": "2026-11-16", "c": 0.7}, {"d": "2026-11-17", "c": 0.705}, {"d": "2026-11-18", "c": 0.59}, {"d": "2026-11-19", "c": 0.51}, {"d": "2026-11-20", "c": 0.325}, {"d": "2026-11-23", "c": 0.275}])'>查看走势图</button>
   </div>
 </details>
 
 <details class="card">
   <summary class="card-sum">
-    <div class="chead"><div class="nm">新世界发展</div><div class="code">00017.HK</div></div>
+    <div class="chead"><div class="nm">力劲科技</div><div class="code">00558.HK</div></div>
     <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 2.070 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-10.00%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">54.5%</div></div>
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.745 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+6.43%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">46.0%</div></div>
     </div>
   </summary>
   <div class="card-body">
     <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">60 <span class="bar"><i style="width:60.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">2.3</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">7.08</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">2.205</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">0.745</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">1.37</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">0.686</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">贴近52周低点(1%)；贴近60日低点(1%)；RSI超卖(12)；量比3.1放量；止跌首阳(+2.2%)</div>
+    <div class="reason">贴近52周低点(3%)；贴近60日低点(7%)；RSI超卖(24)；量比1.7；止跌首阳(+6.4%)</div>
     <div class="tags">
-      <span class="tag">RSI <b>11.9</b></span><span class="tag">60日位置 <b>1%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-52.80%</b></span>
-      <span class="tag">换手率 <b>2.3%</b></span><span class="tag">量比 <b>3.1</b></span>
+      <span class="tag">RSI <b>24.3</b></span><span class="tag">60日位置 <b>7%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-12.90%</b></span>
+      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>1.7</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">40.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">207.8%</div></div>
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">83.9%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">反转候选：现价 2.3 附近可分批建仓，目标 7.08（+207.8%空间），跌破 2.205 止损</div>
+    <div class="reason">反转候选：现价 0.745 附近可分批建仓，目标 1.37（+83.9%空间），跌破 0.686 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>10.0%</b></span><span class="tag">10日乖离 <b>-38.8%</b></span>
-      <span class="tag">成交额 <b>1.33亿</b></span><span class="tag">MACD <b>-0.76/-0.46</b></span>
-      <span class="tag">MA10 <b>3.757</b></span><span class="tag">MA20 <b>4.431</b></span>
+      <span class="tag">20日波动率 <b>3.2%</b></span><span class="tag">10日乖离 <b>-10.1%</b></span>
+      <span class="tag">成交额 <b>0.02亿</b></span><span class="tag">MACD <b>-0.09/-0.08</b></span>
+      <span class="tag">MA10 <b>0.829</b></span><span class="tag">MA20 <b>0.907</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('00017', '新世界发展', [{"d": "2026-10-08", "c": 5.28}, {"d": "2026-10-09", "c": 5.335}, {"d": "2026-10-12", "c": 5.205}, {"d": "2026-10-13", "c": 5.19}, {"d": "2026-10-14", "c": 5.05}, {"d": "2026-10-15", "c": 4.99}, {"d": "2026-10-16", "c": 5.025}, {"d": "2026-10-20", "c": 4.98}, {"d": "2026-10-21", "c": 5.045}, {"d": "2026-10-22", "c": 4.95}, {"d": "2026-10-23", "c": 5.03}, {"d": "2026-10-26", "c": 5.105}, {"d": "2026-10-27", "c": 5.0}, {"d": "2026-10-28", "c": 5.005}, {"d": "2026-10-29", "c": 4.98}, {"d": "2026-10-30", "c": 5.05}, {"d": "2026-11-02", "c": 5.14}, {"d": "2026-11-03", "c": 5.305}, {"d": "2026-11-04", "c": 5.185}, {"d": "2026-11-05", "c": 5.255}, {"d": "2026-11-06", "c": 5.225}, {"d": "2026-11-09", "c": 5.05}, {"d": "2026-11-10", "c": 5.07}, {"d": "2026-11-11", "c": 5.06}, {"d": "2026-11-12", "c": 4.87}, {"d": "2026-11-16", "c": 2.885}, {"d": "2026-11-17", "c": 2.44}, {"d": "2026-11-18", "c": 2.425}, {"d": "2026-11-19", "c": 2.25}, {"d": "2026-11-20", "c": 2.3}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('00558', '力劲科技', [{"d": "2026-10-12", "c": 1.09}, {"d": "2026-10-13", "c": 1.08}, {"d": "2026-10-14", "c": 1.11}, {"d": "2026-10-15", "c": 1.085}, {"d": "2026-10-16", "c": 1.05}, {"d": "2026-10-20", "c": 1.13}, {"d": "2026-10-21", "c": 1.1}, {"d": "2026-10-22", "c": 1.09}, {"d": "2026-10-23", "c": 1.05}, {"d": "2026-10-26", "c": 1.04}, {"d": "2026-10-27", "c": 1.01}, {"d": "2026-10-28", "c": 1.01}, {"d": "2026-10-29", "c": 1.005}, {"d": "2026-10-30", "c": 0.97}, {"d": "2026-11-02", "c": 1.005}, {"d": "2026-11-03", "c": 1.02}, {"d": "2026-11-04", "c": 0.995}, {"d": "2026-11-05", "c": 0.97}, {"d": "2026-11-06", "c": 0.94}, {"d": "2026-11-09", "c": 0.94}, {"d": "2026-11-10", "c": 0.91}, {"d": "2026-11-11", "c": 0.91}, {"d": "2026-11-12", "c": 0.915}, {"d": "2026-11-13", "c": 0.885}, {"d": "2026-11-16", "c": 0.855}, {"d": "2026-11-17", "c": 0.82}, {"d": "2026-11-18", "c": 0.79}, {"d": "2026-11-19", "c": 0.755}, {"d": "2026-11-20", "c": 0.7}, {"d": "2026-11-23", "c": 0.745}])'>查看走势图</button>
   </div>
 </details>
 
@@ -312,7 +353,7 @@ document.addEventListener('click', function(e){
     <div class="prow">
       <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.665 <span class="live">盘中</span></div></div>
       <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">+0.00%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">30.8%</div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">41.5%</div></div>
     </div>
   </summary>
   <div class="card-body">
@@ -326,11 +367,11 @@ document.addEventListener('click', function(e){
       <div><div class="lbl">止损参考</div><div class="dv">0.652</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(10)；量比2.6放量</div>
+    <div class="reason">贴近52周低点(2%)；贴近60日低点(0%)；RSI超卖(10)；量比2.7放量</div>
     <div class="tags">
       <span class="tag">RSI <b>9.7</b></span><span class="tag">60日位置 <b>0%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-40.90%</b></span>
-      <span class="tag">换手率 <b>0.3%</b></span><span class="tag">量比 <b>2.6</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-40.40%</b></span>
+      <span class="tag">换手率 <b>0.6%</b></span><span class="tag">量比 <b>2.7</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
       <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">37.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
@@ -339,20 +380,184 @@ document.addEventListener('click', function(e){
     <div class="lbl" style="margin-top:8px">买入建议</div>
     <div class="reason">反转候选：现价 0.665 附近可分批建仓，目标 1.22（+83.5%空间），跌破 0.652 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>8.2%</b></span><span class="tag">10日乖离 <b>-32.6%</b></span>
-      <span class="tag">成交额 <b>0.11亿</b></span><span class="tag">MACD <b>-0.09/-0.04</b></span>
-      <span class="tag">MA10 <b>0.987</b></span><span class="tag">MA20 <b>1.054</b></span>
+      <span class="tag">20日波动率 <b>8.2%</b></span><span class="tag">10日乖离 <b>-29.2%</b></span>
+      <span class="tag">成交额 <b>0.20亿</b></span><span class="tag">MACD <b>-0.11/-0.05</b></span>
+      <span class="tag">MA10 <b>0.940</b></span><span class="tag">MA20 <b>1.030</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('00308', '香港中旅', [{"d": "2026-10-09", "c": 1.155}, {"d": "2026-10-12", "c": 1.15}, {"d": "2026-10-13", "c": 1.145}, {"d": "2026-10-14", "c": 1.15}, {"d": "2026-10-15", "c": 1.14}, {"d": "2026-10-16", "c": 1.14}, {"d": "2026-10-20", "c": 1.145}, {"d": "2026-10-21", "c": 1.145}, {"d": "2026-10-22", "c": 1.13}, {"d": "2026-10-23", "c": 1.135}, {"d": "2026-10-26", "c": 1.145}, {"d": "2026-10-27", "c": 1.09}, {"d": "2026-10-28", "c": 1.085}, {"d": "2026-10-29", "c": 1.09}, {"d": "2026-10-30", "c": 1.095}, {"d": "2026-11-02", "c": 1.125}, {"d": "2026-11-03", "c": 1.14}, {"d": "2026-11-04", "c": 1.145}, {"d": "2026-11-05", "c": 1.15}, {"d": "2026-11-06", "c": 1.145}, {"d": "2026-11-09", "c": 1.14}, {"d": "2026-11-10", "c": 1.14}, {"d": "2026-11-11", "c": 1.14}, {"d": "2026-11-12", "c": 1.13}, {"d": "2026-11-13", "c": 1.125}, {"d": "2026-11-16", "c": 1.115}, {"d": "2026-11-17", "c": 1.045}, {"d": "2026-11-18", "c": 0.68}, {"d": "2026-11-19", "c": 0.69}, {"d": "2026-11-20", "c": 0.665}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('00308', '香港中旅', [{"d": "2026-10-12", "c": 1.15}, {"d": "2026-10-13", "c": 1.145}, {"d": "2026-10-14", "c": 1.15}, {"d": "2026-10-15", "c": 1.14}, {"d": "2026-10-16", "c": 1.14}, {"d": "2026-10-20", "c": 1.145}, {"d": "2026-10-21", "c": 1.145}, {"d": "2026-10-22", "c": 1.13}, {"d": "2026-10-23", "c": 1.135}, {"d": "2026-10-26", "c": 1.145}, {"d": "2026-10-27", "c": 1.09}, {"d": "2026-10-28", "c": 1.085}, {"d": "2026-10-29", "c": 1.09}, {"d": "2026-10-30", "c": 1.095}, {"d": "2026-11-02", "c": 1.125}, {"d": "2026-11-03", "c": 1.14}, {"d": "2026-11-04", "c": 1.145}, {"d": "2026-11-05", "c": 1.15}, {"d": "2026-11-06", "c": 1.145}, {"d": "2026-11-09", "c": 1.14}, {"d": "2026-11-10", "c": 1.14}, {"d": "2026-11-11", "c": 1.14}, {"d": "2026-11-12", "c": 1.13}, {"d": "2026-11-13", "c": 1.125}, {"d": "2026-11-16", "c": 1.115}, {"d": "2026-11-17", "c": 1.045}, {"d": "2026-11-18", "c": 0.68}, {"d": "2026-11-19", "c": 0.69}, {"d": "2026-11-20", "c": 0.665}, {"d": "2026-11-23", "c": 0.665}])'>查看走势图</button>
   </div>
 </details>
 
 <details class="card">
   <summary class="card-sum">
-    <div class="chead"><div class="nm">信能低碳</div><div class="code">00145.HK</div></div>
+    <div class="chead"><div class="nm">耀才证券金融</div><div class="code">01428.HK</div></div>
     <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.194 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.52%</span></div></div>
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 5.200 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+4.00%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">29.7%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">5.2</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">7.65</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">4.9</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">贴近52周低点(3%)；贴近60日低点(8%)；RSI上穿30(27→34)；量比2.0；止跌首阳(+4.0%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>34.3</b></span><span class="tag">60日位置 <b>8%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+0.10%</b></span>
+      <span class="tag">换手率 <b>1.0%</b></span><span class="tag">量比 <b>2.0</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">47.1%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">反转候选：现价 5.2 附近可分批建仓，目标 7.65（+47.1%空间），跌破 4.9 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>2.9%</b></span><span class="tag">10日乖离 <b>-4.2%</b></span>
+      <span class="tag">成交额 <b>0.86亿</b></span><span class="tag">MACD <b>-0.32/-0.27</b></span>
+      <span class="tag">MA10 <b>5.428</b></span><span class="tag">MA20 <b>5.709</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('01428', '耀才证券金融', [{"d": "2026-10-12", "c": 6.43}, {"d": "2026-10-13", "c": 6.29}, {"d": "2026-10-14", "c": 6.285}, {"d": "2026-10-15", "c": 6.095}, {"d": "2026-10-16", "c": 6.13}, {"d": "2026-10-20", "c": 6.12}, {"d": "2026-10-21", "c": 6.065}, {"d": "2026-10-22", "c": 5.725}, {"d": "2026-10-23", "c": 5.97}, {"d": "2026-10-26", "c": 5.88}, {"d": "2026-10-27", "c": 5.885}, {"d": "2026-10-28", "c": 5.99}, {"d": "2026-10-29", "c": 5.92}, {"d": "2026-10-30", "c": 5.985}, {"d": "2026-11-02", "c": 6.06}, {"d": "2026-11-03", "c": 6.03}, {"d": "2026-11-04", "c": 6.11}, {"d": "2026-11-05", "c": 6.165}, {"d": "2026-11-06", "c": 5.935}, {"d": "2026-11-09", "c": 5.82}, {"d": "2026-11-10", "c": 5.935}, {"d": "2026-11-11", "c": 5.92}, {"d": "2026-11-12", "c": 5.79}, {"d": "2026-11-13", "c": 5.49}, {"d": "2026-11-16", "c": 5.195}, {"d": "2026-11-17", "c": 5.165}, {"d": "2026-11-18", "c": 5.39}, {"d": "2026-11-19", "c": 5.195}, {"d": "2026-11-20", "c": 5.0}, {"d": "2026-11-23", "c": 5.2}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">正力新能</div><div class="code">03677.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 3.015 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+3.43%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">22.5%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">3.015</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">5.225</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">2.857</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">贴近52周低点(1%)；贴近60日低点(4%)；RSI上穿30(25→31)；量比1.8；止跌首阳(+3.4%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>30.6</b></span><span class="tag">60日位置 <b>4%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-5.60%</b></span>
+      <span class="tag">换手率 <b>0.3%</b></span><span class="tag">量比 <b>1.8</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">73.3%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">反转候选：现价 3.015 附近可分批建仓，目标 5.225（+73.3%空间），跌破 2.857 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>3.1%</b></span><span class="tag">10日乖离 <b>-7.1%</b></span>
+      <span class="tag">成交额 <b>0.13亿</b></span><span class="tag">MACD <b>-0.24/-0.23</b></span>
+      <span class="tag">MA10 <b>3.245</b></span><span class="tag">MA20 <b>3.361</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('03677', '正力新能', [{"d": "2026-10-12", "c": 4.275}, {"d": "2026-10-13", "c": 4.16}, {"d": "2026-10-14", "c": 4.1}, {"d": "2026-10-15", "c": 3.955}, {"d": "2026-10-16", "c": 3.855}, {"d": "2026-10-20", "c": 3.82}, {"d": "2026-10-21", "c": 3.63}, {"d": "2026-10-22", "c": 3.47}, {"d": "2026-10-23", "c": 3.6}, {"d": "2026-10-26", "c": 3.515}, {"d": "2026-10-27", "c": 3.45}, {"d": "2026-10-28", "c": 3.46}, {"d": "2026-10-29", "c": 3.375}, {"d": "2026-10-30", "c": 3.36}, {"d": "2026-11-02", "c": 3.4}, {"d": "2026-11-03", "c": 3.435}, {"d": "2026-11-04", "c": 3.535}, {"d": "2026-11-05", "c": 3.65}, {"d": "2026-11-06", "c": 3.64}, {"d": "2026-11-09", "c": 3.455}, {"d": "2026-11-10", "c": 3.53}, {"d": "2026-11-11", "c": 3.495}, {"d": "2026-11-12", "c": 3.35}, {"d": "2026-11-13", "c": 3.275}, {"d": "2026-11-16", "c": 3.195}, {"d": "2026-11-17", "c": 3.225}, {"d": "2026-11-18", "c": 3.255}, {"d": "2026-11-19", "c": 3.2}, {"d": "2026-11-20", "c": 2.915}, {"d": "2026-11-23", "c": 3.015}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">复星医药</div><div class="code">02196.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 14.710 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+2.22%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">21.3%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">14.71</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">18.47</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">14.102</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">贴近52周低点(6%)；贴近60日低点(8%)；RSI上穿30(28→33)；量比1.8；止跌首阳(+2.2%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>32.7</b></span><span class="tag">60日位置 <b>8%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-9.10%</b></span>
+      <span class="tag">换手率 <b>0.9%</b></span><span class="tag">量比 <b>1.8</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">25.6%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">反转候选：现价 14.71 附近可分批建仓，目标 18.47（+25.6%空间），跌破 14.102 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>2.9%</b></span><span class="tag">10日乖离 <b>-6.4%</b></span>
+      <span class="tag">成交额 <b>0.68亿</b></span><span class="tag">MACD <b>-0.59/-0.37</b></span>
+      <span class="tag">MA10 <b>15.716</b></span><span class="tag">MA20 <b>16.226</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('02196', '复星医药', [{"d": "2026-10-12", "c": 17.26}, {"d": "2026-10-13", "c": 17.51}, {"d": "2026-10-14", "c": 17.22}, {"d": "2026-10-15", "c": 17.15}, {"d": "2026-10-16", "c": 17.11}, {"d": "2026-10-20", "c": 17.08}, {"d": "2026-10-21", "c": 16.96}, {"d": "2026-10-22", "c": 16.27}, {"d": "2026-10-23", "c": 16.49}, {"d": "2026-10-26", "c": 16.66}, {"d": "2026-10-27", "c": 16.43}, {"d": "2026-10-28", "c": 16.55}, {"d": "2026-10-29", "c": 16.12}, {"d": "2026-10-30", "c": 16.47}, {"d": "2026-11-02", "c": 16.61}, {"d": "2026-11-03", "c": 16.87}, {"d": "2026-11-04", "c": 17.0}, {"d": "2026-11-05", "c": 17.23}, {"d": "2026-11-06", "c": 17.22}, {"d": "2026-11-09", "c": 16.86}, {"d": "2026-11-10", "c": 17.08}, {"d": "2026-11-11", "c": 16.73}, {"d": "2026-11-12", "c": 16.57}, {"d": "2026-11-13", "c": 16.57}, {"d": "2026-11-16", "c": 16.19}, {"d": "2026-11-17", "c": 14.7}, {"d": "2026-11-18", "c": 15.11}, {"d": "2026-11-19", "c": 15.11}, {"d": "2026-11-20", "c": 14.39}, {"d": "2026-11-23", "c": 14.71}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">PICO FAR EAST</div><div class="code">00752.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.995 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-2.21%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">5.1%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">1.995</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">2.23</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">1.94</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">贴近52周低点(3%)；贴近60日低点(6%)；量比3.0放量</div>
+    <div class="tags">
+      <span class="tag">RSI <b>34.3</b></span><span class="tag">60日位置 <b>6%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-6.10%</b></span>
+      <span class="tag">换手率 <b>0.0%</b></span><span class="tag">量比 <b>3.0</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">36.2%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">11.8%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">反转候选：现价 1.995 附近可分批建仓，目标 2.23（+11.8%空间），跌破 1.94 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>1.5%</b></span><span class="tag">10日乖离 <b>-5.0%</b></span>
+      <span class="tag">成交额 <b>0.01亿</b></span><span class="tag">MACD <b>-0.01/0.00</b></span>
+      <span class="tag">MA10 <b>2.101</b></span><span class="tag">MA20 <b>2.067</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('00752', 'PICO FAR EAST', [{"d": "2026-10-12", "c": 2.14}, {"d": "2026-10-13", "c": 2.14}, {"d": "2026-10-14", "c": 2.13}, {"d": "2026-10-15", "c": 2.12}, {"d": "2026-10-16", "c": 2.11}, {"d": "2026-10-20", "c": 2.085}, {"d": "2026-10-21", "c": 2.075}, {"d": "2026-10-22", "c": 2.03}, {"d": "2026-10-23", "c": 2.04}, {"d": "2026-10-26", "c": 2.03}, {"d": "2026-10-27", "c": 2.01}, {"d": "2026-10-28", "c": 1.98}, {"d": "2026-10-29", "c": 2.0}, {"d": "2026-10-30", "c": 2.01}, {"d": "2026-11-02", "c": 2.01}, {"d": "2026-11-03", "c": 2.015}, {"d": "2026-11-04", "c": 2.01}, {"d": "2026-11-05", "c": 2.09}, {"d": "2026-11-06", "c": 2.1}, {"d": "2026-11-09", "c": 2.1}, {"d": "2026-11-10", "c": 2.155}, {"d": "2026-11-11", "c": 2.14}, {"d": "2026-11-12", "c": 2.125}, {"d": "2026-11-13", "c": 2.115}, {"d": "2026-11-16", "c": 2.125}, {"d": "2026-11-17", "c": 2.13}, {"d": "2026-11-18", "c": 2.11}, {"d": "2026-11-19", "c": 2.075}, {"d": "2026-11-20", "c": 2.04}, {"d": "2026-11-23", "c": 1.995}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">泛远国际</div><div class="code">02516.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.500 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+13.64%</span></div></div>
       <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
     </div>
   </summary>
@@ -362,38 +567,38 @@ document.addEventListener('click', function(e){
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">0.193</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">0.249</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">0.177</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">0.5</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">0.795</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">0.431</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">贴近52周低点(11%)；60日低位区(18%)；量比3.5放量；止跌首阳(+6.6%)</div>
+    <div class="reason">60日低位区(17%)；RSI上穿30(29→43)；量比2.6放量；止跌首阳(+13.6%)</div>
     <div class="tags">
-      <span class="tag">RSI <b>46.2</b></span><span class="tag">60日位置 <b>18%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-2.00%</b></span>
-      <span class="tag">换手率 <b>6.2%</b></span><span class="tag">量比 <b>3.5</b></span>
+      <span class="tag">RSI <b>43.4</b></span><span class="tag">60日位置 <b>17%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+4.20%</b></span>
+      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>2.6</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
       <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">37.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">29.0%</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">59.0%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">反转候选：现价 0.193 附近可分批建仓，目标 0.249（+29.0%空间），跌破 0.177 止损</div>
+    <div class="reason">反转候选：现价 0.5 附近可分批建仓，目标 0.795（+59.0%空间），跌破 0.431 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>3.4%</b></span><span class="tag">10日乖离 <b>1.6%</b></span>
-      <span class="tag">成交额 <b>0.04亿</b></span><span class="tag">MACD <b>-0.01/-0.01</b></span>
-      <span class="tag">MA10 <b>0.190</b></span><span class="tag">MA20 <b>0.196</b></span>
+      <span class="tag">20日波动率 <b>5.5%</b></span><span class="tag">10日乖离 <b>3.8%</b></span>
+      <span class="tag">成交额 <b>0.02亿</b></span><span class="tag">MACD <b>-0.04/-0.04</b></span>
+      <span class="tag">MA10 <b>0.482</b></span><span class="tag">MA20 <b>0.525</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('00145', '信能低碳', [{"d": "2026-10-05", "c": 0.21}, {"d": "2026-10-06", "c": 0.21}, {"d": "2026-10-08", "c": 0.21}, {"d": "2026-10-09", "c": 0.209}, {"d": "2026-10-12", "c": 0.205}, {"d": "2026-10-13", "c": 0.201}, {"d": "2026-10-14", "c": 0.202}, {"d": "2026-10-15", "c": 0.204}, {"d": "2026-10-16", "c": 0.206}, {"d": "2026-10-20", "c": 0.205}, {"d": "2026-10-22", "c": 0.205}, {"d": "2026-10-23", "c": 0.202}, {"d": "2026-10-26", "c": 0.199}, {"d": "2026-10-27", "c": 0.2}, {"d": "2026-10-28", "c": 0.199}, {"d": "2026-10-29", "c": 0.199}, {"d": "2026-10-30", "c": 0.199}, {"d": "2026-11-02", "c": 0.208}, {"d": "2026-11-03", "c": 0.207}, {"d": "2026-11-05", "c": 0.207}, {"d": "2026-11-06", "c": 0.199}, {"d": "2026-11-09", "c": 0.192}, {"d": "2026-11-10", "c": 0.191}, {"d": "2026-11-11", "c": 0.183}, {"d": "2026-11-12", "c": 0.197}, {"d": "2026-11-13", "c": 0.197}, {"d": "2026-11-17", "c": 0.185}, {"d": "2026-11-18", "c": 0.182}, {"d": "2026-11-19", "c": 0.181}, {"d": "2026-11-20", "c": 0.193}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('02516', '泛远国际', [{"d": "2026-10-12", "c": 0.615}, {"d": "2026-10-13", "c": 0.615}, {"d": "2026-10-14", "c": 0.63}, {"d": "2026-10-15", "c": 0.615}, {"d": "2026-10-16", "c": 0.64}, {"d": "2026-10-20", "c": 0.625}, {"d": "2026-10-21", "c": 0.605}, {"d": "2026-10-22", "c": 0.6}, {"d": "2026-10-23", "c": 0.535}, {"d": "2026-10-26", "c": 0.525}, {"d": "2026-10-27", "c": 0.54}, {"d": "2026-10-28", "c": 0.56}, {"d": "2026-10-29", "c": 0.6}, {"d": "2026-10-30", "c": 0.59}, {"d": "2026-11-02", "c": 0.59}, {"d": "2026-11-03", "c": 0.57}, {"d": "2026-11-04", "c": 0.56}, {"d": "2026-11-05", "c": 0.56}, {"d": "2026-11-06", "c": 0.555}, {"d": "2026-11-09", "c": 0.555}, {"d": "2026-11-10", "c": 0.525}, {"d": "2026-11-11", "c": 0.49}, {"d": "2026-11-12", "c": 0.48}, {"d": "2026-11-13", "c": 0.455}, {"d": "2026-11-16", "c": 0.48}, {"d": "2026-11-17", "c": 0.5}, {"d": "2026-11-18", "c": 0.5}, {"d": "2026-11-19", "c": 0.445}, {"d": "2026-11-20", "c": 0.44}, {"d": "2026-11-23", "c": 0.5}])'>查看走势图</button>
   </div>
 </details>
 
 <details class="card">
   <summary class="card-sum">
-    <div class="chead"><div class="nm">德适－Ｂ</div><div class="code">02526.HK</div></div>
+    <div class="chead"><div class="nm">诺亚控股</div><div class="code">06686.HK</div></div>
     <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 75.000 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-4.94%</span></div></div>
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 9.625 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-9.03%</span></div></div>
       <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
     </div>
   </summary>
@@ -403,70 +608,29 @@ document.addEventListener('click', function(e){
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">78.9</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">562.0</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">77.322</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">9.625</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">14.76</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">9.432</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(25)；量比2.6放量</div>
+    <div class="reason">贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(21)；量比3.2放量</div>
     <div class="tags">
-      <span class="tag">RSI <b>25.0</b></span><span class="tag">60日位置 <b>0%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-7.20%</b></span>
-      <span class="tag">换手率 <b>0.6%</b></span><span class="tag">量比 <b>2.6</b></span>
+      <span class="tag">RSI <b>20.7</b></span><span class="tag">60日位置 <b>0%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-11.70%</b></span>
+      <span class="tag">换手率 <b>0.0%</b></span><span class="tag">量比 <b>3.2</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
       <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">37.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">612.3%</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">53.4%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">反转候选：现价 78.9 附近可分批建仓，目标 562.0（+612.3%空间），跌破 77.322 止损</div>
+    <div class="reason">反转候选：现价 9.625 附近可分批建仓，目标 14.76（+53.4%空间），跌破 9.432 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>8.8%</b></span><span class="tag">10日乖离 <b>-16.7%</b></span>
-      <span class="tag">成交额 <b>0.49亿</b></span><span class="tag">MACD <b>-42.62/-47.78</b></span>
-      <span class="tag">MA10 <b>94.740</b></span><span class="tag">MA20 <b>122.667</b></span>
+      <span class="tag">20日波动率 <b>2.8%</b></span><span class="tag">10日乖离 <b>-9.4%</b></span>
+      <span class="tag">成交额 <b>0.01亿</b></span><span class="tag">MACD <b>-0.55/-0.52</b></span>
+      <span class="tag">MA10 <b>10.627</b></span><span class="tag">MA20 <b>10.911</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('02526', '德适－Ｂ', [{"d": "2026-10-09", "c": 268.6}, {"d": "2026-10-12", "c": 253.2}, {"d": "2026-10-13", "c": 230.2}, {"d": "2026-10-14", "c": 218.0}, {"d": "2026-10-15", "c": 218.8}, {"d": "2026-10-16", "c": 232.0}, {"d": "2026-10-20", "c": 223.0}, {"d": "2026-10-21", "c": 224.0}, {"d": "2026-10-22", "c": 205.4}, {"d": "2026-10-23", "c": 204.4}, {"d": "2026-10-26", "c": 193.8}, {"d": "2026-10-27", "c": 197.8}, {"d": "2026-10-28", "c": 190.0}, {"d": "2026-10-29", "c": 180.1}, {"d": "2026-10-30", "c": 158.0}, {"d": "2026-11-02", "c": 141.0}, {"d": "2026-11-03", "c": 115.4}, {"d": "2026-11-04", "c": 117.0}, {"d": "2026-11-05", "c": 113.0}, {"d": "2026-11-06", "c": 99.85}, {"d": "2026-11-09", "c": 99.95}, {"d": "2026-11-10", "c": 94.75}, {"d": "2026-11-11", "c": 91.6}, {"d": "2026-11-12", "c": 92.95}, {"d": "2026-11-13", "c": 85.0}, {"d": "2026-11-16", "c": 104.5}, {"d": "2026-11-17", "c": 106.7}, {"d": "2026-11-18", "c": 100.8}, {"d": "2026-11-19", "c": 92.25}, {"d": "2026-11-20", "c": 78.9}])'>查看走势图</button>
-  </div>
-</details>
-
-<details class="card">
-  <summary class="card-sum">
-    <div class="chead"><div class="nm">快手－ＷＲ</div><div class="code">81024.HK</div></div>
-    <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 17.180 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-1.04%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-    </div>
-  </summary>
-  <div class="card-body">
-    <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
-      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-    </div>
-    <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">17.36</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">29.72</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">17.013</div></div>
-    </div>
-    <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">贴近52周低点(1%)；贴近60日低点(0%)；RSI超卖(19)；量比2.8放量</div>
-    <div class="tags">
-      <span class="tag">RSI <b>19.4</b></span><span class="tag">60日位置 <b>0%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-21.30%</b></span>
-      <span class="tag">换手率 <b>0.0%</b></span><span class="tag">量比 <b>2.8</b></span>
-    </div>
-    <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">37.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">71.2%</div></div>
-    </div>
-    <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">反转候选：现价 17.36 附近可分批建仓，目标 29.72（+71.2%空间），跌破 17.013 止损</div>
-    <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>3.5%</b></span><span class="tag">10日乖离 <b>-20.4%</b></span>
-      <span class="tag">成交额 <b>0.02亿</b></span><span class="tag">MACD <b>-1.43/-0.93</b></span>
-      <span class="tag">MA10 <b>21.798</b></span><span class="tag">MA20 <b>22.605</b></span>
-    </div>
-    <button class="trend-btn" onclick='showTrend('81024', '快手－ＷＲ', [{"d": "2026-10-09", "c": 25.56}, {"d": "2026-10-12", "c": 24.98}, {"d": "2026-10-13", "c": 24.82}, {"d": "2026-10-14", "c": 25.2}, {"d": "2026-10-15", "c": 24.4}, {"d": "2026-10-16", "c": 24.92}, {"d": "2026-10-20", "c": 24.5}, {"d": "2026-10-21", "c": 23.88}, {"d": "2026-10-22", "c": 22.78}, {"d": "2026-10-23", "c": 23.7}, {"d": "2026-10-26", "c": 23.5}, {"d": "2026-10-27", "c": 23.06}, {"d": "2026-10-28", "c": 22.96}, {"d": "2026-10-29", "c": 22.26}, {"d": "2026-10-30", "c": 22.48}, {"d": "2026-11-02", "c": 23.2}, {"d": "2026-11-03", "c": 23.34}, {"d": "2026-11-04", "c": 23.82}, {"d": "2026-11-05", "c": 24.9}, {"d": "2026-11-06", "c": 24.6}, {"d": "2026-11-09", "c": 24.5}, {"d": "2026-11-10", "c": 24.6}, {"d": "2026-11-11", "c": 24.34}, {"d": "2026-11-12", "c": 23.0}, {"d": "2026-11-13", "c": 22.06}, {"d": "2026-11-16", "c": 21.54}, {"d": "2026-11-17", "c": 20.62}, {"d": "2026-11-18", "c": 20.44}, {"d": "2026-11-19", "c": 19.52}, {"d": "2026-11-20", "c": 17.36}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('06686', '诺亚控股', [{"d": "2026-10-06", "c": 12.39}, {"d": "2026-10-07", "c": 12.38}, {"d": "2026-10-13", "c": 12.38}, {"d": "2026-10-14", "c": 12.3}, {"d": "2026-10-15", "c": 12.3}, {"d": "2026-10-16", "c": 12.19}, {"d": "2026-10-20", "c": 11.88}, {"d": "2026-10-21", "c": 11.87}, {"d": "2026-10-22", "c": 11.68}, {"d": "2026-10-23", "c": 11.66}, {"d": "2026-10-26", "c": 11.3}, {"d": "2026-10-27", "c": 11.3}, {"d": "2026-10-28", "c": 11.12}, {"d": "2026-10-29", "c": 10.8}, {"d": "2026-10-30", "c": 10.94}, {"d": "2026-11-02", "c": 11.0}, {"d": "2026-11-03", "c": 11.1}, {"d": "2026-11-04", "c": 11.49}, {"d": "2026-11-05", "c": 11.4}, {"d": "2026-11-09", "c": 11.5}, {"d": "2026-11-10", "c": 11.2}, {"d": "2026-11-11", "c": 10.7}, {"d": "2026-11-12", "c": 10.91}, {"d": "2026-11-13", "c": 10.89}, {"d": "2026-11-16", "c": 10.9}, {"d": "2026-11-17", "c": 10.46}, {"d": "2026-11-18", "c": 10.51}, {"d": "2026-11-19", "c": 10.5}, {"d": "2026-11-20", "c": 10.58}, {"d": "2026-11-23", "c": 9.625}])'>查看走势图</button>
   </div>
 </details>
 
@@ -485,38 +649,38 @@ document.addEventListener('click', function(e){
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">54.4</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">53.9</div></div>
       <div><div class="lbl">目标参考</div><div class="dv">82.25</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">53.312</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">52.822</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">贴近52周低点(0%)；贴近60日低点(0%)；RSI超卖(24)；量比2.6放量</div>
+    <div class="reason">贴近52周低点(1%)；贴近60日低点(0%)；RSI超卖(23)；量比2.8放量</div>
     <div class="tags">
-      <span class="tag">RSI <b>24.0</b></span><span class="tag">60日位置 <b>0%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-14.10%</b></span>
-      <span class="tag">换手率 <b>0.0%</b></span><span class="tag">量比 <b>2.6</b></span>
+      <span class="tag">RSI <b>23.4</b></span><span class="tag">60日位置 <b>0%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-15.60%</b></span>
+      <span class="tag">换手率 <b>0.0%</b></span><span class="tag">量比 <b>2.8</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
       <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">37.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">51.2%</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">52.6%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">反转候选：现价 54.4 附近可分批建仓，目标 82.25（+51.2%空间），跌破 53.312 止损</div>
+    <div class="reason">反转候选：现价 53.9 附近可分批建仓，目标 82.25（+52.6%空间），跌破 52.822 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>2.8%</b></span><span class="tag">10日乖离 <b>-12.9%</b></span>
-      <span class="tag">成交额 <b>0.01亿</b></span><span class="tag">MACD <b>-2.99/-2.18</b></span>
-      <span class="tag">MA10 <b>62.480</b></span><span class="tag">MA20 <b>63.755</b></span>
+      <span class="tag">20日波动率 <b>2.8%</b></span><span class="tag">10日乖离 <b>-11.9%</b></span>
+      <span class="tag">成交额 <b>0.01亿</b></span><span class="tag">MACD <b>-3.38/-2.42</b></span>
+      <span class="tag">MA10 <b>61.210</b></span><span class="tag">MA20 <b>63.200</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('89888', '百度集团－ＷＲ', [{"d": "2026-10-09", "c": 71.0}, {"d": "2026-10-12", "c": 69.75}, {"d": "2026-10-13", "c": 69.55}, {"d": "2026-10-14", "c": 70.05}, {"d": "2026-10-15", "c": 67.0}, {"d": "2026-10-16", "c": 67.75}, {"d": "2026-10-20", "c": 66.9}, {"d": "2026-10-21", "c": 66.2}, {"d": "2026-10-22", "c": 64.0}, {"d": "2026-10-23", "c": 64.8}, {"d": "2026-10-26", "c": 65.0}, {"d": "2026-10-27", "c": 63.95}, {"d": "2026-10-28", "c": 65.55}, {"d": "2026-10-29", "c": 64.2}, {"d": "2026-10-30", "c": 64.3}, {"d": "2026-11-02", "c": 63.95}, {"d": "2026-11-03", "c": 63.3}, {"d": "2026-11-04", "c": 64.9}, {"d": "2026-11-05", "c": 68.7}, {"d": "2026-11-06", "c": 66.45}, {"d": "2026-11-09", "c": 66.6}, {"d": "2026-11-10", "c": 67.55}, {"d": "2026-11-11", "c": 66.85}, {"d": "2026-11-12", "c": 65.5}, {"d": "2026-11-13", "c": 63.3}, {"d": "2026-11-16", "c": 63.9}, {"d": "2026-11-17", "c": 60.45}, {"d": "2026-11-18", "c": 59.6}, {"d": "2026-11-19", "c": 56.65}, {"d": "2026-11-20", "c": 54.4}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('89888', '百度集团－ＷＲ', [{"d": "2026-10-12", "c": 69.75}, {"d": "2026-10-13", "c": 69.55}, {"d": "2026-10-14", "c": 70.05}, {"d": "2026-10-15", "c": 67.0}, {"d": "2026-10-16", "c": 67.75}, {"d": "2026-10-20", "c": 66.9}, {"d": "2026-10-21", "c": 66.2}, {"d": "2026-10-22", "c": 64.0}, {"d": "2026-10-23", "c": 64.8}, {"d": "2026-10-26", "c": 65.0}, {"d": "2026-10-27", "c": 63.95}, {"d": "2026-10-28", "c": 65.55}, {"d": "2026-10-29", "c": 64.2}, {"d": "2026-10-30", "c": 64.3}, {"d": "2026-11-02", "c": 63.95}, {"d": "2026-11-03", "c": 63.3}, {"d": "2026-11-04", "c": 64.9}, {"d": "2026-11-05", "c": 68.7}, {"d": "2026-11-06", "c": 66.45}, {"d": "2026-11-09", "c": 66.6}, {"d": "2026-11-10", "c": 67.55}, {"d": "2026-11-11", "c": 66.85}, {"d": "2026-11-12", "c": 65.5}, {"d": "2026-11-13", "c": 63.3}, {"d": "2026-11-16", "c": 63.9}, {"d": "2026-11-17", "c": 60.45}, {"d": "2026-11-18", "c": 59.6}, {"d": "2026-11-19", "c": 56.65}, {"d": "2026-11-20", "c": 54.4}, {"d": "2026-11-23", "c": 53.9}])'>查看走势图</button>
   </div>
 </details>
 
 <details class="card">
   <summary class="card-sum">
-    <div class="chead"><div class="nm">瑞斯康集团</div><div class="code">01679.HK</div></div>
+    <div class="chead"><div class="nm">力盟科技</div><div class="code">02405.HK</div></div>
     <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.695 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">-0.00%</span></div></div>
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.300 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-1.64%</span></div></div>
       <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
     </div>
   </summary>
@@ -526,33 +690,197 @@ document.addEventListener('click', function(e){
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">0.695</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">1.415</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">0.681</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">0.3</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">0.51</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">0.274</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">贴近60日低点(0%)；RSI超卖(16)；量比3.5放量</div>
+    <div class="reason">贴近52周低点(2%)；贴近60日低点(9%)；量比3.2放量</div>
     <div class="tags">
-      <span class="tag">RSI <b>16.1</b></span><span class="tag">60日位置 <b>0%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-28.40%</b></span>
-      <span class="tag">换手率 <b>1.6%</b></span><span class="tag">量比 <b>3.5</b></span>
+      <span class="tag">RSI <b>44.2</b></span><span class="tag">60日位置 <b>9%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-6.20%</b></span>
+      <span class="tag">换手率 <b>0.6%</b></span><span class="tag">量比 <b>3.2</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
       <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">36.2%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">103.6%</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">70.0%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">反转候选：现价 0.695 附近可分批建仓，目标 1.415（+103.6%空间），跌破 0.681 止损</div>
+    <div class="reason">反转候选：现价 0.3 附近可分批建仓，目标 0.51（+70.0%空间），跌破 0.274 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>4.7%</b></span><span class="tag">10日乖离 <b>-21.6%</b></span>
-      <span class="tag">成交额 <b>0.03亿</b></span><span class="tag">MACD <b>-0.13/-0.10</b></span>
-      <span class="tag">MA10 <b>0.887</b></span><span class="tag">MA20 <b>1.013</b></span>
+      <span class="tag">20日波动率 <b>5.1%</b></span><span class="tag">10日乖离 <b>-1.6%</b></span>
+      <span class="tag">成交额 <b>0.01亿</b></span><span class="tag">MACD <b>-0.01/-0.01</b></span>
+      <span class="tag">MA10 <b>0.305</b></span><span class="tag">MA20 <b>0.309</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('01679', '瑞斯康集团', [{"d": "2026-09-24", "c": 1.275}, {"d": "2026-09-25", "c": 1.21}, {"d": "2026-09-28", "c": 1.31}, {"d": "2026-09-29", "c": 1.31}, {"d": "2026-09-30", "c": 1.31}, {"d": "2026-10-02", "c": 1.32}, {"d": "2026-10-05", "c": 1.2}, {"d": "2026-10-07", "c": 1.305}, {"d": "2026-10-13", "c": 1.305}, {"d": "2026-10-15", "c": 1.305}, {"d": "2026-10-16", "c": 1.305}, {"d": "2026-10-21", "c": 1.29}, {"d": "2026-10-22", "c": 1.14}, {"d": "2026-10-23", "c": 1.09}, {"d": "2026-10-26", "c": 1.105}, {"d": "2026-10-28", "c": 1.15}, {"d": "2026-10-29", "c": 1.14}, {"d": "2026-10-30", "c": 1.065}, {"d": "2026-11-02", "c": 1.06}, {"d": "2026-11-03", "c": 1.05}, {"d": "2026-11-05", "c": 1.04}, {"d": "2026-11-09", "c": 1.04}, {"d": "2026-11-10", "c": 1.04}, {"d": "2026-11-11", "c": 0.98}, {"d": "2026-11-12", "c": 0.97}, {"d": "2026-11-13", "c": 0.895}, {"d": "2026-11-16", "c": 0.8}, {"d": "2026-11-17", "c": 0.7}, {"d": "2026-11-19", "c": 0.71}, {"d": "2026-11-20", "c": 0.695}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('02405', '力盟科技', [{"d": "2026-09-24", "c": 0.315}, {"d": "2026-09-25", "c": 0.315}, {"d": "2026-09-28", "c": 0.31}, {"d": "2026-09-30", "c": 0.29}, {"d": "2026-10-02", "c": 0.325}, {"d": "2026-10-05", "c": 0.35}, {"d": "2026-10-06", "c": 0.32}, {"d": "2026-10-07", "c": 0.36}, {"d": "2026-10-09", "c": 0.36}, {"d": "2026-10-12", "c": 0.355}, {"d": "2026-10-13", "c": 0.345}, {"d": "2026-10-14", "c": 0.315}, {"d": "2026-10-15", "c": 0.315}, {"d": "2026-10-20", "c": 0.315}, {"d": "2026-10-22", "c": 0.295}, {"d": "2026-10-26", "c": 0.29}, {"d": "2026-10-27", "c": 0.29}, {"d": "2026-10-29", "c": 0.32}, {"d": "2026-10-30", "c": 0.32}, {"d": "2026-11-02", "c": 0.32}, {"d": "2026-11-04", "c": 0.305}, {"d": "2026-11-05", "c": 0.305}, {"d": "2026-11-06", "c": 0.305}, {"d": "2026-11-10", "c": 0.32}, {"d": "2026-11-12", "c": 0.32}, {"d": "2026-11-13", "c": 0.32}, {"d": "2026-11-17", "c": 0.28}, {"d": "2026-11-18", "c": 0.29}, {"d": "2026-11-19", "c": 0.305}, {"d": "2026-11-23", "c": 0.3}])'>查看走势图</button>
   </div>
 </details>
 
-<div class="sec"><h2>强势动量候选 <span class="cnt">12 只</span> <span class="cnt">2026-11-20</span></h2><div class="sub">关注短线强势、放量突破信号</div></div>
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">中泽丰</div><div class="code">01282.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.066 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+15.79%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">0.066</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">0.111</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">0.055</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">60日低位区(18%)；RSI上穿30(26→40)；量比3.6放量</div>
+    <div class="tags">
+      <span class="tag">RSI <b>39.7</b></span><span class="tag">60日位置 <b>18%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-16.50%</b></span>
+      <span class="tag">换手率 <b>0.5%</b></span><span class="tag">量比 <b>3.6</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">68.2%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">反转候选：现价 0.066 附近可分批建仓，目标 0.111（+68.2%空间），跌破 0.055 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>6.3%</b></span><span class="tag">10日乖离 <b>-4.1%</b></span>
+      <span class="tag">成交额 <b>0.01亿</b></span><span class="tag">MACD <b>-0.01/-0.01</b></span>
+      <span class="tag">MA10 <b>0.069</b></span><span class="tag">MA20 <b>0.073</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('01282', '中泽丰', [{"d": "2026-10-08", "c": 0.091}, {"d": "2026-10-09", "c": 0.092}, {"d": "2026-10-12", "c": 0.094}, {"d": "2026-10-13", "c": 0.092}, {"d": "2026-10-14", "c": 0.09}, {"d": "2026-10-15", "c": 0.09}, {"d": "2026-10-16", "c": 0.088}, {"d": "2026-10-20", "c": 0.085}, {"d": "2026-10-21", "c": 0.083}, {"d": "2026-10-22", "c": 0.081}, {"d": "2026-10-23", "c": 0.082}, {"d": "2026-10-26", "c": 0.08}, {"d": "2026-10-27", "c": 0.079}, {"d": "2026-10-28", "c": 0.08}, {"d": "2026-10-30", "c": 0.077}, {"d": "2026-11-02", "c": 0.078}, {"d": "2026-11-03", "c": 0.076}, {"d": "2026-11-04", "c": 0.076}, {"d": "2026-11-05", "c": 0.079}, {"d": "2026-11-06", "c": 0.074}, {"d": "2026-11-09", "c": 0.073}, {"d": "2026-11-10", "c": 0.075}, {"d": "2026-11-11", "c": 0.075}, {"d": "2026-11-12", "c": 0.076}, {"d": "2026-11-13", "c": 0.079}, {"d": "2026-11-16", "c": 0.068}, {"d": "2026-11-17", "c": 0.063}, {"d": "2026-11-19", "c": 0.056}, {"d": "2026-11-20", "c": 0.057}, {"d": "2026-11-23", "c": 0.066}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">胜宏科技</div><div class="code">02476.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 93.350 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+7.61%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">93.35</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">225.2</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">85.015</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">贴近52周低点(3%)；贴近60日低点(5%)；RSI上穿30(27→33)；MACD近3日金叉；止跌首阳(+7.6%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>32.5</b></span><span class="tag">60日位置 <b>5%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+1.90%</b></span>
+      <span class="tag">换手率 <b>7.3%</b></span><span class="tag">量比 <b>1.0</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">141.2%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">反转候选：现价 93.35 附近可分批建仓，目标 225.2（+141.2%空间），跌破 85.015 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>6.7%</b></span><span class="tag">10日乖离 <b>-7.1%</b></span>
+      <span class="tag">成交额 <b>7.25亿</b></span><span class="tag">MACD <b>-19.44/-19.73</b></span>
+      <span class="tag">MA10 <b>100.500</b></span><span class="tag">MA20 <b>112.785</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('02476', '胜宏科技', [{"d": "2026-10-12", "c": 174.8}, {"d": "2026-10-13", "c": 172.8}, {"d": "2026-10-14", "c": 172.0}, {"d": "2026-10-15", "c": 158.0}, {"d": "2026-10-16", "c": 151.1}, {"d": "2026-10-20", "c": 156.5}, {"d": "2026-10-21", "c": 157.0}, {"d": "2026-10-22", "c": 142.0}, {"d": "2026-10-23", "c": 149.0}, {"d": "2026-10-26", "c": 147.5}, {"d": "2026-10-27", "c": 143.6}, {"d": "2026-10-28", "c": 149.3}, {"d": "2026-10-29", "c": 136.0}, {"d": "2026-10-30", "c": 123.1}, {"d": "2026-11-02", "c": 123.4}, {"d": "2026-11-03", "c": 117.0}, {"d": "2026-11-04", "c": 122.2}, {"d": "2026-11-05", "c": 119.1}, {"d": "2026-11-06", "c": 108.4}, {"d": "2026-11-09", "c": 108.6}, {"d": "2026-11-10", "c": 113.0}, {"d": "2026-11-11", "c": 124.5}, {"d": "2026-11-12", "c": 115.9}, {"d": "2026-11-13", "c": 100.3}, {"d": "2026-11-16", "c": 91.6}, {"d": "2026-11-17", "c": 90.5}, {"d": "2026-11-18", "c": 94.05}, {"d": "2026-11-19", "c": 95.05}, {"d": "2026-11-20", "c": 86.75}, {"d": "2026-11-23", "c": 93.35}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">粤运交通</div><div class="code">03399.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.145 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+1.33%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">1.145</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">1.315</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">1.098</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">贴近52周低点(12%)；60日低位区(13%)；量比2.5放量</div>
+    <div class="tags">
+      <span class="tag">RSI <b>45.1</b></span><span class="tag">60日位置 <b>13%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+0.40%</b></span>
+      <span class="tag">换手率 <b>0.5%</b></span><span class="tag">量比 <b>2.5</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">14.8%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">反转候选：现价 1.145 附近可分批建仓，目标 1.315（+14.8%空间），跌破 1.098 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>2.0%</b></span><span class="tag">10日乖离 <b>0.1%</b></span>
+      <span class="tag">成交额 <b>0.01亿</b></span><span class="tag">MACD <b>-0.01/-0.01</b></span>
+      <span class="tag">MA10 <b>1.144</b></span><span class="tag">MA20 <b>1.159</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('03399', '粤运交通', [{"d": "2026-10-08", "c": 1.2}, {"d": "2026-10-09", "c": 1.2}, {"d": "2026-10-12", "c": 1.2}, {"d": "2026-10-13", "c": 1.19}, {"d": "2026-10-14", "c": 1.2}, {"d": "2026-10-15", "c": 1.17}, {"d": "2026-10-16", "c": 1.165}, {"d": "2026-10-20", "c": 1.18}, {"d": "2026-10-21", "c": 1.165}, {"d": "2026-10-22", "c": 1.16}, {"d": "2026-10-23", "c": 1.165}, {"d": "2026-10-26", "c": 1.165}, {"d": "2026-10-27", "c": 1.17}, {"d": "2026-10-28", "c": 1.17}, {"d": "2026-10-29", "c": 1.145}, {"d": "2026-10-30", "c": 1.15}, {"d": "2026-11-02", "c": 1.22}, {"d": "2026-11-03", "c": 1.205}, {"d": "2026-11-04", "c": 1.185}, {"d": "2026-11-05", "c": 1.165}, {"d": "2026-11-06", "c": 1.15}, {"d": "2026-11-09", "c": 1.145}, {"d": "2026-11-10", "c": 1.15}, {"d": "2026-11-11", "c": 1.175}, {"d": "2026-11-16", "c": 1.14}, {"d": "2026-11-17", "c": 1.15}, {"d": "2026-11-18", "c": 1.135}, {"d": "2026-11-19", "c": 1.12}, {"d": "2026-11-20", "c": 1.13}, {"d": "2026-11-23", "c": 1.145}])'>查看走势图</button>
+  </div>
+</details>
+
+<div class="sec"><h2>强势动量候选 <span class="cnt">15 只</span> <span class="cnt">2026-11-23</span></h2><div class="sub">关注短线强势、放量突破信号</div></div>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">重塑能源</div><div class="code">02570.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 4.850 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+76.04%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">69.8%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">60 <span class="bar"><i style="width:60.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">4.704</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">5.577</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">4.462</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">5日+29%；量比2.1；入选日大涨(+76.0%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>49.2</b></span><span class="tag">60日位置 <b>17%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+29.00%</b></span>
+      <span class="tag">换手率 <b>0.9%</b></span><span class="tag">量比 <b>2.1</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">40.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">209.5%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">动量候选：等回调到 4.704 附近买入，目标 5.577（+15%），跌破 4.462 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>20.6%</b></span><span class="tag">10日乖离 <b>16.1%</b></span>
+      <span class="tag">成交额 <b>0.03亿</b></span><span class="tag">MACD <b>-0.64/-0.66</b></span>
+      <span class="tag">MA10 <b>4.179</b></span><span class="tag">MA20 <b>4.770</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('02570', '重塑能源', [{"d": "2026-10-12", "c": 4.84}, {"d": "2026-10-13", "c": 5.41}, {"d": "2026-10-14", "c": 5.395}, {"d": "2026-10-15", "c": 4.82}, {"d": "2026-10-16", "c": 4.52}, {"d": "2026-10-20", "c": 4.68}, {"d": "2026-10-21", "c": 5.105}, {"d": "2026-10-22", "c": 4.9}, {"d": "2026-10-23", "c": 5.0}, {"d": "2026-10-26", "c": 5.3}, {"d": "2026-10-27", "c": 5.5}, {"d": "2026-10-28", "c": 5.84}, {"d": "2026-10-29", "c": 5.41}, {"d": "2026-10-30", "c": 5.54}, {"d": "2026-11-02", "c": 5.875}, {"d": "2026-11-03", "c": 5.0}, {"d": "2026-11-04", "c": 5.265}, {"d": "2026-11-05", "c": 5.25}, {"d": "2026-11-06", "c": 5.265}, {"d": "2026-11-09", "c": 4.66}, {"d": "2026-11-10", "c": 5.01}, {"d": "2026-11-11", "c": 4.63}, {"d": "2026-11-12", "c": 4.75}, {"d": "2026-11-13", "c": 4.6}, {"d": "2026-11-16", "c": 3.76}, {"d": "2026-11-17", "c": 3.65}, {"d": "2026-11-18", "c": 4.02}, {"d": "2026-11-19", "c": 3.765}, {"d": "2026-11-20", "c": 2.755}, {"d": "2026-11-23", "c": 4.85}])'>查看走势图</button>
+  </div>
+</details>
 
 <details class="card">
   <summary class="card-sum">
@@ -560,38 +888,38 @@ document.addEventListener('click', function(e){
     <div class="prow">
       <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.500 <span class="live">盘中</span></div></div>
       <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+33.33%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">63.0%</div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">68.6%</div></div>
     </div>
   </summary>
   <div class="card-body">
     <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">93 <span class="bar"><i style="width:93.0%"></i></span></div></div>
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">1.091</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">1.294</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">1.035</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">1.455</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">1.725</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">1.38</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">5日+22%；RSI强势(62)；入选日大涨(+19.7%)</div>
+    <div class="reason">5日+62%；创60日新高；换手2.6%；量比2.2；入选日大涨(+33.3%)</div>
     <div class="tags">
-      <span class="tag">RSI <b>62.3</b></span><span class="tag">60日位置 <b>57%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+22.30%</b></span>
-      <span class="tag">换手率 <b>0.6%</b></span><span class="tag">量比 <b>1.7</b></span>
+      <span class="tag">RSI <b>74.9</b></span><span class="tag">60日位置 <b>100%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+62.20%</b></span>
+      <span class="tag">换手率 <b>2.6%</b></span><span class="tag">量比 <b>2.2</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">41.2%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">32.4%</div></div>
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">48.3%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">0.0%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 1.091 附近买入，目标 1.294（+15%），跌破 1.035 止损</div>
+    <div class="reason">动量候选：等回调到 1.455 附近买入，目标 1.725（+15%），跌破 1.38 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>9.3%</b></span><span class="tag">10日乖离 <b>20.1%</b></span>
-      <span class="tag">成交额 <b>0.01亿</b></span><span class="tag">MACD <b>-0.00/-0.04</b></span>
-      <span class="tag">MA10 <b>0.937</b></span><span class="tag">MA20 <b>0.860</b></span>
+      <span class="tag">20日波动率 <b>10.8%</b></span><span class="tag">10日乖离 <b>50.5%</b></span>
+      <span class="tag">成交额 <b>0.07亿</b></span><span class="tag">MACD <b>0.04/-0.03</b></span>
+      <span class="tag">MA10 <b>0.997</b></span><span class="tag">MA20 <b>0.887</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('00928', '帝王国际投资', [{"d": "2026-09-24", "c": 1.38}, {"d": "2026-09-25", "c": 1.22}, {"d": "2026-09-28", "c": 1.42}, {"d": "2026-09-29", "c": 1.3}, {"d": "2026-10-15", "c": 0.87}, {"d": "2026-10-16", "c": 0.8}, {"d": "2026-10-20", "c": 0.73}, {"d": "2026-10-21", "c": 0.71}, {"d": "2026-10-22", "c": 0.72}, {"d": "2026-10-23", "c": 0.77}, {"d": "2026-10-26", "c": 0.95}, {"d": "2026-10-27", "c": 0.78}, {"d": "2026-10-28", "c": 0.82}, {"d": "2026-10-29", "c": 0.73}, {"d": "2026-10-30", "c": 0.65}, {"d": "2026-11-02", "c": 0.655}, {"d": "2026-11-03", "c": 0.8}, {"d": "2026-11-04", "c": 0.8}, {"d": "2026-11-05", "c": 0.79}, {"d": "2026-11-06", "c": 0.85}, {"d": "2026-11-09", "c": 0.9}, {"d": "2026-11-10", "c": 0.9}, {"d": "2026-11-11", "c": 0.88}, {"d": "2026-11-12", "c": 0.89}, {"d": "2026-11-13", "c": 0.92}, {"d": "2026-11-16", "c": 0.925}, {"d": "2026-11-17", "c": 0.96}, {"d": "2026-11-18", "c": 0.93}, {"d": "2026-11-19", "c": 0.94}, {"d": "2026-11-20", "c": 1.125}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('00928', '帝王国际投资', [{"d": "2026-09-25", "c": 1.22}, {"d": "2026-09-28", "c": 1.42}, {"d": "2026-09-29", "c": 1.3}, {"d": "2026-10-15", "c": 0.87}, {"d": "2026-10-16", "c": 0.8}, {"d": "2026-10-20", "c": 0.73}, {"d": "2026-10-21", "c": 0.71}, {"d": "2026-10-22", "c": 0.72}, {"d": "2026-10-23", "c": 0.77}, {"d": "2026-10-26", "c": 0.95}, {"d": "2026-10-27", "c": 0.78}, {"d": "2026-10-28", "c": 0.82}, {"d": "2026-10-29", "c": 0.73}, {"d": "2026-10-30", "c": 0.65}, {"d": "2026-11-02", "c": 0.655}, {"d": "2026-11-03", "c": 0.8}, {"d": "2026-11-04", "c": 0.8}, {"d": "2026-11-05", "c": 0.79}, {"d": "2026-11-06", "c": 0.85}, {"d": "2026-11-09", "c": 0.9}, {"d": "2026-11-10", "c": 0.9}, {"d": "2026-11-11", "c": 0.88}, {"d": "2026-11-12", "c": 0.89}, {"d": "2026-11-13", "c": 0.92}, {"d": "2026-11-16", "c": 0.925}, {"d": "2026-11-17", "c": 0.96}, {"d": "2026-11-18", "c": 0.93}, {"d": "2026-11-19", "c": 0.94}, {"d": "2026-11-20", "c": 1.125}, {"d": "2026-11-23", "c": 1.5}])'>查看走势图</button>
   </div>
 </details>
 
@@ -601,38 +929,38 @@ document.addEventListener('click', function(e){
     <div class="prow">
       <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.460 <span class="live">盘中</span></div></div>
       <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+4.66%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">61.4%</div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">66.8%</div></div>
     </div>
   </summary>
   <div class="card-body">
     <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">55 <span class="bar"><i style="width:55.0%"></i></span></div></div>
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">1.353</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">1.604</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">1.283</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">1.416</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">1.679</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">1.343</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">换手35.3%；RSI强势(55)；入选日大涨(+39.5%)</div>
+    <div class="reason">5日+15%；换手37.0%；RSI强势(56)</div>
     <div class="tags">
-      <span class="tag">RSI <b>54.5</b></span><span class="tag">60日位置 <b>64%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+1.80%</b></span>
-      <span class="tag">换手率 <b>35.3%</b></span><span class="tag">量比 <b>0.5</b></span>
+      <span class="tag">RSI <b>56.3</b></span><span class="tag">60日位置 <b>70%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+15.00%</b></span>
+      <span class="tag">换手率 <b>37.0%</b></span><span class="tag">量比 <b>0.8</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">37.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">30.5%</div></div>
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">38.8%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">24.7%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 1.353 附近买入，目标 1.604（+15%），跌破 1.283 止损</div>
+    <div class="reason">动量候选：等回调到 1.416 附近买入，目标 1.679（+15%），跌破 1.343 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>18.3%</b></span><span class="tag">10日乖离 <b>8.3%</b></span>
-      <span class="tag">成交额 <b>6.29亿</b></span><span class="tag">MACD <b>0.01/0.04</b></span>
-      <span class="tag">MA10 <b>1.288</b></span><span class="tag">MA20 <b>1.355</b></span>
+      <span class="tag">20日波动率 <b>17.4%</b></span><span class="tag">10日乖离 <b>11.9%</b></span>
+      <span class="tag">成交额 <b>7.79亿</b></span><span class="tag">MACD <b>0.03/0.04</b></span>
+      <span class="tag">MA10 <b>1.304</b></span><span class="tag">MA20 <b>1.381</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('06681', '脑动极光－Ｂ', [{"d": "2026-10-09", "c": 0.96}, {"d": "2026-10-12", "c": 0.845}, {"d": "2026-10-13", "c": 0.75}, {"d": "2026-10-14", "c": 0.69}, {"d": "2026-10-15", "c": 0.655}, {"d": "2026-10-16", "c": 0.63}, {"d": "2026-10-20", "c": 0.645}, {"d": "2026-10-21", "c": 0.755}, {"d": "2026-10-22", "c": 0.96}, {"d": "2026-10-23", "c": 0.875}, {"d": "2026-10-26", "c": 0.94}, {"d": "2026-10-27", "c": 1.195}, {"d": "2026-10-28", "c": 1.82}, {"d": "2026-10-29", "c": 1.52}, {"d": "2026-10-30", "c": 1.63}, {"d": "2026-11-02", "c": 1.35}, {"d": "2026-11-03", "c": 1.505}, {"d": "2026-11-04", "c": 1.44}, {"d": "2026-11-05", "c": 1.445}, {"d": "2026-11-06", "c": 1.38}, {"d": "2026-11-09", "c": 1.295}, {"d": "2026-11-10", "c": 1.39}, {"d": "2026-11-11", "c": 1.455}, {"d": "2026-11-12", "c": 1.5}, {"d": "2026-11-13", "c": 1.37}, {"d": "2026-11-16", "c": 1.27}, {"d": "2026-11-17", "c": 1.165}, {"d": "2026-11-18", "c": 1.04}, {"d": "2026-11-19", "c": 1.0}, {"d": "2026-11-20", "c": 1.395}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('06681', '脑动极光－Ｂ', [{"d": "2026-10-12", "c": 0.845}, {"d": "2026-10-13", "c": 0.75}, {"d": "2026-10-14", "c": 0.69}, {"d": "2026-10-15", "c": 0.655}, {"d": "2026-10-16", "c": 0.63}, {"d": "2026-10-20", "c": 0.645}, {"d": "2026-10-21", "c": 0.755}, {"d": "2026-10-22", "c": 0.96}, {"d": "2026-10-23", "c": 0.875}, {"d": "2026-10-26", "c": 0.94}, {"d": "2026-10-27", "c": 1.195}, {"d": "2026-10-28", "c": 1.82}, {"d": "2026-10-29", "c": 1.52}, {"d": "2026-10-30", "c": 1.63}, {"d": "2026-11-02", "c": 1.35}, {"d": "2026-11-03", "c": 1.505}, {"d": "2026-11-04", "c": 1.44}, {"d": "2026-11-05", "c": 1.445}, {"d": "2026-11-06", "c": 1.38}, {"d": "2026-11-09", "c": 1.295}, {"d": "2026-11-10", "c": 1.39}, {"d": "2026-11-11", "c": 1.455}, {"d": "2026-11-12", "c": 1.5}, {"d": "2026-11-13", "c": 1.37}, {"d": "2026-11-16", "c": 1.27}, {"d": "2026-11-17", "c": 1.165}, {"d": "2026-11-18", "c": 1.04}, {"d": "2026-11-19", "c": 1.0}, {"d": "2026-11-20", "c": 1.395}, {"d": "2026-11-23", "c": 1.46}])'>查看走势图</button>
   </div>
 </details>
 
@@ -642,38 +970,79 @@ document.addEventListener('click', function(e){
     <div class="prow">
       <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 4.620 <span class="live">盘中</span></div></div>
       <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+7.44%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">55.4%</div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct up">54.3%</div></div>
     </div>
   </summary>
   <div class="card-body">
     <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">60 <span class="bar"><i style="width:60.0%"></i></span></div></div>
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">4.171</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">4.945</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">3.956</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">4.481</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">5.313</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">4.25</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">创60日新高；入选日大涨(+14.4%)</div>
+    <div class="reason">5日+16%；创60日新高；入选日大涨(+7.4%)</div>
     <div class="tags">
-      <span class="tag">RSI <b>70.9</b></span><span class="tag">60日位置 <b>100%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+9.10%</b></span>
-      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>1.2</b></span>
+      <span class="tag">RSI <b>75.0</b></span><span class="tag">60日位置 <b>100%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+16.40%</b></span>
+      <span class="tag">换手率 <b>0.3%</b></span><span class="tag">量比 <b>1.5</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">40.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
       <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">0.0%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 4.171 附近买入，目标 4.945（+15%），跌破 3.956 止损</div>
+    <div class="reason">动量候选：等回调到 4.481 附近买入，目标 5.313（+15%），跌破 4.25 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>6.5%</b></span><span class="tag">10日乖离 <b>9.0%</b></span>
-      <span class="tag">成交额 <b>0.19亿</b></span><span class="tag">MACD <b>0.36/0.35</b></span>
-      <span class="tag">MA10 <b>3.945</b></span><span class="tag">MA20 <b>3.568</b></span>
+      <span class="tag">20日波动率 <b>6.3%</b></span><span class="tag">10日乖离 <b>15.3%</b></span>
+      <span class="tag">成交额 <b>0.29亿</b></span><span class="tag">MACD <b>0.39/0.36</b></span>
+      <span class="tag">MA10 <b>4.007</b></span><span class="tag">MA20 <b>3.666</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('01280', '奇点国峰', [{"d": "2026-10-09", "c": 2.67}, {"d": "2026-10-12", "c": 2.605}, {"d": "2026-10-13", "c": 2.395}, {"d": "2026-10-14", "c": 2.28}, {"d": "2026-10-15", "c": 2.35}, {"d": "2026-10-16", "c": 2.405}, {"d": "2026-10-20", "c": 2.6}, {"d": "2026-10-21", "c": 2.53}, {"d": "2026-10-22", "c": 2.415}, {"d": "2026-10-23", "c": 2.45}, {"d": "2026-10-26", "c": 2.455}, {"d": "2026-10-27", "c": 2.59}, {"d": "2026-10-28", "c": 2.735}, {"d": "2026-10-29", "c": 2.9}, {"d": "2026-10-30", "c": 2.8}, {"d": "2026-11-02", "c": 3.13}, {"d": "2026-11-03", "c": 3.7}, {"d": "2026-11-04", "c": 3.985}, {"d": "2026-11-05", "c": 3.85}, {"d": "2026-11-06", "c": 3.77}, {"d": "2026-11-09", "c": 3.995}, {"d": "2026-11-10", "c": 3.845}, {"d": "2026-11-11", "c": 3.975}, {"d": "2026-11-12", "c": 3.89}, {"d": "2026-11-13", "c": 3.94}, {"d": "2026-11-16", "c": 3.97}, {"d": "2026-11-17", "c": 3.9}, {"d": "2026-11-18", "c": 3.875}, {"d": "2026-11-19", "c": 3.76}, {"d": "2026-11-20", "c": 4.3}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('01280', '奇点国峰', [{"d": "2026-10-12", "c": 2.605}, {"d": "2026-10-13", "c": 2.395}, {"d": "2026-10-14", "c": 2.28}, {"d": "2026-10-15", "c": 2.35}, {"d": "2026-10-16", "c": 2.405}, {"d": "2026-10-20", "c": 2.6}, {"d": "2026-10-21", "c": 2.53}, {"d": "2026-10-22", "c": 2.415}, {"d": "2026-10-23", "c": 2.45}, {"d": "2026-10-26", "c": 2.455}, {"d": "2026-10-27", "c": 2.59}, {"d": "2026-10-28", "c": 2.735}, {"d": "2026-10-29", "c": 2.9}, {"d": "2026-10-30", "c": 2.8}, {"d": "2026-11-02", "c": 3.13}, {"d": "2026-11-03", "c": 3.7}, {"d": "2026-11-04", "c": 3.985}, {"d": "2026-11-05", "c": 3.85}, {"d": "2026-11-06", "c": 3.77}, {"d": "2026-11-09", "c": 3.995}, {"d": "2026-11-10", "c": 3.845}, {"d": "2026-11-11", "c": 3.975}, {"d": "2026-11-12", "c": 3.89}, {"d": "2026-11-13", "c": 3.94}, {"d": "2026-11-16", "c": 3.97}, {"d": "2026-11-17", "c": 3.9}, {"d": "2026-11-18", "c": 3.875}, {"d": "2026-11-19", "c": 3.76}, {"d": "2026-11-20", "c": 4.3}, {"d": "2026-11-23", "c": 4.62}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">南旋控股</div><div class="code">01982.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.780 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+16.42%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">32.7%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">55 <span class="bar"><i style="width:55.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">0.757</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">0.897</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">0.718</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">5日+13%；RSI强势(65)；入选日大涨(+16.4%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>65.2</b></span><span class="tag">60日位置 <b>85%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+13.00%</b></span>
+      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>1.8</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">38.8%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">2.6%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">动量候选：等回调到 0.757 附近买入，目标 0.897（+15%），跌破 0.718 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>4.2%</b></span><span class="tag">10日乖离 <b>12.8%</b></span>
+      <span class="tag">成交额 <b>0.03亿</b></span><span class="tag">MACD <b>-0.01/-0.01</b></span>
+      <span class="tag">MA10 <b>0.692</b></span><span class="tag">MA20 <b>0.710</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('01982', '南旋控股', [{"d": "2026-10-08", "c": 0.745}, {"d": "2026-10-09", "c": 0.745}, {"d": "2026-10-12", "c": 0.755}, {"d": "2026-10-13", "c": 0.75}, {"d": "2026-10-14", "c": 0.755}, {"d": "2026-10-15", "c": 0.735}, {"d": "2026-10-16", "c": 0.76}, {"d": "2026-10-20", "c": 0.74}, {"d": "2026-10-22", "c": 0.735}, {"d": "2026-10-23", "c": 0.745}, {"d": "2026-10-26", "c": 0.745}, {"d": "2026-10-27", "c": 0.745}, {"d": "2026-10-28", "c": 0.725}, {"d": "2026-10-29", "c": 0.715}, {"d": "2026-10-30", "c": 0.72}, {"d": "2026-11-02", "c": 0.725}, {"d": "2026-11-03", "c": 0.725}, {"d": "2026-11-04", "c": 0.72}, {"d": "2026-11-05", "c": 0.74}, {"d": "2026-11-06", "c": 0.72}, {"d": "2026-11-09", "c": 0.7}, {"d": "2026-11-10", "c": 0.685}, {"d": "2026-11-11", "c": 0.68}, {"d": "2026-11-12", "c": 0.68}, {"d": "2026-11-13", "c": 0.69}, {"d": "2026-11-16", "c": 0.67}, {"d": "2026-11-17", "c": 0.68}, {"d": "2026-11-18", "c": 0.68}, {"d": "2026-11-20", "c": 0.67}, {"d": "2026-11-23", "c": 0.78}])'>查看走势图</button>
   </div>
 </details>
 
@@ -683,79 +1052,161 @@ document.addEventListener('click', function(e){
     <div class="prow">
       <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.875 <span class="live">盘中</span></div></div>
       <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-2.34%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">34.8%</div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">29.0%</div></div>
     </div>
   </summary>
   <div class="card-body">
     <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">40 <span class="bar"><i style="width:40.0%"></i></span></div></div>
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">1.862</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">2.208</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">1.766</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">1.819</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">2.156</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">1.725</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">5日+17%；创60日新高</div>
+    <div class="reason">5日+13%；RSI强势(69)</div>
     <div class="tags">
-      <span class="tag">RSI <b>74.9</b></span><span class="tag">60日位置 <b>100%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+16.70%</b></span>
+      <span class="tag">RSI <b>69.2</b></span><span class="tag">60日位置 <b>91%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+13.00%</b></span>
       <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>1.7</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">36.2%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">0.0%</div></div>
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">2.4%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 1.862 附近买入，目标 2.208（+15%），跌破 1.766 止损</div>
+    <div class="reason">动量候选：等回调到 1.819 附近买入，目标 2.156（+15%），跌破 1.725 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>2.8%</b></span><span class="tag">10日乖离 <b>11.7%</b></span>
-      <span class="tag">成交额 <b>0.47亿</b></span><span class="tag">MACD <b>0.07/0.03</b></span>
-      <span class="tag">MA10 <b>1.719</b></span><span class="tag">MA20 <b>1.622</b></span>
+      <span class="tag">20日波动率 <b>3.0%</b></span><span class="tag">10日乖离 <b>7.1%</b></span>
+      <span class="tag">成交额 <b>0.36亿</b></span><span class="tag">MACD <b>0.08/0.04</b></span>
+      <span class="tag">MA10 <b>1.751</b></span><span class="tag">MA20 <b>1.644</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('00290', '国富量子', [{"d": "2026-10-09", "c": 1.555}, {"d": "2026-10-12", "c": 1.56}, {"d": "2026-10-13", "c": 1.525}, {"d": "2026-10-14", "c": 1.535}, {"d": "2026-10-15", "c": 1.485}, {"d": "2026-10-16", "c": 1.52}, {"d": "2026-10-20", "c": 1.445}, {"d": "2026-10-21", "c": 1.49}, {"d": "2026-10-22", "c": 1.45}, {"d": "2026-10-23", "c": 1.435}, {"d": "2026-10-26", "c": 1.44}, {"d": "2026-10-27", "c": 1.445}, {"d": "2026-10-28", "c": 1.525}, {"d": "2026-10-29", "c": 1.535}, {"d": "2026-10-30", "c": 1.555}, {"d": "2026-11-02", "c": 1.55}, {"d": "2026-11-03", "c": 1.55}, {"d": "2026-11-04", "c": 1.56}, {"d": "2026-11-05", "c": 1.575}, {"d": "2026-11-06", "c": 1.52}, {"d": "2026-11-09", "c": 1.555}, {"d": "2026-11-10", "c": 1.61}, {"d": "2026-11-11", "c": 1.715}, {"d": "2026-11-12", "c": 1.68}, {"d": "2026-11-13", "c": 1.645}, {"d": "2026-11-16", "c": 1.66}, {"d": "2026-11-17", "c": 1.695}, {"d": "2026-11-18", "c": 1.815}, {"d": "2026-11-19", "c": 1.89}, {"d": "2026-11-20", "c": 1.92}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('00290', '国富量子', [{"d": "2026-10-12", "c": 1.56}, {"d": "2026-10-13", "c": 1.525}, {"d": "2026-10-14", "c": 1.535}, {"d": "2026-10-15", "c": 1.485}, {"d": "2026-10-16", "c": 1.52}, {"d": "2026-10-20", "c": 1.445}, {"d": "2026-10-21", "c": 1.49}, {"d": "2026-10-22", "c": 1.45}, {"d": "2026-10-23", "c": 1.435}, {"d": "2026-10-26", "c": 1.44}, {"d": "2026-10-27", "c": 1.445}, {"d": "2026-10-28", "c": 1.525}, {"d": "2026-10-29", "c": 1.535}, {"d": "2026-10-30", "c": 1.555}, {"d": "2026-11-02", "c": 1.55}, {"d": "2026-11-03", "c": 1.55}, {"d": "2026-11-04", "c": 1.56}, {"d": "2026-11-05", "c": 1.575}, {"d": "2026-11-06", "c": 1.52}, {"d": "2026-11-09", "c": 1.555}, {"d": "2026-11-10", "c": 1.61}, {"d": "2026-11-11", "c": 1.715}, {"d": "2026-11-12", "c": 1.68}, {"d": "2026-11-13", "c": 1.645}, {"d": "2026-11-16", "c": 1.66}, {"d": "2026-11-17", "c": 1.695}, {"d": "2026-11-18", "c": 1.815}, {"d": "2026-11-19", "c": 1.89}, {"d": "2026-11-20", "c": 1.92}, {"d": "2026-11-23", "c": 1.875}])'>查看走势图</button>
   </div>
 </details>
 
 <details class="card">
   <summary class="card-sum">
-    <div class="chead"><div class="nm">阿尔法企业</div><div class="code">00948.HK</div></div>
+    <div class="chead"><div class="nm">大快活集团</div><div class="code">00052.HK</div></div>
     <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.310 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-10.14%</span></div></div>
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 6.165 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+9.60%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct ">27.2%</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">60 <span class="bar"><i style="width:60.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">5.98</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">7.09</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">5.672</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">5日+11%；创60日新高；入选日大涨(+9.6%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>75.6</b></span><span class="tag">60日位置 <b>100%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+10.60%</b></span>
+      <span class="tag">换手率 <b>0.4%</b></span><span class="tag">量比 <b>1.9</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">40.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">0.0%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">动量候选：等回调到 5.98 附近买入，目标 7.09（+15%），跌破 5.672 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>3.4%</b></span><span class="tag">10日乖离 <b>10.5%</b></span>
+      <span class="tag">成交额 <b>0.03亿</b></span><span class="tag">MACD <b>0.33/0.27</b></span>
+      <span class="tag">MA10 <b>5.582</b></span><span class="tag">MA20 <b>5.295</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('00052', '大快活集团', [{"d": "2026-10-09", "c": 4.355}, {"d": "2026-10-12", "c": 4.375}, {"d": "2026-10-13", "c": 4.375}, {"d": "2026-10-15", "c": 4.39}, {"d": "2026-10-16", "c": 4.355}, {"d": "2026-10-20", "c": 4.685}, {"d": "2026-10-21", "c": 4.755}, {"d": "2026-10-22", "c": 4.72}, {"d": "2026-10-23", "c": 4.88}, {"d": "2026-10-26", "c": 4.875}, {"d": "2026-10-27", "c": 4.92}, {"d": "2026-10-28", "c": 4.94}, {"d": "2026-10-29", "c": 4.865}, {"d": "2026-10-30", "c": 4.96}, {"d": "2026-11-02", "c": 4.885}, {"d": "2026-11-03", "c": 4.965}, {"d": "2026-11-04", "c": 4.99}, {"d": "2026-11-05", "c": 5.175}, {"d": "2026-11-06", "c": 5.165}, {"d": "2026-11-09", "c": 5.22}, {"d": "2026-11-10", "c": 5.17}, {"d": "2026-11-11", "c": 5.1}, {"d": "2026-11-12", "c": 5.35}, {"d": "2026-11-13", "c": 5.28}, {"d": "2026-11-16", "c": 5.575}, {"d": "2026-11-17", "c": 5.93}, {"d": "2026-11-18", "c": 5.905}, {"d": "2026-11-19", "c": 5.715}, {"d": "2026-11-20", "c": 5.625}, {"d": "2026-11-23", "c": 6.165}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">大森控股</div><div class="code">01580.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.750 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+7.14%</span></div></div>
       <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
     </div>
   </summary>
   <div class="card-body">
     <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">85 <span class="bar"><i style="width:85.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">68 <span class="bar"><i style="width:68.0%"></i></span></div></div>
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">0.335</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">0.397</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">0.317</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">0.728</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">0.862</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">0.69</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">5日+62%；创60日新高；量比3.3；入选日大涨(+30.2%)</div>
+    <div class="reason">5日+124%；换手2.8%；量比3.8；入选日大涨(+7.1%)</div>
     <div class="tags">
-      <span class="tag">RSI <b>75.2</b></span><span class="tag">60日位置 <b>100%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+62.00%</b></span>
-      <span class="tag">换手率 <b>0.6%</b></span><span class="tag">量比 <b>3.3</b></span>
+      <span class="tag">RSI <b>75.5</b></span><span class="tag">60日位置 <b>92%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+123.90%</b></span>
+      <span class="tag">换手率 <b>2.8%</b></span><span class="tag">量比 <b>3.8</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">46.2%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">0.0%</div></div>
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">42.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">6.0%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 0.335 附近买入，目标 0.397（+15%），跌破 0.317 止损</div>
+    <div class="reason">动量候选：等回调到 0.728 附近买入，目标 0.862（+15%），跌破 0.69 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>9.2%</b></span><span class="tag">10日乖离 <b>37.1%</b></span>
-      <span class="tag">成交额 <b>0.02亿</b></span><span class="tag">MACD <b>0.01/0.00</b></span>
-      <span class="tag">MA10 <b>0.252</b></span><span class="tag">MA20 <b>0.249</b></span>
+      <span class="tag">20日波动率 <b>18.7%</b></span><span class="tag">10日乖离 <b>58.2%</b></span>
+      <span class="tag">成交额 <b>0.23亿</b></span><span class="tag">MACD <b>0.08/0.03</b></span>
+      <span class="tag">MA10 <b>0.474</b></span><span class="tag">MA20 <b>0.394</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('00948', '阿尔法企业', [{"d": "2026-09-28", "c": 0.25}, {"d": "2026-09-29", "c": 0.25}, {"d": "2026-09-30", "c": 0.248}, {"d": "2026-10-07", "c": 0.248}, {"d": "2026-10-09", "c": 0.248}, {"d": "2026-10-12", "c": 0.248}, {"d": "2026-10-13", "c": 0.265}, {"d": "2026-10-16", "c": 0.27}, {"d": "2026-10-20", "c": 0.27}, {"d": "2026-10-21", "c": 0.27}, {"d": "2026-10-22", "c": 0.27}, {"d": "2026-10-26", "c": 0.25}, {"d": "2026-10-27", "c": 0.25}, {"d": "2026-10-28", "c": 0.238}, {"d": "2026-10-29", "c": 0.26}, {"d": "2026-10-30", "c": 0.247}, {"d": "2026-11-02", "c": 0.24}, {"d": "2026-11-03", "c": 0.235}, {"d": "2026-11-04", "c": 0.235}, {"d": "2026-11-05", "c": 0.24}, {"d": "2026-11-06", "c": 0.234}, {"d": "2026-11-10", "c": 0.23}, {"d": "2026-11-11", "c": 0.23}, {"d": "2026-11-12", "c": 0.211}, {"d": "2026-11-13", "c": 0.213}, {"d": "2026-11-16", "c": 0.243}, {"d": "2026-11-17", "c": 0.275}, {"d": "2026-11-18", "c": 0.27}, {"d": "2026-11-19", "c": 0.265}, {"d": "2026-11-20", "c": 0.345}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('01580', '大森控股', [{"d": "2026-10-08", "c": 0.42}, {"d": "2026-10-09", "c": 0.405}, {"d": "2026-10-12", "c": 0.4}, {"d": "2026-10-13", "c": 0.385}, {"d": "2026-10-15", "c": 0.37}, {"d": "2026-10-16", "c": 0.355}, {"d": "2026-10-20", "c": 0.345}, {"d": "2026-10-21", "c": 0.315}, {"d": "2026-10-22", "c": 0.315}, {"d": "2026-10-23", "c": 0.315}, {"d": "2026-10-26", "c": 0.305}, {"d": "2026-10-27", "c": 0.3}, {"d": "2026-10-28", "c": 0.305}, {"d": "2026-10-29", "c": 0.33}, {"d": "2026-10-30", "c": 0.31}, {"d": "2026-11-02", "c": 0.33}, {"d": "2026-11-03", "c": 0.31}, {"d": "2026-11-05", "c": 0.315}, {"d": "2026-11-06", "c": 0.3}, {"d": "2026-11-09", "c": 0.325}, {"d": "2026-11-10", "c": 0.31}, {"d": "2026-11-11", "c": 0.31}, {"d": "2026-11-12", "c": 0.31}, {"d": "2026-11-13", "c": 0.305}, {"d": "2026-11-16", "c": 0.335}, {"d": "2026-11-17", "c": 0.46}, {"d": "2026-11-18", "c": 0.465}, {"d": "2026-11-19", "c": 0.795}, {"d": "2026-11-20", "c": 0.7}, {"d": "2026-11-23", "c": 0.75}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">MOMENTA-W</div><div class="code">06880.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 180.400 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+9.40%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">65 <span class="bar"><i style="width:65.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">174.988</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">207.46</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">165.968</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">5日+24%；RSI强势(65)；入选日大涨(+9.4%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>65.2</b></span><span class="tag">60日位置 <b>41%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+23.80%</b></span>
+      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>1.5</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">41.2%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">43.0%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">动量候选：等回调到 174.988 附近买入，目标 207.46（+15%），跌破 165.968 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>5.7%</b></span><span class="tag">10日乖离 <b>15.7%</b></span>
+      <span class="tag">成交额 <b>0.75亿</b></span><span class="tag">MACD <b>1.60/-3.32</b></span>
+      <span class="tag">MA10 <b>155.920</b></span><span class="tag">MA20 <b>146.025</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('06880', 'MOMENTA-W', [{"d": "2026-10-12", "c": 150.0}, {"d": "2026-10-13", "c": 152.1}, {"d": "2026-10-14", "c": 163.0}, {"d": "2026-10-15", "c": 163.8}, {"d": "2026-10-16", "c": 171.8}, {"d": "2026-10-20", "c": 168.2}, {"d": "2026-10-21", "c": 166.5}, {"d": "2026-10-22", "c": 162.0}, {"d": "2026-10-23", "c": 162.0}, {"d": "2026-10-26", "c": 146.2}, {"d": "2026-10-27", "c": 146.0}, {"d": "2026-10-28", "c": 145.7}, {"d": "2026-10-29", "c": 138.0}, {"d": "2026-10-30", "c": 129.2}, {"d": "2026-11-02", "c": 134.2}, {"d": "2026-11-03", "c": 126.0}, {"d": "2026-11-04", "c": 135.0}, {"d": "2026-11-05", "c": 139.0}, {"d": "2026-11-06", "c": 133.7}, {"d": "2026-11-09", "c": 134.5}, {"d": "2026-11-10", "c": 153.8}, {"d": "2026-11-11", "c": 157.9}, {"d": "2026-11-12", "c": 153.2}, {"d": "2026-11-13", "c": 143.4}, {"d": "2026-11-16", "c": 145.7}, {"d": "2026-11-17", "c": 148.0}, {"d": "2026-11-18", "c": 149.8}, {"d": "2026-11-19", "c": 162.1}, {"d": "2026-11-20", "c": 164.9}, {"d": "2026-11-23", "c": 180.4}])'>查看走势图</button>
   </div>
 </details>
 
@@ -770,74 +1221,115 @@ document.addEventListener('click', function(e){
   </summary>
   <div class="card-body">
     <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">70 <span class="bar"><i style="width:70.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">60 <span class="bar"><i style="width:60.0%"></i></span></div></div>
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">96.903</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">114.885</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">91.908</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">144.045</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">170.775</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">136.62</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">5日+23%；创60日新高；入选日大涨(+7.0%)</div>
+    <div class="reason">5日+90%；创60日新高；RSI过热(87)；入选日大涨(+48.6%)</div>
     <div class="tags">
-      <span class="tag">RSI <b>74.7</b></span><span class="tag">60日位置 <b>100%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+22.70%</b></span>
-      <span class="tag">换手率 <b>0.2%</b></span><span class="tag">量比 <b>0.8</b></span>
+      <span class="tag">RSI <b>87.1</b></span><span class="tag">60日位置 <b>100%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+89.90%</b></span>
+      <span class="tag">换手率 <b>0.3%</b></span><span class="tag">量比 <b>0.8</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">42.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">40.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
       <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">0.0%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 96.903 附近买入，目标 114.885（+15%），跌破 91.908 止损</div>
+    <div class="reason">动量候选：等回调到 144.045 附近买入，目标 170.775（+15%），跌破 136.62 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>6.7%</b></span><span class="tag">10日乖离 <b>20.5%</b></span>
-      <span class="tag">成交额 <b>0.44亿</b></span><span class="tag">MACD <b>8.66/6.31</b></span>
-      <span class="tag">MA10 <b>82.930</b></span><span class="tag">MA20 <b>76.487</b></span>
+      <span class="tag">20日波动率 <b>12.5%</b></span><span class="tag">10日乖离 <b>63.5%</b></span>
+      <span class="tag">成交额 <b>1.03亿</b></span><span class="tag">MACD <b>13.18/7.69</b></span>
+      <span class="tag">MA10 <b>90.810</b></span><span class="tag">MA20 <b>80.780</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('06810', '商米科技－Ｗ', [{"d": "2026-10-09", "c": 53.95}, {"d": "2026-10-12", "c": 58.6}, {"d": "2026-10-13", "c": 57.15}, {"d": "2026-10-14", "c": 53.35}, {"d": "2026-10-15", "c": 52.55}, {"d": "2026-10-16", "c": 55.85}, {"d": "2026-10-20", "c": 54.95}, {"d": "2026-10-21", "c": 58.0}, {"d": "2026-10-22", "c": 58.45}, {"d": "2026-10-23", "c": 60.8}, {"d": "2026-10-26", "c": 62.65}, {"d": "2026-10-27", "c": 65.0}, {"d": "2026-10-28", "c": 72.9}, {"d": "2026-10-29", "c": 76.0}, {"d": "2026-10-30", "c": 66.5}, {"d": "2026-11-02", "c": 70.0}, {"d": "2026-11-03", "c": 69.35}, {"d": "2026-11-04", "c": 75.0}, {"d": "2026-11-05", "c": 72.35}, {"d": "2026-11-06", "c": 70.7}, {"d": "2026-11-09", "c": 69.7}, {"d": "2026-11-10", "c": 68.0}, {"d": "2026-11-11", "c": 75.8}, {"d": "2026-11-12", "c": 81.6}, {"d": "2026-11-13", "c": 81.4}, {"d": "2026-11-16", "c": 78.2}, {"d": "2026-11-17", "c": 85.95}, {"d": "2026-11-18", "c": 95.4}, {"d": "2026-11-19", "c": 93.35}, {"d": "2026-11-20", "c": 99.9}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('06810', '商米科技－Ｗ', [{"d": "2026-10-12", "c": 58.6}, {"d": "2026-10-13", "c": 57.15}, {"d": "2026-10-14", "c": 53.35}, {"d": "2026-10-15", "c": 52.55}, {"d": "2026-10-16", "c": 55.85}, {"d": "2026-10-20", "c": 54.95}, {"d": "2026-10-21", "c": 58.0}, {"d": "2026-10-22", "c": 58.45}, {"d": "2026-10-23", "c": 60.8}, {"d": "2026-10-26", "c": 62.65}, {"d": "2026-10-27", "c": 65.0}, {"d": "2026-10-28", "c": 72.9}, {"d": "2026-10-29", "c": 76.0}, {"d": "2026-10-30", "c": 66.5}, {"d": "2026-11-02", "c": 70.0}, {"d": "2026-11-03", "c": 69.35}, {"d": "2026-11-04", "c": 75.0}, {"d": "2026-11-05", "c": 72.35}, {"d": "2026-11-06", "c": 70.7}, {"d": "2026-11-09", "c": 69.7}, {"d": "2026-11-10", "c": 68.0}, {"d": "2026-11-11", "c": 75.8}, {"d": "2026-11-12", "c": 81.6}, {"d": "2026-11-13", "c": 81.4}, {"d": "2026-11-16", "c": 78.2}, {"d": "2026-11-17", "c": 85.95}, {"d": "2026-11-18", "c": 95.4}, {"d": "2026-11-19", "c": 93.35}, {"d": "2026-11-20", "c": 99.9}, {"d": "2026-11-23", "c": 148.5}])'>查看走势图</button>
   </div>
 </details>
 
 <details class="card">
   <summary class="card-sum">
-    <div class="chead"><div class="nm">兴利（香港）控股</div><div class="code">00396.HK</div></div>
+    <div class="chead"><div class="nm">埃斯顿</div><div class="code">02715.HK</div></div>
     <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.295 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="dn big">-4.84%</span></div></div>
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 13.700 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+6.53%</span></div></div>
       <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
     </div>
   </summary>
   <div class="card-body">
     <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">60 <span class="bar"><i style="width:60.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">0.301</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">0.356</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">0.285</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">13.289</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">15.755</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">12.604</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">5日+39%；量比3.0；入选日大涨(+29.2%)</div>
+    <div class="reason">换手10.4%；RSI强势(54)；入选日大涨(+6.5%)</div>
     <div class="tags">
-      <span class="tag">RSI <b>72.9</b></span><span class="tag">60日位置 <b>52%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+39.00%</b></span>
-      <span class="tag">换手率 <b>1.0%</b></span><span class="tag">量比 <b>3.0</b></span>
+      <span class="tag">RSI <b>53.6</b></span><span class="tag">60日位置 <b>37%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+5.40%</b></span>
+      <span class="tag">换手率 <b>10.4%</b></span><span class="tag">量比 <b>0.6</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="">40.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">27.4%</div></div>
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">37.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">25.2%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 0.301 附近买入，目标 0.356（+15%），跌破 0.285 止损</div>
+    <div class="reason">动量候选：等回调到 13.289 附近买入，目标 15.755（+15%），跌破 12.604 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>7.3%</b></span><span class="tag">10日乖离 <b>30.6%</b></span>
-      <span class="tag">成交额 <b>0.02亿</b></span><span class="tag">MACD <b>0.00/-0.01</b></span>
-      <span class="tag">MA10 <b>0.237</b></span><span class="tag">MA20 <b>0.235</b></span>
+      <span class="tag">20日波动率 <b>3.7%</b></span><span class="tag">10日乖离 <b>3.0%</b></span>
+      <span class="tag">成交额 <b>1.36亿</b></span><span class="tag">MACD <b>-0.09/-0.13</b></span>
+      <span class="tag">MA10 <b>13.295</b></span><span class="tag">MA20 <b>13.295</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('00396', '兴利（香港）控股', [{"d": "2026-10-05", "c": 0.247}, {"d": "2026-10-06", "c": 0.25}, {"d": "2026-10-07", "c": 0.265}, {"d": "2026-10-08", "c": 0.244}, {"d": "2026-10-09", "c": 0.244}, {"d": "2026-10-12", "c": 0.25}, {"d": "2026-10-14", "c": 0.24}, {"d": "2026-10-15", "c": 0.223}, {"d": "2026-10-16", "c": 0.237}, {"d": "2026-10-20", "c": 0.222}, {"d": "2026-10-21", "c": 0.219}, {"d": "2026-10-22", "c": 0.227}, {"d": "2026-10-26", "c": 0.23}, {"d": "2026-10-27", "c": 0.244}, {"d": "2026-10-28", "c": 0.244}, {"d": "2026-10-29", "c": 0.231}, {"d": "2026-11-02", "c": 0.231}, {"d": "2026-11-04", "c": 0.241}, {"d": "2026-11-05", "c": 0.24}, {"d": "2026-11-06", "c": 0.223}, {"d": "2026-11-09", "c": 0.23}, {"d": "2026-11-10", "c": 0.23}, {"d": "2026-11-11", "c": 0.229}, {"d": "2026-11-12", "c": 0.228}, {"d": "2026-11-13", "c": 0.223}, {"d": "2026-11-16", "c": 0.225}, {"d": "2026-11-17", "c": 0.224}, {"d": "2026-11-18", "c": 0.234}, {"d": "2026-11-19", "c": 0.24}, {"d": "2026-11-20", "c": 0.31}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('02715', '埃斯顿', [{"d": "2026-10-12", "c": 12.7}, {"d": "2026-10-13", "c": 12.85}, {"d": "2026-10-14", "c": 12.39}, {"d": "2026-10-15", "c": 11.66}, {"d": "2026-10-16", "c": 11.74}, {"d": "2026-10-20", "c": 12.5}, {"d": "2026-10-21", "c": 12.2}, {"d": "2026-10-22", "c": 11.7}, {"d": "2026-10-23", "c": 13.22}, {"d": "2026-10-26", "c": 13.46}, {"d": "2026-10-27", "c": 12.75}, {"d": "2026-10-28", "c": 13.74}, {"d": "2026-10-29", "c": 13.25}, {"d": "2026-10-30", "c": 13.29}, {"d": "2026-11-02", "c": 13.16}, {"d": "2026-11-03", "c": 12.59}, {"d": "2026-11-04", "c": 13.3}, {"d": "2026-11-05", "c": 13.82}, {"d": "2026-11-06", "c": 13.33}, {"d": "2026-11-09", "c": 13.72}, {"d": "2026-11-10", "c": 13.89}, {"d": "2026-11-11", "c": 14.07}, {"d": "2026-11-12", "c": 13.38}, {"d": "2026-11-13", "c": 12.89}, {"d": "2026-11-16", "c": 13.0}, {"d": "2026-11-17", "c": 12.99}, {"d": "2026-11-18", "c": 13.02}, {"d": "2026-11-19", "c": 13.15}, {"d": "2026-11-20", "c": 12.86}, {"d": "2026-11-23", "c": 13.7}])'>查看走势图</button>
+  </div>
+</details>
+
+<details class="card">
+  <summary class="card-sum">
+    <div class="chead"><div class="nm">奥思集团</div><div class="code">01161.HK</div></div>
+    <div class="prow">
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 1.400 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+11.11%</span></div></div>
+      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
+    </div>
+  </summary>
+  <div class="card-body">
+    <div class="prow">
+      <div class="pcol"><div class="lbl">量化得分</div><div class="score">50 <span class="bar"><i style="width:50.0%"></i></span></div></div>
+      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
+    </div>
+    <div class="dgrid">
+      <div><div class="lbl">买入参考</div><div class="dv">1.358</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">1.61</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">1.288</div></div>
+    </div>
+    <div class="lbl" style="margin-top:10px">入选理由</div>
+    <div class="reason">量比2.1；RSI强势(67)；入选日大涨(+11.1%)</div>
+    <div class="tags">
+      <span class="tag">RSI <b>66.5</b></span><span class="tag">60日位置 <b>92%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+7.30%</b></span>
+      <span class="tag">换手率 <b>0.1%</b></span><span class="tag">量比 <b>2.1</b></span>
+    </div>
+    <div class="prow" style="margin-top:8px">
+      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">37.5%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">1.1%</div></div>
+    </div>
+    <div class="lbl" style="margin-top:8px">买入建议</div>
+    <div class="reason">动量候选：等回调到 1.358 附近买入，目标 1.61（+15%），跌破 1.288 止损</div>
+    <div class="tags" style="margin-top:8px">
+      <span class="tag">20日波动率 <b>3.1%</b></span><span class="tag">10日乖离 <b>7.0%</b></span>
+      <span class="tag">成交额 <b>0.01亿</b></span><span class="tag">MACD <b>0.02/0.01</b></span>
+      <span class="tag">MA10 <b>1.308</b></span><span class="tag">MA20 <b>1.277</b></span>
+    </div>
+    <button class="trend-btn" onclick='showTrend('01161', '奥思集团', [{"d": "2026-10-02", "c": 1.285}, {"d": "2026-10-05", "c": 1.24}, {"d": "2026-10-06", "c": 1.315}, {"d": "2026-10-07", "c": 1.28}, {"d": "2026-10-09", "c": 1.245}, {"d": "2026-10-12", "c": 1.24}, {"d": "2026-10-13", "c": 1.245}, {"d": "2026-10-14", "c": 1.26}, {"d": "2026-10-15", "c": 1.245}, {"d": "2026-10-16", "c": 1.245}, {"d": "2026-10-20", "c": 1.25}, {"d": "2026-10-22", "c": 1.25}, {"d": "2026-10-23", "c": 1.25}, {"d": "2026-10-28", "c": 1.25}, {"d": "2026-10-30", "c": 1.26}, {"d": "2026-11-03", "c": 1.25}, {"d": "2026-11-04", "c": 1.245}, {"d": "2026-11-05", "c": 1.235}, {"d": "2026-11-06", "c": 1.24}, {"d": "2026-11-09", "c": 1.22}, {"d": "2026-11-10", "c": 1.26}, {"d": "2026-11-11", "c": 1.29}, {"d": "2026-11-12", "c": 1.29}, {"d": "2026-11-13", "c": 1.315}, {"d": "2026-11-16", "c": 1.305}, {"d": "2026-11-17", "c": 1.305}, {"d": "2026-11-18", "c": 1.33}, {"d": "2026-11-19", "c": 1.33}, {"d": "2026-11-20", "c": 1.26}, {"d": "2026-11-23", "c": 1.4}])'>查看走势图</button>
   </div>
 </details>
 
@@ -852,124 +1344,42 @@ document.addEventListener('click', function(e){
   </summary>
   <div class="card-body">
     <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">55 <span class="bar"><i style="width:55.0%"></i></span></div></div>
-      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-    </div>
-    <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">45.047</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">53.406</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">42.725</div></div>
-    </div>
-    <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">5日+11%；RSI强势(64)；入选日大涨(+8.9%)</div>
-    <div class="tags">
-      <span class="tag">RSI <b>63.6</b></span><span class="tag">60日位置 <b>51%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+11.50%</b></span>
-      <span class="tag">换手率 <b>0.1%</b></span><span class="tag">量比 <b>0.5</b></span>
-    </div>
-    <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">38.8%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">30.2%</div></div>
-    </div>
-    <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 45.047 附近买入，目标 53.406（+15%），跌破 42.725 止损</div>
-    <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>4.6%</b></span><span class="tag">10日乖离 <b>11.4%</b></span>
-      <span class="tag">成交额 <b>0.04亿</b></span><span class="tag">MACD <b>0.70/-0.70</b></span>
-      <span class="tag">MA10 <b>41.694</b></span><span class="tag">MA20 <b>38.866</b></span>
-    </div>
-    <button class="trend-btn" onclick='showTrend('01511', '驭势科技', [{"d": "2026-10-09", "c": 40.36}, {"d": "2026-10-12", "c": 34.0}, {"d": "2026-10-13", "c": 33.04}, {"d": "2026-10-14", "c": 33.44}, {"d": "2026-10-15", "c": 33.6}, {"d": "2026-10-16", "c": 33.72}, {"d": "2026-10-20", "c": 32.26}, {"d": "2026-10-21", "c": 32.38}, {"d": "2026-10-22", "c": 33.42}, {"d": "2026-10-23", "c": 32.06}, {"d": "2026-10-26", "c": 33.2}, {"d": "2026-10-27", "c": 36.42}, {"d": "2026-10-28", "c": 37.82}, {"d": "2026-10-29", "c": 35.2}, {"d": "2026-10-30", "c": 34.14}, {"d": "2026-11-02", "c": 35.06}, {"d": "2026-11-03", "c": 35.38}, {"d": "2026-11-04", "c": 37.0}, {"d": "2026-11-05", "c": 39.46}, {"d": "2026-11-06", "c": 36.7}, {"d": "2026-11-09", "c": 37.2}, {"d": "2026-11-10", "c": 37.66}, {"d": "2026-11-11", "c": 39.8}, {"d": "2026-11-12", "c": 41.0}, {"d": "2026-11-13", "c": 41.66}, {"d": "2026-11-16", "c": 42.8}, {"d": "2026-11-17", "c": 44.44}, {"d": "2026-11-18", "c": 43.3}, {"d": "2026-11-19", "c": 42.64}, {"d": "2026-11-20", "c": 46.44}])'>查看走势图</button>
-  </div>
-</details>
-
-<details class="card">
-  <summary class="card-sum">
-    <div class="chead"><div class="nm">信能低碳</div><div class="code">00145.HK</div></div>
-    <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.194 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.52%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-    </div>
-  </summary>
-  <div class="card-body">
-    <div class="prow">
       <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">0.187</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">0.222</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">0.178</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">51.507</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">61.065</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">48.852</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">换手6.2%；量比3.5；入选日大涨(+6.6%)</div>
+    <div class="reason">5日+24%；入选日大涨(+14.3%)</div>
     <div class="tags">
-      <span class="tag">RSI <b>46.2</b></span><span class="tag">60日位置 <b>18%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-2.00%</b></span>
-      <span class="tag">换手率 <b>6.2%</b></span><span class="tag">量比 <b>3.5</b></span>
+      <span class="tag">RSI <b>72.8</b></span><span class="tag">60日位置 <b>74%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+24.10%</b></span>
+      <span class="tag">换手率 <b>0.7%</b></span><span class="tag">量比 <b>1.0</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
       <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">36.2%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">29.0%</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">13.7%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 0.187 附近买入，目标 0.222（+15%），跌破 0.178 止损</div>
+    <div class="reason">动量候选：等回调到 51.507 附近买入，目标 61.065（+15%），跌破 48.852 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>3.4%</b></span><span class="tag">10日乖离 <b>1.6%</b></span>
-      <span class="tag">成交额 <b>0.04亿</b></span><span class="tag">MACD <b>-0.01/-0.01</b></span>
-      <span class="tag">MA10 <b>0.190</b></span><span class="tag">MA20 <b>0.196</b></span>
+      <span class="tag">20日波动率 <b>5.1%</b></span><span class="tag">10日乖离 <b>22.7%</b></span>
+      <span class="tag">成交额 <b>0.45亿</b></span><span class="tag">MACD <b>1.56/-0.25</b></span>
+      <span class="tag">MA10 <b>43.284</b></span><span class="tag">MA20 <b>39.861</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('00145', '信能低碳', [{"d": "2026-10-05", "c": 0.21}, {"d": "2026-10-06", "c": 0.21}, {"d": "2026-10-08", "c": 0.21}, {"d": "2026-10-09", "c": 0.209}, {"d": "2026-10-12", "c": 0.205}, {"d": "2026-10-13", "c": 0.201}, {"d": "2026-10-14", "c": 0.202}, {"d": "2026-10-15", "c": 0.204}, {"d": "2026-10-16", "c": 0.206}, {"d": "2026-10-20", "c": 0.205}, {"d": "2026-10-22", "c": 0.205}, {"d": "2026-10-23", "c": 0.202}, {"d": "2026-10-26", "c": 0.199}, {"d": "2026-10-27", "c": 0.2}, {"d": "2026-10-28", "c": 0.199}, {"d": "2026-10-29", "c": 0.199}, {"d": "2026-10-30", "c": 0.199}, {"d": "2026-11-02", "c": 0.208}, {"d": "2026-11-03", "c": 0.207}, {"d": "2026-11-05", "c": 0.207}, {"d": "2026-11-06", "c": 0.199}, {"d": "2026-11-09", "c": 0.192}, {"d": "2026-11-10", "c": 0.191}, {"d": "2026-11-11", "c": 0.183}, {"d": "2026-11-12", "c": 0.197}, {"d": "2026-11-13", "c": 0.197}, {"d": "2026-11-17", "c": 0.185}, {"d": "2026-11-18", "c": 0.182}, {"d": "2026-11-19", "c": 0.181}, {"d": "2026-11-20", "c": 0.193}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('01511', '驭势科技', [{"d": "2026-10-12", "c": 34.0}, {"d": "2026-10-13", "c": 33.04}, {"d": "2026-10-14", "c": 33.44}, {"d": "2026-10-15", "c": 33.6}, {"d": "2026-10-16", "c": 33.72}, {"d": "2026-10-20", "c": 32.26}, {"d": "2026-10-21", "c": 32.38}, {"d": "2026-10-22", "c": 33.42}, {"d": "2026-10-23", "c": 32.06}, {"d": "2026-10-26", "c": 33.2}, {"d": "2026-10-27", "c": 36.42}, {"d": "2026-10-28", "c": 37.82}, {"d": "2026-10-29", "c": 35.2}, {"d": "2026-10-30", "c": 34.14}, {"d": "2026-11-02", "c": 35.06}, {"d": "2026-11-03", "c": 35.38}, {"d": "2026-11-04", "c": 37.0}, {"d": "2026-11-05", "c": 39.46}, {"d": "2026-11-06", "c": 36.7}, {"d": "2026-11-09", "c": 37.2}, {"d": "2026-11-10", "c": 37.66}, {"d": "2026-11-11", "c": 39.8}, {"d": "2026-11-12", "c": 41.0}, {"d": "2026-11-13", "c": 41.66}, {"d": "2026-11-16", "c": 42.8}, {"d": "2026-11-17", "c": 44.44}, {"d": "2026-11-18", "c": 43.3}, {"d": "2026-11-19", "c": 42.64}, {"d": "2026-11-20", "c": 46.44}, {"d": "2026-11-23", "c": 53.1}])'>查看走势图</button>
   </div>
 </details>
 
 <details class="card">
   <summary class="card-sum">
-    <div class="chead"><div class="nm">科拓股份</div><div class="code">02272.HK</div></div>
+    <div class="chead"><div class="nm">宝济药业－Ｂ</div><div class="code">02659.HK</div></div>
     <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 105.800 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+0.57%</span></div></div>
-      <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
-    </div>
-  </summary>
-  <div class="card-body">
-    <div class="prow">
-      <div class="pcol"><div class="lbl">量化得分</div><div class="score">45 <span class="bar"><i style="width:45.0%"></i></span></div></div>
-      <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
-    </div>
-    <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">102.044</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">120.98</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">96.784</div></div>
-    </div>
-    <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">5日+78%；入选日大涨(+7.1%)</div>
-    <div class="tags">
-      <span class="tag">RSI <b>82.5</b></span><span class="tag">60日位置 <b>83%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+78.00%</b></span>
-      <span class="tag">换手率 <b>1.5%</b></span><span class="tag">量比 <b>1.4</b></span>
-    </div>
-    <div class="prow" style="margin-top:8px">
-      <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">36.2%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">12.0%</div></div>
-    </div>
-    <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 102.044 附近买入，目标 120.98（+15%），跌破 96.784 止损</div>
-    <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>12.1%</b></span><span class="tag">10日乖离 <b>53.0%</b></span>
-      <span class="tag">成交额 <b>1.63亿</b></span><span class="tag">MACD <b>6.83/1.08</b></span>
-      <span class="tag">MA10 <b>68.765</b></span><span class="tag">MA20 <b>59.564</b></span>
-    </div>
-    <button class="trend-btn" onclick='showTrend('02272', '科拓股份', [{"d": "2026-10-09", "c": 53.45}, {"d": "2026-10-12", "c": 52.45}, {"d": "2026-10-13", "c": 53.5}, {"d": "2026-10-14", "c": 53.3}, {"d": "2026-10-15", "c": 52.25}, {"d": "2026-10-16", "c": 51.6}, {"d": "2026-10-20", "c": 50.0}, {"d": "2026-10-21", "c": 50.0}, {"d": "2026-10-22", "c": 55.0}, {"d": "2026-10-23", "c": 56.45}, {"d": "2026-10-26", "c": 49.7}, {"d": "2026-10-27", "c": 44.98}, {"d": "2026-10-28", "c": 46.1}, {"d": "2026-10-29", "c": 42.16}, {"d": "2026-10-30", "c": 42.88}, {"d": "2026-11-02", "c": 43.56}, {"d": "2026-11-03", "c": 57.0}, {"d": "2026-11-04", "c": 60.4}, {"d": "2026-11-05", "c": 57.85}, {"d": "2026-11-06", "c": 59.0}, {"d": "2026-11-09", "c": 57.8}, {"d": "2026-11-10", "c": 59.25}, {"d": "2026-11-11", "c": 59.7}, {"d": "2026-11-12", "c": 57.75}, {"d": "2026-11-13", "c": 59.1}, {"d": "2026-11-16", "c": 58.8}, {"d": "2026-11-17", "c": 58.6}, {"d": "2026-11-18", "c": 73.25}, {"d": "2026-11-19", "c": 98.2}, {"d": "2026-11-20", "c": 105.2}])'>查看走势图</button>
-  </div>
-</details>
-
-<details class="card">
-  <summary class="card-sum">
-    <div class="chead"><div class="nm">乙德投资控股</div><div class="code">06182.HK</div></div>
-    <div class="prow">
-      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 0.725 <span class="live">盘中</span></div></div>
-      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class=" big">+0.00%</span></div></div>
+      <div class="pcol"><div class="lbl">盘中现价</div><div class="pval">HK$ 10.520 </div></div>
+      <div class="pcol"><div class="lbl">盘中涨跌</div><div class="pct"><span class="up big">+10.56%</span></div></div>
       <div class="pcol"><div class="lbl">RF概率 🤖</div><div class="pct dn">—</div></div>
     </div>
   </summary>
@@ -979,29 +1389,29 @@ document.addEventListener('click', function(e){
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">0.703</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">0.834</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">0.667</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">10.204</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">12.098</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">9.678</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">换手3.4%；量比2.4；RSI强势(51)</div>
+    <div class="reason">换手5.0%；RSI强势(52)；入选日大涨(+10.6%)</div>
     <div class="tags">
-      <span class="tag">RSI <b>51.1</b></span><span class="tag">60日位置 <b>62%</b></span>
-      <span class="tag">5日涨跌 <b class="dn">-2.70%</b></span>
-      <span class="tag">换手率 <b>3.4%</b></span><span class="tag">量比 <b>2.4</b></span>
+      <span class="tag">RSI <b>52.2</b></span><span class="tag">60日位置 <b>33%</b></span>
+      <span class="tag">5日涨跌 <b class="dn">-12.90%</b></span>
+      <span class="tag">换手率 <b>5.0%</b></span><span class="tag">量比 <b>1.1</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
       <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.8%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">19.3%</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">58.4%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 0.703 附近买入，目标 0.834（+15%），跌破 0.667 止损</div>
+    <div class="reason">动量候选：等回调到 10.204 附近买入，目标 12.098（+15%），跌破 9.678 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>3.7%</b></span><span class="tag">10日乖离 <b>-0.1%</b></span>
-      <span class="tag">成交额 <b>0.20亿</b></span><span class="tag">MACD <b>0.00/0.01</b></span>
-      <span class="tag">MA10 <b>0.726</b></span><span class="tag">MA20 <b>0.714</b></span>
+      <span class="tag">20日波动率 <b>8.6%</b></span><span class="tag">10日乖离 <b>-0.1%</b></span>
+      <span class="tag">成交额 <b>0.79亿</b></span><span class="tag">MACD <b>0.07/-0.18</b></span>
+      <span class="tag">MA10 <b>10.532</b></span><span class="tag">MA20 <b>9.449</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('06182', '乙德投资控股', [{"d": "2026-10-09", "c": 0.68}, {"d": "2026-10-12", "c": 0.765}, {"d": "2026-10-13", "c": 0.77}, {"d": "2026-10-14", "c": 0.795}, {"d": "2026-10-15", "c": 0.8}, {"d": "2026-10-16", "c": 0.81}, {"d": "2026-10-20", "c": 0.8}, {"d": "2026-10-21", "c": 0.775}, {"d": "2026-10-22", "c": 0.695}, {"d": "2026-10-23", "c": 0.72}, {"d": "2026-10-26", "c": 0.675}, {"d": "2026-10-27", "c": 0.675}, {"d": "2026-10-28", "c": 0.675}, {"d": "2026-10-29", "c": 0.705}, {"d": "2026-10-30", "c": 0.665}, {"d": "2026-11-02", "c": 0.69}, {"d": "2026-11-03", "c": 0.715}, {"d": "2026-11-04", "c": 0.75}, {"d": "2026-11-05", "c": 0.75}, {"d": "2026-11-06", "c": 0.72}, {"d": "2026-11-09", "c": 0.715}, {"d": "2026-11-10", "c": 0.715}, {"d": "2026-11-11", "c": 0.715}, {"d": "2026-11-12", "c": 0.745}, {"d": "2026-11-13", "c": 0.745}, {"d": "2026-11-16", "c": 0.75}, {"d": "2026-11-17", "c": 0.76}, {"d": "2026-11-18", "c": 0.685}, {"d": "2026-11-19", "c": 0.7}, {"d": "2026-11-20", "c": 0.725}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('02659', '宝济药业－Ｂ', [{"d": "2026-10-12", "c": 11.24}, {"d": "2026-10-13", "c": 10.6}, {"d": "2026-10-14", "c": 10.2}, {"d": "2026-10-15", "c": 9.695}, {"d": "2026-10-16", "c": 9.6}, {"d": "2026-10-20", "c": 9.2}, {"d": "2026-10-21", "c": 9.2}, {"d": "2026-10-22", "c": 7.515}, {"d": "2026-10-23", "c": 7.79}, {"d": "2026-10-26", "c": 7.92}, {"d": "2026-10-27", "c": 7.9}, {"d": "2026-10-28", "c": 8.42}, {"d": "2026-10-29", "c": 8.425}, {"d": "2026-10-30", "c": 8.01}, {"d": "2026-11-02", "c": 8.01}, {"d": "2026-11-03", "c": 7.735}, {"d": "2026-11-04", "c": 8.07}, {"d": "2026-11-05", "c": 9.26}, {"d": "2026-11-06", "c": 8.78}, {"d": "2026-11-09", "c": 9.05}, {"d": "2026-11-10", "c": 9.18}, {"d": "2026-11-11", "c": 9.415}, {"d": "2026-11-12", "c": 11.4}, {"d": "2026-11-13", "c": 10.44}, {"d": "2026-11-16", "c": 12.08}, {"d": "2026-11-17", "c": 11.25}, {"d": "2026-11-18", "c": 11.1}, {"d": "2026-11-19", "c": 10.42}, {"d": "2026-11-20", "c": 9.515}, {"d": "2026-11-23", "c": 10.52}])'>查看走势图</button>
   </div>
 </details>
 
@@ -1020,29 +1430,29 @@ document.addEventListener('click', function(e){
       <div class="pcol"><div class="lbl">估值标签</div><div><span class="vbadge ">无PE参考</span></div></div>
     </div>
     <div class="dgrid">
-      <div><div class="lbl">买入参考</div><div class="dv">23.649</div></div>
-      <div><div class="lbl">目标参考</div><div class="dv">28.037</div></div>
-      <div><div class="lbl">止损参考</div><div class="dv">22.43</div></div>
+      <div><div class="lbl">买入参考</div><div class="dv">24.735</div></div>
+      <div><div class="lbl">目标参考</div><div class="dv">29.325</div></div>
+      <div><div class="lbl">止损参考</div><div class="dv">23.46</div></div>
     </div>
     <div class="lbl" style="margin-top:10px">入选理由</div>
-    <div class="reason">5日+17%；RSI强势(60)</div>
+    <div class="reason">5日+17%；RSI强势(65)</div>
     <div class="tags">
-      <span class="tag">RSI <b>59.9</b></span><span class="tag">60日位置 <b>22%</b></span>
-      <span class="tag">5日涨跌 <b class="up">+17.20%</b></span>
-      <span class="tag">换手率 <b>0.0%</b></span><span class="tag">量比 <b>1.4</b></span>
+      <span class="tag">RSI <b>65.4</b></span><span class="tag">60日位置 <b>30%</b></span>
+      <span class="tag">5日涨跌 <b class="up">+17.10%</b></span>
+      <span class="tag">换手率 <b>0.1%</b></span><span class="tag">量比 <b>1.5</b></span>
     </div>
     <div class="prow" style="margin-top:8px">
       <div class="pcol"><div class="lbl">量化概率</div><div class="pval"><b class="dn">35.0%</b></div><div class="lbl" style="font-size:11px">基于历史回测胜率</div></div>
-      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">55.1%</div></div>
+      <div class="pcol"><div class="lbl">预计反弹空间</div><div class="pval">45.6%</div></div>
     </div>
     <div class="lbl" style="margin-top:8px">买入建议</div>
-    <div class="reason">动量候选：等回调到 23.649 附近买入，目标 28.037（+15%），跌破 22.43 止损</div>
+    <div class="reason">动量候选：等回调到 24.735 附近买入，目标 29.325（+15%），跌破 23.46 止损</div>
     <div class="tags" style="margin-top:8px">
-      <span class="tag">20日波动率 <b>3.3%</b></span><span class="tag">10日乖离 <b>8.9%</b></span>
-      <span class="tag">成交额 <b>0.04亿</b></span><span class="tag">MACD <b>-0.06/-0.72</b></span>
-      <span class="tag">MA10 <b>22.390</b></span><span class="tag">MA20 <b>22.020</b></span>
+      <span class="tag">20日波动率 <b>3.4%</b></span><span class="tag">10日乖离 <b>11.6%</b></span>
+      <span class="tag">成交额 <b>0.08亿</b></span><span class="tag">MACD <b>0.16/-0.54</b></span>
+      <span class="tag">MA10 <b>22.858</b></span><span class="tag">MA20 <b>22.207</b></span>
     </div>
-    <button class="trend-btn" onclick='showTrend('01236', '乐动机器人', [{"d": "2026-10-09", "c": 26.48}, {"d": "2026-10-12", "c": 25.02}, {"d": "2026-10-13", "c": 23.88}, {"d": "2026-10-14", "c": 23.0}, {"d": "2026-10-15", "c": 21.4}, {"d": "2026-10-16", "c": 21.5}, {"d": "2026-10-20", "c": 21.54}, {"d": "2026-10-21", "c": 21.58}, {"d": "2026-10-22", "c": 21.5}, {"d": "2026-10-23", "c": 21.22}, {"d": "2026-10-26", "c": 21.76}, {"d": "2026-10-27", "c": 21.58}, {"d": "2026-10-28", "c": 22.64}, {"d": "2026-10-29", "c": 21.9}, {"d": "2026-10-30", "c": 22.1}, {"d": "2026-11-02", "c": 22.06}, {"d": "2026-11-03", "c": 21.28}, {"d": "2026-11-04", "c": 21.28}, {"d": "2026-11-05", "c": 21.3}, {"d": "2026-11-06", "c": 20.6}, {"d": "2026-11-09", "c": 20.82}, {"d": "2026-11-10", "c": 20.86}, {"d": "2026-11-11", "c": 20.98}, {"d": "2026-11-12", "c": 20.9}, {"d": "2026-11-13", "c": 20.8}, {"d": "2026-11-16", "c": 21.78}, {"d": "2026-11-17", "c": 24.08}, {"d": "2026-11-18", "c": 24.36}, {"d": "2026-11-19", "c": 24.94}, {"d": "2026-11-20", "c": 24.38}])'>查看走势图</button>
+    <button class="trend-btn" onclick='showTrend('01236', '乐动机器人', [{"d": "2026-10-12", "c": 25.02}, {"d": "2026-10-13", "c": 23.88}, {"d": "2026-10-14", "c": 23.0}, {"d": "2026-10-15", "c": 21.4}, {"d": "2026-10-16", "c": 21.5}, {"d": "2026-10-20", "c": 21.54}, {"d": "2026-10-21", "c": 21.58}, {"d": "2026-10-22", "c": 21.5}, {"d": "2026-10-23", "c": 21.22}, {"d": "2026-10-26", "c": 21.76}, {"d": "2026-10-27", "c": 21.58}, {"d": "2026-10-28", "c": 22.64}, {"d": "2026-10-29", "c": 21.9}, {"d": "2026-10-30", "c": 22.1}, {"d": "2026-11-02", "c": 22.06}, {"d": "2026-11-03", "c": 21.28}, {"d": "2026-11-04", "c": 21.28}, {"d": "2026-11-05", "c": 21.3}, {"d": "2026-11-06", "c": 20.6}, {"d": "2026-11-09", "c": 20.82}, {"d": "2026-11-10", "c": 20.86}, {"d": "2026-11-11", "c": 20.98}, {"d": "2026-11-12", "c": 20.9}, {"d": "2026-11-13", "c": 20.8}, {"d": "2026-11-16", "c": 21.78}, {"d": "2026-11-17", "c": 24.08}, {"d": "2026-11-18", "c": 24.36}, {"d": "2026-11-19", "c": 24.94}, {"d": "2026-11-20", "c": 24.38}, {"d": "2026-11-23", "c": 25.5}])'>查看走势图</button>
   </div>
 </details>
 
@@ -1103,7 +1513,7 @@ document.addEventListener('click', function(e){
 <div class="sec"><h2>🗂️ 存档 <span class="cnt">港股</span></h2>
 <div class="sub">每日存盘小分类：数据、预测、方法、战绩各归一框；缺失字段写“暂无/待更新”，不填假数</div></div>
 <div class="dim-grid">
-<div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">🗃️ 数据源</div><div class="lbl" style="margin-top:8px">数据来源</div><div style="font-size:13.5px;line-height:1.7">新浪全盘快照＋东方财富日K（前复权）</div><div class="lbl" style="margin-top:8px">覆盖范围</div><div style="font-size:13.5px;line-height:1.7">约 2806 只 · 数据日 20261120</div><div class="lbl" style="margin-top:8px">更新时间</div><div style="font-size:13.5px;line-height:1.7">2026-11-20 10:27</div><div class="lbl" style="margin-top:8px">已知缺口</div><div style="font-size:13.5px;line-height:1.7">暂无/待更新</div></div><div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">🔮 当日预测</div><div class="lbl" style="margin-top:8px">当日预测条数</div><div style="font-size:13.5px;line-height:1.7">8</div><div class="lbl" style="margin-top:8px">偏涨 / 偏跌分布</div><div style="font-size:13.5px;line-height:1.7">偏涨 5 只 / 偏跌 3 只</div><div class="lbl" style="margin-top:8px">概率口径</div><div style="font-size:13.5px;line-height:1.7">模型预测短期（1–2 天）涨到 +5–7% 目标的概率，不是涨跌保证。</div><div class="lbl" style="margin-top:8px">方向说明</div><div style="font-size:13.5px;line-height:1.7">偏跌仅指 2 天内涨到 +5% 以上的概率不到一半，不是预测会跌；请按概率排序看头部。</div><div class="lbl" style="margin-top:8px">分布统计口径</div><div style="font-size:13.5px;line-height:1.7">按 prob_data.json 有概率条目计；无概率/数据缺口条目不计入</div></div><div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">🧪 方法说明</div><div class="lbl" style="margin-top:8px">模型</div><div style="font-size:13.5px;line-height:1.7">随机森林＋校准（生产模型）</div><div class="lbl" style="margin-top:8px">因子数</div><div style="font-size:13.5px;line-height:1.7">32 个</div><div class="lbl" style="margin-top:8px">主要因子族</div><div style="font-size:13.5px;line-height:1.7">暂无/待更新</div><div class="lbl" style="margin-top:8px">标签定义</div><div style="font-size:13.5px;line-height:1.7">后 2 日最高价涨幅 ≥5% 为正样本。</div><div class="lbl" style="margin-top:8px">回测留出集指标</div><div style="font-size:13.5px;line-height:1.7">AUC 0.766；前 20 命中率 49.3%；log-loss 0.4551；2026-10-24 32 因子换装报告（留出集）；页面上方「模型胜率」板块已统一为32因子版</div></div><div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">📒 准确率战绩</div><div class="lbl" style="margin-top:8px">累计 / 已核验 / 正确</div><div style="font-size:13.5px;line-height:1.7">393 / 377 / 179</div><div class="lbl" style="margin-top:8px">准确率</div><div style="font-size:13.5px;line-height:1.7">47.5%</div><div class="lbl" style="margin-top:8px">待核验条数</div><div style="font-size:13.5px;line-height:1.7">16</div><div class="lbl" style="margin-top:8px">最近预测明细（前 5 条，含待核验）</div><div style="font-size:13.5px;line-height:1.7"><div class="tbl-wrap"><table class="prob-table" style="margin-top:8px"><tr><th>预测日</th><th>代码</th><th>名称</th><th>方向</th><th>概率</th><th>实际涨跌</th><th>结果</th></tr><tr><td>2026-11-20</td><td>00348</td><td>中国智能健康</td><td>偏涨</td><td>61.1%</td><td>—</td><td>待核验</td></tr><tr><td>2026-11-20</td><td>02567</td><td>七牛智能</td><td>偏涨</td><td>60.9%</td><td>—</td><td>待核验</td></tr><tr><td>2026-11-20</td><td>01347</td><td>华虹宏力</td><td>偏涨</td><td>56.3%</td><td>—</td><td>待核验</td></tr><tr><td>2026-11-20</td><td>00017</td><td>新世界发展</td><td>偏涨</td><td>56.6%</td><td>—</td><td>待核验</td></tr><tr><td>2026-11-20</td><td>00209</td><td>万维智能科技</td><td>偏涨</td><td>55.5%</td><td>—</td><td>待核验</td></tr></table></div></div></div>
+<div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">🗃️ 数据源</div><div class="lbl" style="margin-top:8px">数据来源</div><div style="font-size:13.5px;line-height:1.7">新浪全盘快照＋东方财富日K（前复权）</div><div class="lbl" style="margin-top:8px">覆盖范围</div><div style="font-size:13.5px;line-height:1.7">约 2805 只 · 数据日 20261123</div><div class="lbl" style="margin-top:8px">更新时间</div><div style="font-size:13.5px;line-height:1.7">2026-11-23 10:07</div><div class="lbl" style="margin-top:8px">已知缺口</div><div style="font-size:13.5px;line-height:1.7">暂无/待更新</div></div><div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">🔮 当日预测</div><div class="lbl" style="margin-top:8px">当日预测条数</div><div style="font-size:13.5px;line-height:1.7">8</div><div class="lbl" style="margin-top:8px">偏涨 / 偏跌分布</div><div style="font-size:13.5px;line-height:1.7">偏涨 5 只 / 偏跌 3 只</div><div class="lbl" style="margin-top:8px">概率口径</div><div style="font-size:13.5px;line-height:1.7">模型预测短期（1–2 天）涨到 +5–7% 目标的概率，不是涨跌保证。</div><div class="lbl" style="margin-top:8px">方向说明</div><div style="font-size:13.5px;line-height:1.7">偏跌仅指 2 天内涨到 +5% 以上的概率不到一半，不是预测会跌；请按概率排序看头部。</div><div class="lbl" style="margin-top:8px">分布统计口径</div><div style="font-size:13.5px;line-height:1.7">按 prob_data.json 有概率条目计；无概率/数据缺口条目不计入</div></div><div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">🧪 方法说明</div><div class="lbl" style="margin-top:8px">模型</div><div style="font-size:13.5px;line-height:1.7">随机森林＋校准（生产模型）</div><div class="lbl" style="margin-top:8px">因子数</div><div style="font-size:13.5px;line-height:1.7">32 个</div><div class="lbl" style="margin-top:8px">主要因子族</div><div style="font-size:13.5px;line-height:1.7">暂无/待更新</div><div class="lbl" style="margin-top:8px">标签定义</div><div style="font-size:13.5px;line-height:1.7">后 2 日最高价涨幅 ≥5% 为正样本。</div><div class="lbl" style="margin-top:8px">回测留出集指标</div><div style="font-size:13.5px;line-height:1.7">AUC 0.766；前 20 命中率 49.3%；log-loss 0.4551；2026-10-24 32 因子换装报告（留出集）；页面上方「模型胜率」板块已统一为32因子版</div></div><div class="info" style="margin-bottom:0"><div style="font-size:14px;font-weight:700">📒 准确率战绩</div><div class="lbl" style="margin-top:8px">累计 / 已核验 / 正确</div><div style="font-size:13.5px;line-height:1.7">401 / 393 / 187</div><div class="lbl" style="margin-top:8px">准确率</div><div style="font-size:13.5px;line-height:1.7">47.6%</div><div class="lbl" style="margin-top:8px">待核验条数</div><div style="font-size:13.5px;line-height:1.7">8</div><div class="lbl" style="margin-top:8px">最近预测明细（前 5 条，含待核验）</div><div style="font-size:13.5px;line-height:1.7"><div class="tbl-wrap"><table class="prob-table" style="margin-top:8px"><tr><th>预测日</th><th>代码</th><th>名称</th><th>方向</th><th>概率</th><th>实际涨跌</th><th>结果</th></tr><tr><td>2026-11-23</td><td>00928</td><td>帝王国际投资</td><td>偏涨</td><td>68.1%</td><td>—</td><td>待核验</td></tr><tr><td>2026-11-23</td><td>06681</td><td>脑动极光－Ｂ</td><td>偏涨</td><td>67.4%</td><td>—</td><td>待核验</td></tr><tr><td>2026-11-23</td><td>02625</td><td>江苏宏信</td><td>偏涨</td><td>66.4%</td><td>—</td><td>待核验</td></tr><tr><td>2026-11-23</td><td>00017</td><td>新世界发展</td><td>偏涨</td><td>57.9%</td><td>—</td><td>待核验</td></tr><tr><td>2026-11-23</td><td>01280</td><td>奇点国峰</td><td>偏涨</td><td>53.7%</td><td>—</td><td>待核验</td></tr></table></div></div></div>
 </div>
 <!-- ARCHIVE-END -->
 
