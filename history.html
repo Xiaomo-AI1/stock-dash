@@ -164,12 +164,48 @@ document.addEventListener('click', function(e){
 
 <div class="wrap">
 <div class="nav"><a href="./index.html">当日选股</a><a href="./history.html">历史归档</a></div>
-<div class="topbar">历史选股归档</div><div class="info"><div class="lbl">共收录</div><div class="dt">30 期</div><div class="lbl" style="margin-top:6px">按日期排序（近→远，点击展开查看当日股票）<br>标准：1-2天涨≥5% 或 3-7天涨≥15% 算准</div></div>
+<div class="topbar">历史选股归档</div><div class="info"><div class="lbl">共收录</div><div class="dt">31 期</div><div class="lbl" style="margin-top:6px">按日期排序（近→远，点击展开查看当日股票）<br>标准：1-2天涨≥5% 或 3-7天涨≥15% 算准</div></div>
 <div class="sec"><h2>🔮 概率预测战绩 <span class="cnt">按预测日汇总</span></h2>
 <div class="sub">胜率 = 方向猜对的比例（已核验条目）；方向分布按该批全部预测的模型判定计数；偏差值按同一批已核验股票算，未核验的批写“待核验”<br>
 偏差值 = |预测偏涨占比 − 当日实际涨股占比|（百分点）：预测与实际都在同一批已核验股票里数，预测偏涨占比 = 已核验中判偏涨的只数 ÷ 已核验总数，实际涨股占比 = 已核验中核验日收盘涨了的只数 ÷ 已核验总数（实际涨跌 = 核验日收盘价 ÷ 预测时价格 − 1，大于 0 算涨）；&gt;40pp 标“偏差过大”。涨跌不是平均的，某日涨多跌少是正常的；偏差只看模型判的分布和当日实际分布差多远——偏差反复大、总往一个方向偏，说明模型算法有问题。<br>
 注意：概率预测每批用的是前一日选股候选，所以预测日与下方按选股日期分的选股归档日期不直接对应（例如 11-04 的概率批对应 11-03 的选股）。</div></div>
-<div class="tbl-wrap"><table class="prob-table"><tr><th>预测日</th><th>预测数</th><th>已核验</th><th>正确</th><th>准确率</th><th>方向分布</th><th>偏差值</th><th>待核验</th></tr><tr><td>2026-11-27</td><td>20</td><td>0</td><td>0</td><td>待核验</td><td>偏涨 9 只 / 偏跌 11 只（偏涨 45.0%）</td><td>待核验</td><td>20</td></tr><tr><td>2026-11-26</td><td>10</td><td>0</td><td>0</td><td>待核验</td><td>偏涨 6 只 / 偏跌 4 只（偏涨 60.0%）</td><td>待核验</td><td>10</td></tr><tr><td>2026-11-25</td><td>18</td><td>18</td><td>9</td><td>50.0%</td><td>偏涨 9 只 / 偏跌 9 只（偏涨 50.0%）</td><td>5.6pp（预测涨 50.0% / 实际涨 44.4%）</td><td>0</td></tr><tr><td>2026-11-24</td><td>14</td><td>14</td><td>6</td><td>42.9%</td><td>偏涨 4 只 / 偏跌 10 只（偏涨 28.6%）</td><td>21.4pp（预测涨 28.6% / 实际涨 50.0%）</td><td>0</td></tr><tr><td>2026-11-23</td><td>8</td><td>8</td><td>4</td><td>50.0%</td><td>偏涨 5 只 / 偏跌 3 只（偏涨 62.5%）</td><td>12.5pp（预测涨 62.5% / 实际涨 50.0%）</td><td>0</td></tr><tr><td>2026-11-20</td><td>15</td><td>15</td><td>7</td><td>46.7%</td><td>偏涨 8 只 / 偏跌 7 只（偏涨 53.3%）</td><td>13.3pp（预测涨 53.3% / 实际涨 40.0%）</td><td>0</td></tr><tr><td>2026-11-19</td><td>12</td><td>12</td><td>7</td><td>58.3%</td><td>偏涨 6 只 / 偏跌 6 只（偏涨 50.0%）</td><td>8.3pp（预测涨 50.0% / 实际涨 41.7%）</td><td>0</td></tr><tr><td>2026-11-18</td><td>16</td><td>16</td><td>4</td><td>25.0%</td><td>偏涨 9 只 / 偏跌 7 只（偏涨 56.2%）</td><td>18.8pp（预测涨 56.2% / 实际涨 37.5%）</td><td>0</td></tr><tr><td>2026-11-17</td><td>19</td><td>19</td><td>10</td><td>52.6%</td><td>偏涨 15 只 / 偏跌 4 只（偏涨 78.9%）</td><td>26.3pp（预测涨 78.9% / 实际涨 52.6%）</td><td>0</td></tr><tr><td>2026-11-16</td><td>17</td><td>17</td><td>8</td><td>47.1%</td><td>偏涨 13 只 / 偏跌 4 只（偏涨 76.5%）</td><td>41.2pp（预测涨 76.5% / 实际涨 35.3%） <b style="color:#c00">偏差过大</b></td><td>0</td></tr><tr><td>2026-11-13</td><td>17</td><td>17</td><td>10</td><td>58.8%</td><td>偏涨 10 只 / 偏跌 7 只（偏涨 58.8%）</td><td>0.0pp（预测涨 58.8% / 实际涨 58.8%）</td><td>0</td></tr><tr><td>2026-11-12</td><td>22</td><td>22</td><td>14</td><td>63.6%</td><td>偏涨 12 只 / 偏跌 10 只（偏涨 54.5%）</td><td>22.7pp（预测涨 54.5% / 实际涨 31.8%）</td><td>0</td></tr><tr><td>2026-11-11</td><td>24</td><td>24</td><td>11</td><td>45.8%</td><td>偏涨 13 只 / 偏跌 11 只（偏涨 54.2%）</td><td>33.3pp（预测涨 54.2% / 实际涨 20.8%）</td><td>0</td></tr><tr><td>2026-11-10</td><td>21</td><td>21</td><td>8</td><td>38.1%</td><td>偏涨 10 只 / 偏跌 11 只（偏涨 47.6%）</td><td>0.0pp（预测涨 47.6% / 实际涨 47.6%）</td><td>0</td></tr><tr><td>2026-11-09</td><td>23</td><td>23</td><td>11</td><td>47.8%</td><td>偏涨 14 只 / 偏跌 9 只（偏涨 60.9%）</td><td>8.7pp（预测涨 60.9% / 实际涨 69.6%）</td><td>0</td></tr><tr><td>2026-11-06</td><td>28</td><td>28</td><td>16</td><td>57.1%</td><td>偏涨 15 只 / 偏跌 13 只（偏涨 53.6%）</td><td>7.1pp（预测涨 53.6% / 实际涨 46.4%）</td><td>0</td></tr><tr><td>2026-11-05</td><td>17</td><td>17</td><td>8</td><td>47.1%</td><td>偏涨 10 只 / 偏跌 7 只（偏涨 58.8%）</td><td>29.4pp（预测涨 58.8% / 实际涨 29.4%）</td><td>0</td></tr><tr><td>2026-11-04</td><td>17</td><td>17</td><td>7</td><td>41.2%</td><td>偏涨 8 只 / 偏跌 9 只（偏涨 47.1%）</td><td>11.8pp（预测涨 47.1% / 实际涨 58.8%）</td><td>0</td></tr><tr><td>2026-11-03</td><td>19</td><td>19</td><td>8</td><td>42.1%</td><td>偏涨 13 只 / 偏跌 6 只（偏涨 68.4%）</td><td>10.5pp（预测涨 68.4% / 实际涨 57.9%）</td><td>0</td></tr><tr><td>2026-11-02</td><td>20</td><td>20</td><td>12</td><td>60.0%</td><td>偏涨 10 只 / 偏跌 10 只（偏涨 50.0%）</td><td>10.0pp（预测涨 50.0% / 实际涨 40.0%）</td><td>0</td></tr><tr><td>2026-10-30</td><td>15</td><td>15</td><td>3</td><td>20.0%</td><td>偏涨 8 只 / 偏跌 7 只（偏涨 53.3%）</td><td>13.3pp（预测涨 53.3% / 实际涨 40.0%）</td><td>0</td></tr><tr><td>2026-10-29</td><td>13</td><td>13</td><td>11</td><td>84.6%</td><td>偏涨 6 只 / 偏跌 7 只（偏涨 46.2%）</td><td>15.4pp（预测涨 46.2% / 实际涨 30.8%）</td><td>0</td></tr><tr><td>2026-10-28</td><td>19</td><td>19</td><td>10</td><td>52.6%</td><td>偏涨 8 只 / 偏跌 11 只（偏涨 42.1%）</td><td>21.1pp（预测涨 42.1% / 实际涨 21.1%）</td><td>0</td></tr><tr><td>2026-10-27</td><td>17</td><td>17</td><td>10</td><td>58.8%</td><td>偏涨 12 只 / 偏跌 5 只（偏涨 70.6%）</td><td>5.9pp（预测涨 70.6% / 实际涨 76.5%）</td><td>0</td></tr><tr><td>2026-10-26</td><td>15</td><td>15</td><td>5</td><td>33.3%</td><td>偏涨 9 只 / 偏跌 6 只（偏涨 60.0%）</td><td>26.7pp（预测涨 60.0% / 实际涨 33.3%）</td><td>0</td></tr><tr><td>2026-10-23</td><td>15</td><td>15</td><td>4</td><td>26.7%</td><td>偏涨 9 只 / 偏跌 6 只（偏涨 60.0%）</td><td>13.3pp（预测涨 60.0% / 实际涨 46.7%）</td><td>0</td></tr><tr><td>2026-10-22</td><td>12</td><td>12</td><td>3</td><td>25.0%</td><td>偏涨 8 只 / 偏跌 4 只（偏涨 66.7%）</td><td>41.7pp（预测涨 66.7% / 实际涨 25.0%） <b style="color:#c00">偏差过大</b></td><td>0</td></tr></table></div>
+<div class="tbl-wrap"><table class="prob-table"><tr><th>预测日</th><th>预测数</th><th>已核验</th><th>正确</th><th>准确率</th><th>方向分布</th><th>偏差值</th><th>待核验</th></tr><tr><td>2026-11-27</td><td>20</td><td>0</td><td>0</td><td>待核验</td><td>偏涨 9 只 / 偏跌 11 只（偏涨 45.0%）</td><td>待核验</td><td>20</td></tr><tr><td>2026-11-26</td><td>10</td><td>10</td><td>0</td><td>0.0%</td><td>偏涨 6 只 / 偏跌 4 只（偏涨 60.0%）</td><td>30.0pp（预测涨 60.0% / 实际涨 30.0%）</td><td>0</td></tr><tr><td>2026-11-25</td><td>18</td><td>18</td><td>9</td><td>50.0%</td><td>偏涨 9 只 / 偏跌 9 只（偏涨 50.0%）</td><td>5.6pp（预测涨 50.0% / 实际涨 44.4%）</td><td>0</td></tr><tr><td>2026-11-24</td><td>14</td><td>14</td><td>6</td><td>42.9%</td><td>偏涨 4 只 / 偏跌 10 只（偏涨 28.6%）</td><td>21.4pp（预测涨 28.6% / 实际涨 50.0%）</td><td>0</td></tr><tr><td>2026-11-23</td><td>8</td><td>8</td><td>4</td><td>50.0%</td><td>偏涨 5 只 / 偏跌 3 只（偏涨 62.5%）</td><td>12.5pp（预测涨 62.5% / 实际涨 50.0%）</td><td>0</td></tr><tr><td>2026-11-20</td><td>15</td><td>15</td><td>7</td><td>46.7%</td><td>偏涨 8 只 / 偏跌 7 只（偏涨 53.3%）</td><td>13.3pp（预测涨 53.3% / 实际涨 40.0%）</td><td>0</td></tr><tr><td>2026-11-19</td><td>12</td><td>12</td><td>7</td><td>58.3%</td><td>偏涨 6 只 / 偏跌 6 只（偏涨 50.0%）</td><td>8.3pp（预测涨 50.0% / 实际涨 41.7%）</td><td>0</td></tr><tr><td>2026-11-18</td><td>16</td><td>16</td><td>4</td><td>25.0%</td><td>偏涨 9 只 / 偏跌 7 只（偏涨 56.2%）</td><td>18.8pp（预测涨 56.2% / 实际涨 37.5%）</td><td>0</td></tr><tr><td>2026-11-17</td><td>19</td><td>19</td><td>10</td><td>52.6%</td><td>偏涨 15 只 / 偏跌 4 只（偏涨 78.9%）</td><td>26.3pp（预测涨 78.9% / 实际涨 52.6%）</td><td>0</td></tr><tr><td>2026-11-16</td><td>17</td><td>17</td><td>8</td><td>47.1%</td><td>偏涨 13 只 / 偏跌 4 只（偏涨 76.5%）</td><td>41.2pp（预测涨 76.5% / 实际涨 35.3%） <b style="color:#c00">偏差过大</b></td><td>0</td></tr><tr><td>2026-11-13</td><td>17</td><td>17</td><td>10</td><td>58.8%</td><td>偏涨 10 只 / 偏跌 7 只（偏涨 58.8%）</td><td>0.0pp（预测涨 58.8% / 实际涨 58.8%）</td><td>0</td></tr><tr><td>2026-11-12</td><td>22</td><td>22</td><td>14</td><td>63.6%</td><td>偏涨 12 只 / 偏跌 10 只（偏涨 54.5%）</td><td>22.7pp（预测涨 54.5% / 实际涨 31.8%）</td><td>0</td></tr><tr><td>2026-11-11</td><td>24</td><td>24</td><td>11</td><td>45.8%</td><td>偏涨 13 只 / 偏跌 11 只（偏涨 54.2%）</td><td>33.3pp（预测涨 54.2% / 实际涨 20.8%）</td><td>0</td></tr><tr><td>2026-11-10</td><td>21</td><td>21</td><td>8</td><td>38.1%</td><td>偏涨 10 只 / 偏跌 11 只（偏涨 47.6%）</td><td>0.0pp（预测涨 47.6% / 实际涨 47.6%）</td><td>0</td></tr><tr><td>2026-11-09</td><td>23</td><td>23</td><td>11</td><td>47.8%</td><td>偏涨 14 只 / 偏跌 9 只（偏涨 60.9%）</td><td>8.7pp（预测涨 60.9% / 实际涨 69.6%）</td><td>0</td></tr><tr><td>2026-11-06</td><td>28</td><td>28</td><td>16</td><td>57.1%</td><td>偏涨 15 只 / 偏跌 13 只（偏涨 53.6%）</td><td>7.1pp（预测涨 53.6% / 实际涨 46.4%）</td><td>0</td></tr><tr><td>2026-11-05</td><td>17</td><td>17</td><td>8</td><td>47.1%</td><td>偏涨 10 只 / 偏跌 7 只（偏涨 58.8%）</td><td>29.4pp（预测涨 58.8% / 实际涨 29.4%）</td><td>0</td></tr><tr><td>2026-11-04</td><td>17</td><td>17</td><td>7</td><td>41.2%</td><td>偏涨 8 只 / 偏跌 9 只（偏涨 47.1%）</td><td>11.8pp（预测涨 47.1% / 实际涨 58.8%）</td><td>0</td></tr><tr><td>2026-11-03</td><td>19</td><td>19</td><td>8</td><td>42.1%</td><td>偏涨 13 只 / 偏跌 6 只（偏涨 68.4%）</td><td>10.5pp（预测涨 68.4% / 实际涨 57.9%）</td><td>0</td></tr><tr><td>2026-11-02</td><td>20</td><td>20</td><td>12</td><td>60.0%</td><td>偏涨 10 只 / 偏跌 10 只（偏涨 50.0%）</td><td>10.0pp（预测涨 50.0% / 实际涨 40.0%）</td><td>0</td></tr><tr><td>2026-10-30</td><td>15</td><td>15</td><td>3</td><td>20.0%</td><td>偏涨 8 只 / 偏跌 7 只（偏涨 53.3%）</td><td>13.3pp（预测涨 53.3% / 实际涨 40.0%）</td><td>0</td></tr><tr><td>2026-10-29</td><td>13</td><td>13</td><td>11</td><td>84.6%</td><td>偏涨 6 只 / 偏跌 7 只（偏涨 46.2%）</td><td>15.4pp（预测涨 46.2% / 实际涨 30.8%）</td><td>0</td></tr><tr><td>2026-10-28</td><td>19</td><td>19</td><td>10</td><td>52.6%</td><td>偏涨 8 只 / 偏跌 11 只（偏涨 42.1%）</td><td>21.1pp（预测涨 42.1% / 实际涨 21.1%）</td><td>0</td></tr><tr><td>2026-10-27</td><td>17</td><td>17</td><td>10</td><td>58.8%</td><td>偏涨 12 只 / 偏跌 5 只（偏涨 70.6%）</td><td>5.9pp（预测涨 70.6% / 实际涨 76.5%）</td><td>0</td></tr><tr><td>2026-10-26</td><td>15</td><td>15</td><td>5</td><td>33.3%</td><td>偏涨 9 只 / 偏跌 6 只（偏涨 60.0%）</td><td>26.7pp（预测涨 60.0% / 实际涨 33.3%）</td><td>0</td></tr><tr><td>2026-10-23</td><td>15</td><td>15</td><td>4</td><td>26.7%</td><td>偏涨 9 只 / 偏跌 6 只（偏涨 60.0%）</td><td>13.3pp（预测涨 60.0% / 实际涨 46.7%）</td><td>0</td></tr><tr><td>2026-10-22</td><td>12</td><td>12</td><td>3</td><td>25.0%</td><td>偏涨 8 只 / 偏跌 4 只（偏涨 66.7%）</td><td>41.7pp（预测涨 66.7% / 实际涨 25.0%） <b style="color:#c00">偏差过大</b></td><td>0</td></tr></table></div>
+
+<details class="hist-day">
+<summary class="hist-date">2026-11-27（反转 21 / 动量 30） <span class="vbadge">暂无数据</span></summary>
+<div class="lbl" style="font-size:12px;color:#999;margin-bottom:4px">底部反转</div>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>00719</td><td>山东新华制药股份</td><td>60</td><td>4.835</td><td>+3.09%</td><td>贴近52周低点(7%)；贴近60日低点(9%)；RSI上穿30(27→36)</td></tr>
+<tr><td>01956</td><td>中科闻歌</td><td>50</td><td>43.1</td><td>+41.50%</td><td>贴近52周低点(13%)；60日中低位(21%)；RSI上穿30(22→44)</td></tr>
+<tr><td>00895</td><td>东江环保</td><td>45</td><td>1.43</td><td>+6.72%</td><td>贴近52周低点(6%)；60日中低位(23%)；量比3.1放量</td></tr>
+<tr><td>01850</td><td>美好生活集团控股</td><td>45</td><td>0.33</td><td>-4.35%</td><td>贴近52周低点(2%)；贴近60日低点(5%)；量比2.6放量</td></tr>
+<tr><td>02729</td><td>凯乐士科技</td><td>45</td><td>5.2</td><td>+16.46%</td><td>贴近52周低点(2%)；贴近60日低点(2%)；RSI超卖(20)</td></tr>
+<tr><td>07489</td><td>岚图汽车</td><td>45</td><td>1.18</td><td>+9.77%</td><td>贴近52周低点(2%)；贴近60日低点(7%)；RSI上穿30(29→38)</td></tr>
+<tr><td>00323</td><td>马鞍山钢铁股份</td><td>40</td><td>1.105</td><td>+2.79%</td><td>贴近52周低点(2%)；贴近60日低点(4%)；RSI超卖(26)</td></tr>
+<tr><td>00537</td><td>普源精电</td><td>40</td><td>15.06</td><td>+8.58%</td><td>贴近52周低点(7%)；贴近60日低点(8%)；MACD近3日金叉</td></tr>
+<tr><td>00604</td><td>深圳控股</td><td>40</td><td>0.355</td><td>+9.23%</td><td>贴近52周低点(7%)；贴近60日低点(9%)；RSI上穿30(15→32)</td></tr>
+<tr><td>01020</td><td>中细软科技</td><td>40</td><td>0.178</td><td>+4.71%</td><td>贴近52周低点(15%)；贴近60日低点(7%)；RSI上穿30(26→36)</td></tr>
+<tr><td>01081</td><td>大金重工</td><td>40</td><td>17.81</td><td>+8.07%</td><td>贴近52周低点(3%)；贴近60日低点(7%)；RSI上穿30(30→38)</td></tr>
+<tr><td>01377</td><td>鼎泰高科</td><td>40</td><td>103.8</td><td>+26.20%</td><td>贴近52周低点(6%)；贴近60日低点(9%)；RSI上穿30(27→38)</td></tr>
+<tr><td>01896</td><td>猫眼娱乐</td><td>40</td><td>3.095</td><td>+3.69%</td><td>贴近52周低点(4%)；贴近60日低点(8%)；RSI上穿30(23→32)</td></tr>
+<tr><td>02570</td><td>重塑能源</td><td>40</td><td>8.02</td><td>+43.09%</td><td>贴近52周低点(4%)；量比3.0放量；止跌首阳(+43.1%)</td></tr>
+<tr><td>02665</td><td>图达通</td><td>40</td><td>1.045</td><td>+12.97%</td><td>贴近52周低点(1%)；贴近60日低点(9%)；RSI上穿30(29→41)</td></tr></table></div>
+<div class="lbl" style="font-size:12px;color:#999;margin:8px 0 4px">强势动量</div>
+<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>09678</td><td>云知声</td><td>95</td><td>56.3</td><td>+24.34%</td><td>5日+49%；换手11.7%；量比2.4</td></tr>
+<tr><td>02515</td><td>天津建发</td><td>90</td><td>6.175</td><td>+7.39%</td><td>5日+36%；创60日新高；RSI强势(70)</td></tr>
+<tr><td>02570</td><td>重塑能源</td><td>80</td><td>8.02</td><td>+43.09%</td><td>5日+191%；量比3.0；RSI强势(64)</td></tr>
+<tr><td>02670</td><td>云迹</td><td>80</td><td>3.505</td><td>+73.51%</td><td>5日+70%；换手50.0%；RSI强势(51)</td></tr>
+<tr><td>09630</td><td>芯碁微装</td><td>80</td><td>194.8</td><td>+34.72%</td><td>5日+26%；换手12.5%；RSI强势(53)</td></tr>
+<tr><td>09869</td><td>海伦司</td><td>80</td><td>0.71</td><td>+19.33%</td><td>5日+22%；量比2.4；RSI强势(51)</td></tr>
+<tr><td>06058</td><td>兴证国际</td><td>80</td><td>0.56</td><td>+12.00%</td><td>5日+30%；量比2.4；RSI强势(68)</td></tr>
+<tr><td>07688</td><td>拓璞数控</td><td>75</td><td>10.74</td><td>+15.61%</td><td>5日+39%；换手5.3%；量比2.4</td></tr>
+<tr><td>02687</td><td>卓越睿新</td><td>75</td><td>187.9</td><td>+160.43%</td><td>5日+274%；换手6.1%；量比3.0</td></tr>
+<tr><td>01191</td><td>海光芯正</td><td>73</td><td>79.4</td><td>+26.23%</td><td>5日+28%；换手3.3%；RSI强势(52)</td></tr>
+<tr><td>01705</td><td>宾仕国际</td><td>73</td><td>1.595</td><td>+31.28%</td><td>5日+23%；换手2.2%；RSI强势(63)</td></tr>
+<tr><td>09689</td><td>金泰丰国际控股</td><td>70</td><td>1.6</td><td>+10.34%</td><td>5日+84%；创60日新高；入选日大涨(+10.3%)</td></tr>
+<tr><td>01956</td><td>中科闻歌</td><td>68</td><td>43.1</td><td>+41.50%</td><td>5日+27%；换手2.1%；量比2.6</td></tr>
+<tr><td>02718</td><td>明略科技－Ｗ</td><td>65</td><td>22.88</td><td>+24.89%</td><td>5日+15%；换手7.1%；量比2.1</td></tr>
+<tr><td>06067</td><td>星源材质</td><td>65</td><td>5.28</td><td>+12.22%</td><td>5日+25%；RSI强势(51)；入选日大涨(+12.2%)</td></tr></table></div>
+</details>
 
 <details class="hist-day">
 <summary class="hist-date">2026-11-26（反转 13 / 动量 24） <span class="vbadge">暂无数据</span></summary>
@@ -1046,39 +1082,6 @@ document.addEventListener('click', function(e){
 <tr><td>01087</td><td>威讯控股</td><td>45</td><td>1.79</td><td>+7.51%</td><td>5日+11%；量比2.1；RSI强势(60)</td></tr>
 <tr><td>08098</td><td>昌利控股</td><td>45</td><td>0.42</td><td>+20.00%</td><td>5日+136%；创60日新高；RSI过热(98)</td></tr>
 <tr><td>02583</td><td>西普尼</td><td>43</td><td>44.64</td><td>-14.97%</td><td>5日+14%；换手3.2%；量比2.7</td></tr></table></div>
-</details>
-
-<details class="hist-day">
-<summary class="hist-date">2026-10-13（反转 30 / 动量 12） <span class="vbadge vn">准确率 38.1%（16/42，短期16/中期4）</span></summary>
-<div class="lbl" style="font-size:12px;color:#999;margin-bottom:4px">底部反转</div>
-<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>02652</td><td>长风药业</td><td>107</td><td>6.35</td><td>+3.76%</td><td></td></tr>
-<tr><td>08360</td><td>简朴新生活</td><td>100</td><td>0.24</td><td>+4.35%</td><td></td></tr>
-<tr><td>00751</td><td>创维集团</td><td>97</td><td>3.03</td><td>-3.19%</td><td></td></tr>
-<tr><td>02665</td><td>图达通</td><td>97</td><td>1.465</td><td>-12.80%</td><td></td></tr>
-<tr><td>01928</td><td>金沙中国有限公司</td><td>90</td><td>11.42</td><td>+3.35%</td><td></td></tr>
-<tr><td>03700</td><td>映宇宙</td><td>90</td><td>0.675</td><td>+13.45%</td><td></td></tr>
-<tr><td>09981</td><td>沃尔核材</td><td>90</td><td>8.045</td><td>+1.32%</td><td></td></tr>
-<tr><td>02889</td><td>博泰车联</td><td>87</td><td>54.2</td><td>+2.65%</td><td></td></tr>
-<tr><td>00568</td><td>山东墨龙</td><td>77</td><td>3.72</td><td>+0.27%</td><td></td></tr>
-<tr><td>00881</td><td>中升控股</td><td>77</td><td>2.38</td><td>+1.49%</td><td></td></tr>
-<tr><td>01638</td><td>佳兆业集团</td><td>77</td><td>0.021</td><td>+0.00%</td><td></td></tr>
-<tr><td>02097</td><td>蜜雪集团</td><td>77</td><td>167.3</td><td>-2.85%</td><td></td></tr>
-<tr><td>02272</td><td>科拓股份</td><td>77</td><td>53.5</td><td>+2.00%</td><td></td></tr>
-<tr><td>02372</td><td>伟立控股</td><td>77</td><td>0.65</td><td>-18.24%</td><td></td></tr>
-<tr><td>02495</td><td>声通科技</td><td>77</td><td>23.4</td><td>-1.76%</td><td></td></tr></table></div>
-<div class="lbl" style="font-size:12px;color:#999;margin:8px 0 4px">强势动量</div>
-<div class="tbl-wrap"><table class="hist-table"><tr><th>代码</th><th>名称</th><th>得分</th><th>价格</th><th>涨跌</th><th>入选理由(前3)</th></tr><tr><td>01389</td><td>美捷汇控股</td><td>78</td><td>0.755</td><td>+45.19%</td><td></td></tr>
-<tr><td>02450</td><td>淮北绿金股份</td><td>78</td><td>18.5</td><td>+9.73%</td><td></td></tr>
-<tr><td>02583</td><td>西普尼</td><td>70</td><td>52.5</td><td>+17.08%</td><td></td></tr>
-<tr><td>00813</td><td>世茂集团</td><td>55</td><td>0.075</td><td>-7.41%</td><td></td></tr>
-<tr><td>00875</td><td>从玉智农</td><td>55</td><td>0.37</td><td>-12.94%</td><td></td></tr>
-<tr><td>02777</td><td>富力地产</td><td>55</td><td>0.221</td><td>-2.21%</td><td></td></tr>
-<tr><td>06182</td><td>乙德投资控股</td><td>55</td><td>0.77</td><td>+0.65%</td><td></td></tr>
-<tr><td>00376</td><td>云锋金融</td><td>45</td><td>2.155</td><td>+5.12%</td><td></td></tr>
-<tr><td>00810</td><td>中国铸晨８１</td><td>45</td><td>0.12</td><td>+17.65%</td><td></td></tr>
-<tr><td>01536</td><td>煜荣集团</td><td>40</td><td>0.43</td><td>-6.52%</td><td></td></tr>
-<tr><td>02536</td><td>百乐皇宫</td><td>40</td><td>0.8</td><td>+16.79%</td><td></td></tr>
-<tr><td>01613</td><td>协同通信</td><td>40</td><td>0.895</td><td>+9.15%</td><td></td></tr></table></div>
 </details>
 
 <div class="warn">量化筛选结果仅供研究参考，不构成投资建议。盘中价为轮询抓取可能延迟，下单以券商 App 实时行情为准。</div>
